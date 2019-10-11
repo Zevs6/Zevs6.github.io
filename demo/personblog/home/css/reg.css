@@ -1,0 +1,128 @@
+@charset "utf-8";
+body {
+	font-size: 12px;
+	background: #53A8BC url(../img/bg.jpg) 50% top scroll no-repeat;
+	color: #5d5d5d;
+}
+
+* {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	font-size: 14px;
+}
+
+#top {
+	width: 100%;
+	height: 90px;
+}
+
+#menu {
+	width: 1000px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#menu img {
+	height: 90px;
+}
+
+#menu ul {
+	list-style-type: none;
+}
+
+#menu ul li {
+	float: left;
+	height: 90px;
+	line-height: 90px;
+	margin-right: 50px;
+}
+
+#menu ul li a {
+	color: black;
+	text-decoration: none;
+	display: inline-block;
+}
+
+#menu ul li a:hover {
+	color: deepskyblue;
+	font-size: 16px;
+}
+
+#box {
+	width: 900px;
+	height: 490px;
+	background-color:rgba(0,0,0,0.4);
+	/*background: url(http://img.php.cn/upload/course/000/000/004/58144f924a5da186.gif);*/
+	margin: 0 auto;
+	margin-top: 68px;
+	padding: 50px;
+}
+
+#box p {
+	text-align: center;
+}
+
+em{
+	color: red;
+	font-size: 14px;
+	margin-left: 270px;
+}
+
+.p_line {
+	border-bottom: 1px solid #000000;
+	color: #000000;
+	font-size: 16px;
+	height: 40px;
+	line-height: 50px;
+}
+
+.txtBox {
+	border: 1px solid #bbbbbb;
+	width: 350px;
+	margin-top: 22px;
+	height: 50px;
+	padding-left: 10px;
+	border-radius: 5px;
+}
+
+.btn {
+	width: 365px;
+	height: 50px;
+	color: white;
+	background-color: #DD0000;
+	margin-top: 25px;
+}
+
+#bottom {
+	width: 100%;
+	background-color: #323333;
+	height: 230px;
+	margin-top: 140px;
+}
+
+#bottom-content {
+	width: 1000px;
+	overflow: hidden;
+	margin: 0 auto;
+	color: white;
+	height: 230px;
+}
+
+#content-left {
+	width: 460px;
+	float: left;
+	height: 280px;
+}
+
+#bottom-content p {
+	margin-top: 10px;
+}
+
+#content-right {
+	width: 460px;
+	float: right;
+	height: 280px;
+	text-align: center;
+	margin-top: 40px;
+}

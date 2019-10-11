@@ -1,0 +1,139 @@
+﻿ @charset "gb2312";
+
+body {
+	font-size: 12px;
+	background: #53A8BC url(../img/bg.jpg) 50% top scroll no-repeat;
+	color: #5d5d5d;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+.blank {
+	height: 5px;
+	overflow: hidden;
+	width: 100%;
+	margin: auto;
+	clear: both
+}
+
+header {
+	padding: 40px 0;
+	width: 1000px;
+	margin: auto;
+}
+
+header h1 {
+	font-size: 36px;
+	text-shadow: #fff 1px 1px 1px;
+	font-family: 'Arizonia', cursive;
+}
+
+
+/* google 在线字体 Arizonia */
+
+header h1 a {
+	color: #000;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+header h1 a:hover {
+	padding-left: 20px
+}
+
+header p {
+	margin: 17px 0 0 0;
+	text-shadow: #000 1px 1px 1px;
+	color: #fff
+}
+
+.navswf {
+	position: relative;
+	width: 1000px;
+	margin: auto;
+}
+
+#nav {
+	line-height: 40px;
+	width: 1000px;
+	height: 40px;
+	position: absolute;
+	left: 0px;
+	top: 15px;
+}
+
+
+/* nav圆角背景 rgba 透明度0.2 */
+
+#nav ul {
+	list-style: none;
+	text-align: left
+}
+
+#nav ul li {
+	display: inline;
+}
+
+#nav ul li a {
+	color: #FFF;
+	padding: 15px 30px;
+	transition: all 0.5s;	
+}
+
+
+/* 背景颜色过渡效果 */
+
+#nav ul li a:hover {
+	background: #E5B91C;
+	color: #FFF;
+	border-radius: 50px 0;
+}
+
+#nav ul li a#nav_current {
+	background: #9ACC99;
+	border-radius: 0 50px;
+}
+ .left {
+    width: 777px;
+    padding: 88px;
+    line-height: 32px;
+    background-color: #73B6C6;
+    overflow: hidden;
+    margin: 66px auto;
+}
+.artComtent p{
+	font-family: "宋体";
+	font-size: 14px;
+	text-indent: 2em;
+}
+
+.title{
+	font-size: 21px;
+	color: #000000;
+	text-align: center;
+}
+
+.do {
+    margin-top: 20px;
+    border-top: #ccc 1px solid;
+}
+.dash_line {
+    border: #ccc 1px dashed;
+    margin: 32px 0;
+}
+
+.cont {
+    float: left;
+    padding: 0 10px;
+    border-right: #ccc 1px solid;
+    color: #ccc;
+}
+.operate {
+    float: right;
+    padding: 0 10px;
+    border-left: #ccc 1px solid;
+}

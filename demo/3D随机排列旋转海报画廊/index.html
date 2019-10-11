@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			position: relative;
+			width: 100%;
+			height: 600px;
+			background: #333;
+			perspective: 800px;
+			overflow: hidden;
+		}
+		.photo{
+			position: absolute;
+			width: 260px;
+			height: 320px;
+			z-index: 1;
+			transition: .5s;
+			left: 50%;
+			top: 50%;
+			margin: -160px 0 0 -130px;
+		}
+		.photo .photo-wrap{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+			transition: all .6s ease-in-out;
+			transform-origin: 0% 50% 0px;
+		}
+		.photo .photo-wrap .side{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #eee;
+			top: 0;
+			right: 0;
+			padding: 20px;
+			box-sizing: border-box;
+			backface-visibility:hidden;
+		}
+		.photo .photo-wrap .side-front{
+            transform: rotateY(0deg);
+		}
+		.photo .photo-wrap .side-front .image{
+			width: 100%;
+			height: 250px;
+			line-height: 250px;
+			overflow: hidden;
+		}
+		.photo .photo-wrap .side-front .image img{
+			width: 100%;
+			vertical-align: middle;/*使高度不够的图片居中显示*/
+		}
+		.photo .photo-wrap .side-front .caption{
+			text-align: center;
+			font-size: 16px;
+			line-height: 50px;
+		}
+		.photo .photo-wrap .side-back{
+			 transform: rotateY(180deg);
+		}
+		.btn{
+			position: absolute;
+			width: 80%;
+			left: 10%;
+			height: 30px;
+			line-height: 30px;
+			bottom: 20px;
+			z-index: 3;
+			text-align: center;
+		}
+		.btn .i{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+			background-color: #aaa;
+			border-radius: 50%;
+			transform: scale(.5);
+			transition: .5s;
+		}
+		.photo_center{
+			top: 50%;
+			left: 50%;
+			margin: -160px 0 0 -130px;
+			z-index: 2;
+		}
+		.btn .i_current{
+			transform: scale(1);
+		}
+		.nav .i_back{
+			background-color: #555;
+			transform: rotateY(180deg);
+		}
+		.photo_front .photo-wrap{/* .photo_front 是添加到 div.photo 的类 */
+			transform: translate(0px, 0px) rotateY(0deg);
+		}
+		.photo_back .photo-wrap{/* .photo_back 是添加到 div.photo 的类*/
+			transform: translate(260px, 0px) rotateY(180deg);
+		}
+	</style>
+ </head>
+ <body>
+		<div id='wrap'>
+			
+			
+		</div>
+		<script type="text/javascript" src='data.js'></script>
+		<script type="text/javascript">
+			function addPhotos(){
+				var box='';
+				var _btn='';
+				for(var i=0;i<data.length;i++){
+					box+='<div class="photo photo-front" onclick="turn(this)" id="photo_'+(i+1)+'">\
+							<div class="photo-wrap">\
+								<div class="side side-front">\
+									<p class="image">\
+										<img src="images/'+ data[i].img +'" alt="" />\
+									</p>\
+									<p class="caption">' + data[i].caption + '</p>\
+								</div>\
+								<div class="side side-back">\
+									<p class="desc">' + data[i].desc +'</p>\
+								</div>\
+							</div>\
+						</div>';
+						_btn+='<span id="btn_'+(i+1)+'" onclick="turn(g(\'#photo_' + (i + 1) + '\'))" class="i"></span>'
+				}
+					var navigation = '<div class="btn">' + _btn + '</div>'
+					g('#wrap').innerHTML += box + navigation ;
+					rsort(random([1,data.length]));
+			}
+			addPhotos();
+			
+			function rsort(n){
+				var photos=[];
+				var _photo=g('.photo');
+				for(var i=0;i<_photo.length;i++){
+					_photo[i].className = 'photo photo_front';
+					_photo[i].style.left='';
+					_photo[i].style.top='';
+					_photo[i].style.transform='scale(1.3)';
+					photos.push(_photo[i]); 
+				}
+				
+				var photo_center=g("#photo_"+n);
+				photo_center.className += ' photo_center';
+
+				photo_center = photos.splice(n-1, 1);
+				//console.log(photo_center);
+				//console.log(photos);
+				var photo_left=photos.splice(0, Math.ceil(photos.length / 2));
+				var photo_right=photos;
+				var ranges=range();
+				for (var j=0;j<photo_left.length ;j++ )
+				{
+					photo_left[j].style.left=random(ranges.left.x) + 'px';
+					photo_left[j].style.top=random(ranges.left.y) + 'px';
+					photo_left[j].style.transform='rotate('+random([-150,150])+'deg) scale(1)';
+				}
+
+				for (var k=0;k<photo_right.length ;k++ )
+				{
+					photo_right[k].style.left=random(ranges.right.x) + 'px';
+					photo_right[k].style.top=random(ranges.right.y) + 'px';
+					photo_right[k].style.transform='rotate('+random([-150,150])+'deg) scale(1)';
+				}
+
+				var btns = g('.i');
+                for(var s = 0; s < btns.length; s++){
+                    btns[s].className = 'i';
+                }
+				g('#btn_' + n).className += ' i_current';
+			}
+			
+			
+			function range(){
+				var range={
+					left:{
+						x : [],
+						y : []
+					},
+					right:{
+						x : [],
+						y : []
+					}
+				};
+				var wrap={
+					width : g('#wrap').clientWidth,
+					height : g('#wrap').clientHeight
+				};
+				var photo={
+					width : g('.photo')[0].clientWidth,
+					height : g('.photo')[0].clientHeight
+				};
+
+				range.left.x=[0 - photo.width / 4 + 130, wrap.width / 2 - photo.width * 5 / 4 + 130];
+				range.left.y=[0 - photo.height / 4 + 160, wrap.height/2 - photo.height * 3 / 4 + 160];
+				range.right.x=[wrap.width / 2 + photo.width / 4 + 130, wrap.width - photo.width / 4 + 130];
+				range.right.y=range.left.y;
+
+				return range;
+			}
+
+			function turn(elem){
+                var cls = elem.className;
+                var n = elem.id.split('_')[1];//var n = elem.id.substr(-1, 1)，但是不推荐 substr;
+                if(!/photo_center/.test(cls)){//判断当前点击的元素是不是 photo_center，不是的话不执行后面的翻转而进行海报排序
+                    return rsort(n);
+                }
+                if(/photo_front/.test(cls)){
+                    cls = cls.replace(/photo_front/, 'photo_back');
+                    g('#btn_' + n).className += ' i_back';//同时处理控制按钮
+                } else{
+                    cls = cls.replace(/photo_back/, 'photo_front');
+                    g('#btn_' + n).className = g('#btn_' + n).className.replace(/\s*i_back\s*/, ' ');//同时处理控制按钮
+                }
+
+                elem.className = cls;
+            }
+			function g(selector){
+                return selector.substring(0, 1) == '.' ? document.getElementsByClassName(selector.substring(1)) : document.getElementById(selector.substring(1));
+            }
+			function random(range){
+				var min=Math.min(range[0],range[1]);
+				var max=Math.max(range[0],range[1]);
+				var diff=max-min;
+				var number= Math.round(Math.random() * diff) + min;
+				return number;
+			}
+			
+		</script>
+	</body>
+</html>

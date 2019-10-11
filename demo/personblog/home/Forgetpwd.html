@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="img/favicon.ico"/>
+		<title>忘记密码</title>
+		<link rel="stylesheet" href="css/Forgetpwd.css" />
+		<script type="text/javascript" src="js/Forgetpwd.js" ></script>
+	</head>
+	<body>
+		<div class="logo">
+			<img src="img/banner.png" height="300px" width: "300px"/>
+		</div>
+		<div class="forgetpwd">
+			<h2 class="title">修改您的帐号密码</h2>
+			<form class="content" name="myForm" action="bug.html" onsubmit="return validateForm()">
+				<input type="text" name="tel" placeholder="手机号" />
+				<input type="number" name="" id="jym" placeholder="请输入小于100的验证码" max="100" />
+				<input type="text" name="yzm" placeholder="手机验证码" />
+				<input type="password" name="pwd" placeholder="修改密码" />
+				<input type="password" name="cmpwd" placeholder="确认密码" />
+				<input type="submit" value="确认修改" />
+			</form>
+		</div>
+	</body>
+</html>

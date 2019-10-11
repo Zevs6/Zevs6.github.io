@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	background: url(../img/bg.jpg) no-repeat center/cover;
+}
+
+.logo {
+	grid-row: 2;
+	grid-column: 3;
+	margin-top: 80px;
+}
+
+.forgetpwd {
+	grid-row: 2;
+	grid-column: 4;
+	width: 400px;
+	height: 400px;
+	margin-top: 45px;
+	background-color: #ebf0f1;
+	border-radius: 8px;
+}
+
+.forgetpwd:before {
+	content: '';
+	/*激活伪元素的必要因素*/
+	display: block;
+	height: 13px;
+	background-image: -webkit-linear-gradient(left, #28ae61 0%, #28ae61 20%, #8e44ad 20%, #8e44ad 40%, #3498db 40%, #3498db 60%, #e74c3c 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+	/*css3渐变色*/
+	border-radius: 6px 6px 0 0;
+}
+
+.title {
+	line-height: 80px;
+	text-align: center;
+	font-size: 2em;
+	/*em=px*2*/
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	/*改变主轴方向  纵向*/
+	justify-content: space-around;
+	/*均分剩余空间*/
+	align-items: center;
+	height: 290px;
+}
+
+.content input {
+	width: 70%;
+	height: 36px;
+	border: 1px solid #bbb;
+	border-radius: 6px;
+	text-indent: 1em;
+}

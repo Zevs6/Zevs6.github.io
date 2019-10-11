@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户注册页面</title>
+		<link rel="icon" href="img/favicon.ico"/>
+		<link rel="stylesheet" href="css/reg.css" />
+		<script type="text/javascript" src="js/reg.js" ></script>
+	</head>
+
+	<body>
+		<div id="top">
+			<div id="menu">
+				<ul>
+					<li><img src=img/BLCO.png></li>
+					<li>
+						<a href="index.html">网站首页</a>
+					</li>
+					<li>
+						<a href="about .html">关于我</a>
+					</li>
+					<li>
+						<a href="Broken .html">碎言碎语</a>
+					</li>
+					<li>
+						<a href="Technical.html">技术探讨</a>
+					</li>
+					<li>
+						<a href="life.html">慢生活</a>
+					</li>
+					<li>
+						<a href="message .html">留言板</a>
+					</li>
+					<li class="mi">
+						<a href="Login.html">登陆</a>/
+						<a href="reg.html">注册</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="box">
+			<form action="" method="post"  onsubmit="checkisnull()" >
+				<p class="p_line">注册账号已有账号直接登陆</p>
+				<p style="margin-top: 20px"><input type="text" class="txtBox" placeholder="请输入用户名" id="username" onblur="checkname()"></p>
+				<em id="nameinfo">*用户名由5-10个字符组成！</em>
+				<p><input type="tel" name="userName" class="txtBox" placeholder="请输入手机号" id="telephone" onblur="checktel()"></p>
+				<em id="telinfo" >*手机号码由11位数字组成！</em>
+				<p><input type="password" class="txtBox" placeholder="请输入密码" id="pwd" onblur="checkpwd()"></p>
+				<em id="pwdinfo">*使用字母、数字、符号两种及以上的组合，8-12个字符</em>
+				<p><input type="password" name="pwd" class="txtBox" placeholder="再次输入密码" id="cmpwd" onblur="checkcmpwd()"></p>
+				<em id="cmpwdinfo">*请确认密码是否一致</em>
+				<p><input class="btn" type="submit" value="提交注册"></p>
+			</form>
+		</div>
+		<div id="bottom">
+			<div id="bottom-content">
+				<div id="content-left">
+					<p><img src="img/mmqrcode1480482663960.png" height="150px"></p>
+					<p> 网站位置 | 关于我们 | 意见反馈 | 免责声明</p>
+				</div>
+				<div id="content-right">
+					<p>友情链接</p>
+					<p>中国教育网  | 个人博客</p>
+					<p>公司网址：www.baidu.com</p>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

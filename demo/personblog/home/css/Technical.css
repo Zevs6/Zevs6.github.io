@@ -1,0 +1,313 @@
+﻿@charset "gb2312";
+
+body {
+	font-size: 12px;
+	background: #53A8BC url(../img/bg.jpg) 50% top scroll no-repeat;
+	color: #5d5d5d;
+	margin:0;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+.blank {
+	height: 5px;
+	overflow: hidden;
+	width: 100%;
+	margin: auto;
+	clear: both
+}
+
+header {
+	padding: 40px 0;
+	width: 1000px;
+	margin: auto;
+}
+
+header h1 {
+	font-size: 36px;
+	text-shadow: #fff 1px 1px 1px;
+	font-family: 'Arizonia', cursive;
+}
+
+
+/* google 在线字体 Arizonia */
+
+header h1 a {
+	color: #000;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+header h1 a:hover {
+	padding-left: 20px
+}
+
+header p {
+	margin: 17px 0 0 0;
+	text-shadow: #000 1px 1px 1px;
+	color: #fff
+}
+
+.navswf {
+	position: relative;
+	width: 1000px;
+	margin: auto;
+}
+
+#nav {
+	line-height: 40px;
+	width: 1000px;
+	height: 40px;
+	position: absolute;
+	left: 0px;
+	top: 15px;
+}
+
+
+/* nav圆角背景 rgba 透明度0.2 */
+
+#nav ul {
+	list-style: none;
+	text-align: left
+}
+
+#nav ul li {
+	display: inline;
+}
+
+#nav ul li a {
+	color: #FFF;
+	padding: 15px 30px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+}
+
+
+/* 背景颜色过渡效果 */
+
+#nav ul li a:hover {
+	background: #E5B91C;
+	color: #FFF;
+	border-radius: 50px 0;
+}
+
+#nav ul li a#nav_current {
+	background: #9ACC99;
+	border-radius: 0 50px;
+}
+
+
+
+
+
+
+#header{
+	margin: 80px auto 0 auto;
+	width: 1300px;
+	background: url(../img/body_bg.png);
+}
+
+#blogTitle {
+    background: url(../img/title-yellow.png) no-repeat center 21px;
+    height: 314px;
+    clear: both;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+#blogTitle h1 {
+    font-size: 30px;
+    width: 310px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    position: relative;
+    top: 80px;
+    left: 17px;
+    font-weight: normal;
+}
+
+#blogTitle h1 a, #blogTitle h2 {
+    color: #fff;
+}
+
+#blogTitle h2 {
+    width: 550px;
+    position: relative;
+    height: 75px;
+    line-height: 180%;
+    font-weight: normal;
+    top: 107px;
+    left: 5px;
+    font-size: 16px;
+}
+
+.main{
+	width: 1300px;
+	/*border: 1px solid red;*/
+	margin: 0 auto 30px auto;
+}
+.post{
+	float: left;
+	width: 860px;
+	padding: 36px;
+	border-radius: 0 0 70px 30px;
+	border: 1px dashed slateblue ;
+	background-color: rgba(22,159,230,0.3);
+}
+
+.postTitle2{
+	font-size: 36px;
+	color: #000000;
+}
+
+.blogpost{
+	padding:0 36px 0 36px;
+	font-size: 16px;
+	color: white;
+	line-height: 30px;
+}
+
+.cnblogs_code{
+	overflow: hidden;
+	width: 700px;
+	padding:16px 40px 16px 30px;
+	margin: auto;
+	color: #000000;
+	border-radius:20px;
+	font-size: 15px;
+	background-color:rgba(204,204,204,0.6);
+}	
+		
+
+.blog_right{
+	float: right;
+	width: 320px;
+	height: 2000px;
+	/*border: 1px solid red;*/
+}
+
+.newsItem{
+	width: 100%;
+	margin-bottom: 36px;
+	
+}
+.catListTitle {
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgba(22,159,230,0.6);
+    color: #fff;
+    font-weight: normal;
+    border: 1px solid #169fe6;
+}
+#blog-news {
+    overflow: visible;
+    margin-bottom: 20px;
+}
+.blog_right :hover #blog-news{
+	border:1px solid red;
+}
+
+#profile_block {
+    background: #fff;
+    padding: 20px;
+    color: #7e8c8d;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 0!important;
+    border: 1px solid #dedede;
+}
+#profile_block a {
+    color: #9fa4a4;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.newsItem:hover img{
+	border:1px solid red;
+}
+
+#search{
+	width: 100%;
+	height: 180px;
+	background: white;
+}
+
+#search:hover{
+	border:1px solid red;
+}
+.div_my_zzk {
+    padding-top: 30px; 
+    margin-left: 30px;
+}
+
+.input_my_zzk {
+    width: 160px;
+    height: 35px;
+    border: 1px solid #ddd;
+    outline: none;
+    line-height: 35px;
+    font-size: 13px;
+    padding: 0 12px;
+}
+#btnZzk {
+    font-size: 14px;
+    height: 37px;
+    width: 70px;
+    background: #ff5e52;
+    text-align: center;
+    line-height: 37px;
+    border: none;
+    color: #fff;
+    font-family: "Microsoft Yahei","Simsun",Arial;
+}
+
+#TopDiggPostsBlock{
+	width: 100%;
+	background: white;
+}
+
+#TopDiggPostsBlock ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#TopDiggPostsBlock ul li{
+	line-height: 2;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 20px 10px 20px 20px;
+    font-size: 14px;
+    color: #777;
+}
+#TopDiggPostsBlock ul li a:hover{
+	text-decoration:underline;
+	color: red;
+}
+
+
+.clear{
+	clear: both;
+}
+
+.footer-bottom { 
+	margin-top: 140px;
+	background: rgba(0, 0, 0, 0.6);
+ 	overflow: hidden; 
+ }
+ 
+.footer-bottom p { 
+	font-size: 14px;
+	width: 1000px; 
+	margin: 0 auto; 
+	padding: 10px 0; 
+	text-align: center;
+}

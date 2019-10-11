@@ -1,0 +1,3401 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>Http转入Https的完整攻略 | 皮皮猪~个人博客</title>
+  <meta name="keywords" content=" http , https ">
+  <meta name="description" content="Http转入Https的完整攻略 | 皮皮猪~个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="http://zhsh666.xyz/404/index-1.html">
+<meta property="og:site_name" content="皮皮猪~个人博客">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-14T08:53:08.535Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="404">
+
+
+<link rel="icon" href="/img/favicon.ico">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/gruvbox-dark.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.png" />
+</a>
+<div class="author">
+    <span>Zevs</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/7b54b38528d8" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="weibo" href="https://weibo.com/5824301643/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo&amp;is_all=1" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="csdn" href="https://blog.csdn.net/weixin_43958049" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-csdn"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/u/4189459" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:2602138376@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=https://shang.qq.com/wpa/qunwpa?idkey=79e326c19a9ebf8ac3b7375a8711cd3b7a7680fae68de5b2253849a328936ab4&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(238)</small></div></li>
+    
+        
+            
+            <li><div data-rel="搭建技术">搭建技术<small>(50)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="前端开发"><i class="fold iconfont icon-right"></i>前端开发<small>(39)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="JavaScript">JavaScript<small>(2)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="随笔">随笔<small>(46)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="技术介绍">技术介绍<small>(31)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="后端开发"><i class="fold iconfont icon-right"></i>后端开发<small>(16)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="PHP">PHP<small>(8)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Java"><i class="fold iconfont icon-right"></i>Java<small>(40)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="千问">千问<small>(5)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="读书">读书<small>(14)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="开篇博客">开篇博客<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    <a class="dynamic-menu site_url"   href="/photo">相册</a>
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://pic.iqy.ink/">图床</a>
+    
+    
+    <a class="dynamic-menu " target="_self"   href="https://z.zhsh666.xyz/">主题切换</a>
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="238">
+<input type="hidden" id="yelog_site_word_count" value="500.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://chuangzaoshi.com/">【创造师】</a></li>
+            
+            <li><a target="_blank" href="http://yelog.org/">【叶落阁】</a></li>
+            
+            <li><a target="_blank" href="https://www.qxxmx.com">【草莓酱】</a></li>
+            
+            <li><a target="_blank" href="https://wxy97.com/">【王旭阳】</a></li>
+            
+            <li><a target="_blank" href="https://www.liaoxuefeng.com/wiki/1022910821149312">【廖雪峰】</a></li>
+            
+            <li><a target="_blank" href="https://xian6ge.cn/posts/82ce1911/">【贤柳阁】</a></li>
+            
+            <li><a target="_blank" href="https://rzfyu.com/">【非汝鱼】</a></li>
+            
+            <li><a target="_blank" href="https://oriheart.top/">【梨花诗】</a></li>
+            
+            <li><a target="_blank" href="https://yremp.live/">【流  年】</a></li>
+            
+            <li><a target="_blank" href="https://2heng.xin/">【樱花庄】</a></li>
+            
+            <li><a target="_blank" href="https://yremp.club/">【yremp】</a></li>
+            
+            <li><a target="_blank" href="http://bbs.kdays.net/index">【KDays论坛】</a></li>
+            
+            <li><a target="_blank" href="https://myau.moe/">【myau】</a></li>
+            
+            <li><a target="_blank" href="https://marmomento.github.io/">【marmomento】</a></li>
+            
+            <li><a target="_blank" href="https://zhsh666.xyz">【Zevs】</a></li>
+            
+            <li><a target="_blank" href="https://powerlrl.github.io/">【LinYo】</a></li>
+            
+            <li><a target="_blank" href="https://jackym06.github.io/">【MaoLi】</a></li>
+            
+            <li><a target="_blank" href="http://fangzh.top/2018/2018090514/">【FangL】</a></li>
+            
+            <li><a target="_blank" href="http://litten.me">【Litten】</a></li>
+            
+            <li><a target="_blank" href="https://imsun.net/">【Sun】</a></li>
+            
+            <li><a target="_blank" href="http://hfanss.com/">【HFan】</a></li>
+            
+            <li><a target="_blank" href="https://www.whyvv.top/">【Whyvv】</a></li>
+            
+            <li><a target="_blank" href="https://staunchkai.com/">【STAUN】</a></li>
+            
+            <li><a target="_blank" href="https://blog.creat.kim/">【DS Blog】</a></li>
+            
+            <li><a target="_blank" href="https://blog.wzdxy.com/">【WZdxy】</a></li>
+            
+            <li><a target="_blank" href="http://www.zhaojun.im/">【ZJK】</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/zhsh666/">【blog】</a></li>
+            
+            <li><a target="_blank" href="https://www.php.cn">【PHP】</a></li>
+            
+            <li><a target="_blank" href="https://hellowangheng.github.io/">【WangH】</a></li>
+            
+            <li><a target="_blank" href="https://blog.damonare.cn/">【Damonare】</a></li>
+            
+            <li><a target="_blank" href="https://claiyre.github.io/">【Claiyre】</a></li>
+            
+            <li><a target="_blank" href="https://blog.slomoo.cn/">【Slomoo】</a></li>
+            
+            <li><a target="_blank" href="https://blog.givensir.cn/">【GivenSir】</a></li>
+            
+            <li><a target="_blank" href="https://laustar.fun/">【laustar】</a></li>
+            
+            <li><a target="_blank" href="https://www.mckinleylu.com/">【McKinley】</a></li>
+            
+            <li><a target="_blank" href="http://cnm.one/">【喵帕斯】</a></li>
+            
+            <li><a target="_blank" href="http://ibruce.info/">【不如】</a></li>
+            
+            <li><a target="_blank" href="https://xdlrt.github.io/">【小居】</a></li>
+            
+            <li><a target="_blank" href="http://damonare.cn/">【念念】</a></li>
+            
+            <li><a target="_blank" href="https://helloqingfeng.github.io/">【清风】</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">3-hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">CSS3</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">小程序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">css</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Flex</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Apache</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Tomcat</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">服务器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">HBuilder</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">HTML</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">JavaScript</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">HTML5</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">idea</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">IDEA</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Java</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">jsp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">JDBC</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">MySQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Github</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">node.js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Node.js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">PHP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">PanDownload</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Python</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">java</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">SpringBoot</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Vue</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">框架</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">wordpress</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">WampServer</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">WordPress</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">自定义</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">nodejs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">GitHub</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">gitbash</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">部署</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">final</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">常量</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">数据库</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">飘落特效</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">jquery</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Markdown</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Typora</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">npm</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">jsDeliver</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cnd</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">1+x</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">代码</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">安卓</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">博客</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">纪念</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">reading</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数据结构</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Chrome</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Cookie</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Session</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">codding</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">剪辑</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">缘起</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">虚拟机</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">模拟器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Wordpress</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">智慧树</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">图床</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">码云</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网站收录</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CSS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">轮播图</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">鼠标点击</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">点击特效</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">jsDelivr</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PicGo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">前端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Swing</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">南京三日游</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">主题</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Lsky Pro</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">宝塔</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Android</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Vue.js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Spring Boot</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网页设计</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">http</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">https</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">多线程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">HTMK</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">JS</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="开篇博客 "
+           href="/2019/08/14/纪念博客搭建完成/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="纪念博客搭建完成">纪念博客搭建完成</span>
+            <span class="post-date" title="2019-08-14 09:42:38">2019/08/14</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/10/11/happy birthday/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="致自己生日快乐，写给自己22岁生日！">致自己生日快乐，写给自己22岁生日！</span>
+            <span class="post-date" title="2019-10-11 10:30:00">2019/10/11</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/21/准备度过一个怎样的大学生活？/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="准备度过一个怎样的大学生活？">准备度过一个怎样的大学生活？</span>
+            <span class="post-date" title="2019-09-21 11:20:28">2019/09/21</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/09/21/永远并不远 五种可能注定要衰落的编程语言/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="永远并不远 五种可能注定要衰落的编程语言">永远并不远 五种可能注定要衰落的编程语言</span>
+            <span class="post-date" title="2019-09-21 11:14:28">2019/09/21</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/09/21/漫画：《程序员十二时辰》/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="漫画：《程序员十二时辰》，内容过于真实">漫画：《程序员十二时辰》，内容过于真实</span>
+            <span class="post-date" title="2019-09-21 11:03:28">2019/09/21</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/09/21/HBuilder-App/"
+           data-tag="HBuilder"
+           data-author="" >
+            <span class="post-title" title="HBuilder如何打包App方法">HBuilder如何打包App方法</span>
+            <span class="post-date" title="2019-09-21 10:42:28">2019/09/21</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/20/school/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="清晨的电子学院图片分享！">清晨的电子学院图片分享！</span>
+            <span class="post-date" title="2019-09-20 13:06:28">2019/09/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/20/总有一束光能照亮我们的生活/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="总有一束光能照亮我们的生活！">总有一束光能照亮我们的生活！</span>
+            <span class="post-date" title="2019-09-20 13:01:28">2019/09/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/18/9.18/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="今天是9.18,向所有爱国抗日的志士们致敬!">今天是9.18,向所有爱国抗日的志士们致敬!</span>
+            <span class="post-date" title="2019-09-18 09:25:25">2019/09/18</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/09/17/Apache Tomcat下载、安装、配置图文教程/"
+           data-tag="Tomcat"
+           data-author="" >
+            <span class="post-title" title="Apache Tomcat下载、安装、配置图文教程">Apache Tomcat下载、安装、配置图文教程</span>
+            <span class="post-date" title="2019-09-17 12:57:25">2019/09/17</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/17/GitHub上50个最受欢迎的PHP开源项目【2019】/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="GitHub上50个最受欢迎的PHP开源项目【2019】">GitHub上50个最受欢迎的PHP开源项目【2019】</span>
+            <span class="post-date" title="2019-09-17 12:56:25">2019/09/17</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/17/PHP怎么连接Mysql数据库/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP怎么连接Mysql数据库">PHP怎么连接Mysql数据库</span>
+            <span class="post-date" title="2019-09-17 12:55:25">2019/09/17</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/17/PHP怎么实现分页功能？（图文+视频教程）/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP怎么实现分页功能？（图文+视频教程）">PHP怎么实现分页功能？（图文+视频教程）</span>
+            <span class="post-date" title="2019-09-17 12:54:25">2019/09/17</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/17/php经典趣味算法/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="php经典趣味算法">php经典趣味算法</span>
+            <span class="post-date" title="2019-09-17 12:52:25">2019/09/17</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/15/last-day/"
+           data-tag="南京三日游"
+           data-author="" >
+            <span class="post-title" title="南京三日游随笔">南京三日游随笔</span>
+            <span class="post-date" title="2019-09-15 21:43:25">2019/09/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/15/day3/"
+           data-tag="南京三日游"
+           data-author="" >
+            <span class="post-title" title="南京三日游day3">南京三日游day3</span>
+            <span class="post-date" title="2019-09-15 20:34:25">2019/09/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/14/day2/"
+           data-tag="南京三日游"
+           data-author="" >
+            <span class="post-title" title="南京三日游day2">南京三日游day2</span>
+            <span class="post-date" title="2019-09-14 18:16:25">2019/09/14</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/13/day1/"
+           data-tag="南京三日游"
+           data-author="" >
+            <span class="post-title" title="南京三日游day1">南京三日游day1</span>
+            <span class="post-date" title="2019-09-13 20:16:25">2019/09/13</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/12/CSS3-border/"
+           data-tag="CSS3"
+           data-author="" >
+            <span class="post-title" title="CSS3：不可思议的border属性">CSS3：不可思议的border属性</span>
+            <span class="post-date" title="2019-09-12 13:03:25">2019/09/12</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/09/10/Sakura樱花主题添加可爱的看板娘（详细教程）/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Sakura樱花主题添加可爱的看板娘（详细教程）">Sakura樱花主题添加可爱的看板娘（详细教程）</span>
+            <span class="post-date" title="2019-09-10 18:26:37">2019/09/10</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/09/09/WampServer/"
+           data-tag="WampServer"
+           data-author="" >
+            <span class="post-title" title="解决WampServer服务安装后MySQL无法启动且呈现橘黄色">解决WampServer服务安装后MySQL无法启动且呈现橘黄色</span>
+            <span class="post-date" title="2019-09-09 20:00:25">2019/09/09</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/09/03/通过JSP网页连接Mysql数据库/"
+           data-tag="jsp"
+           data-author="" >
+            <span class="post-title" title="通过JSP网页连接Mysql数据库">通过JSP网页连接Mysql数据库</span>
+            <span class="post-date" title="2019-09-03 22:56:18">2019/09/03</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/09/03/什么是JSP/"
+           data-tag="jsp"
+           data-author="" >
+            <span class="post-title" title="什么是JSP">什么是JSP</span>
+            <span class="post-date" title="2019-09-03 22:29:18">2019/09/03</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/09/03/JSP实现简单的用户登录和注册/"
+           data-tag="jsp"
+           data-author="" >
+            <span class="post-title" title="JSP实现简单的用户登录和注册">JSP实现简单的用户登录和注册</span>
+            <span class="post-date" title="2019-09-03 22:29:18">2019/09/03</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/09/03/JSP基础知识/"
+           data-tag="jsp"
+           data-author="" >
+            <span class="post-title" title="JSP基础知识">JSP基础知识</span>
+            <span class="post-date" title="2019-09-03 21:49:18">2019/09/03</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/03/10行代码实现小程序支付功能！/"
+           data-tag="小程序"
+           data-author="" >
+            <span class="post-title" title="10行代码实现小程序支付功能！">10行代码实现小程序支付功能！</span>
+            <span class="post-date" title="2019-09-03 15:04:44">2019/09/03</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/03/最全面的多线程面试题，你能回答几个？/"
+           data-tag="多线程"
+           data-author="" >
+            <span class="post-title" title="最全面的多线程面试题，你能回答几个？">最全面的多线程面试题，你能回答几个？</span>
+            <span class="post-date" title="2019-09-03 14:59:31">2019/09/03</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/09/03/分享几个实用的HEXO博客功能插件/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="分享几个实用的HEXO博客功能插件">分享几个实用的HEXO博客功能插件</span>
+            <span class="post-date" title="2019-09-03 14:55:01">2019/09/03</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/02/明猫不做暗事/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="明猫不做暗事">明猫不做暗事</span>
+            <span class="post-date" title="2019-09-02 20:17:01">2019/09/02</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/02/天地人间静静语/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="天地人间静静语">天地人间静静语</span>
+            <span class="post-date" title="2019-09-02 14:17:01">2019/09/02</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/02/“1-X”中级Web前端证书对应课程分析/"
+           data-tag="1+x"
+           data-author="" >
+            <span class="post-title" title="“1+X”中级Web前端证书对应课程分析">“1+X”中级Web前端证书对应课程分析</span>
+            <span class="post-date" title="2019-09-02 12:20:42">2019/09/02</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/09/02/优化hexo访问速度-将hexo部署到云主机VPS/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="优化hexo访问速度-将hexo部署到云主机VPS">优化hexo访问速度-将hexo部署到云主机VPS</span>
+            <span class="post-date" title="2019-09-02 07:51:50">2019/09/02</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/09/01/Github+jsDelivr+PicGo 打造稳定快速、高效免费图床/"
+           data-tag="Github,jsDelivr,PicGo"
+           data-author="" >
+            <span class="post-title" title="Github+jsDelivr+PicGo 打造稳定快速、高效免费图床">Github+jsDelivr+PicGo 打造稳定快速、高效免费图床</span>
+            <span class="post-date" title="2019-09-01 12:42:49">2019/09/01</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/31/九月你好/"
+           data-tag="纪念"
+           data-author="" >
+            <span class="post-title" title="九月你好">九月你好</span>
+            <span class="post-date" title="2019-08-31 10:10:28">2019/08/31</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/30/回首过往/"
+           data-tag="缘起"
+           data-author="" >
+            <span class="post-title" title="回首过往">回首过往</span>
+            <span class="post-date" title="2019-08-30 07:43:53">2019/08/30</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/网站收录提交入口/"
+           data-tag="网站收录"
+           data-author="" >
+            <span class="post-title" title="网站收录提交入口">网站收录提交入口</span>
+            <span class="post-date" title="2019-08-29 10:01:53">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/宝塔安装Lsky Pro图床教程/"
+           data-tag="图床,Lsky Pro,宝塔"
+           data-author="" >
+            <span class="post-title" title="宝塔安装Lsky Pro图床教程">宝塔安装Lsky Pro图床教程</span>
+            <span class="post-date" title="2019-08-29 09:34:18">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/WordPress程序搭建个人博客教程，如何快速建站？/"
+           data-tag="WordPress"
+           data-author="" >
+            <span class="post-title" title="WordPress程序搭建个人博客教程，如何快速建站？">WordPress程序搭建个人博客教程，如何快速建站？</span>
+            <span class="post-date" title="2019-08-29 09:23:59">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/使用wordpress建站流程的八个步骤/"
+           data-tag="wordpress"
+           data-author="" >
+            <span class="post-title" title="使用wordpress建站流程的八个步骤">使用wordpress建站流程的八个步骤</span>
+            <span class="post-date" title="2019-08-29 09:15:04">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/WP建站入门基础知识/"
+           data-tag="wordpress"
+           data-author="" >
+            <span class="post-title" title="WP建站入门基础知识">WP建站入门基础知识</span>
+            <span class="post-date" title="2019-08-29 09:10:33">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/有关wordpress建站的7个必知常识/"
+           data-tag="wordpress"
+           data-author="" >
+            <span class="post-title" title="有关wordpress建站的7个必知常识">有关wordpress建站的7个必知常识</span>
+            <span class="post-date" title="2019-08-29 09:07:20">2019/08/29</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/29/CSS3爱心飘落特效/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="CSS3爱心飘落特效">CSS3爱心飘落特效</span>
+            <span class="post-date" title="2019-08-29 09:01:09">2019/08/29</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/29/jquery实现web页面樱花飘落特效/"
+           data-tag="飘落特效,jquery"
+           data-author="" >
+            <span class="post-title" title="jquery实现web页面樱花飘落特效">jquery实现web页面樱花飘落特效</span>
+            <span class="post-date" title="2019-08-29 08:57:09">2019/08/29</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/29/很漂亮的网页飘落特效代码/"
+           data-tag="飘落特效,代码"
+           data-author="" >
+            <span class="post-title" title="很漂亮的网页飘落特效代码">很漂亮的网页飘落特效代码</span>
+            <span class="post-date" title="2019-08-29 08:48:16">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/jsDeliver-github使用教程，免费的cnd/"
+           data-tag="jsDeliver,cnd"
+           data-author="" >
+            <span class="post-title" title="jsDeliver+github使用教程，免费的cdn">jsDeliver+github使用教程，免费的cdn</span>
+            <span class="post-date" title="2019-08-29 06:52:46">2019/08/29</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/28/资源分享/"
+           data-tag="css,HTML,JavaScript,Java"
+           data-author="" >
+            <span class="post-title" title="资源分享">资源分享</span>
+            <span class="post-date" title="2019-08-28 14:54:52">2019/08/28</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/28/我就是我/"
+           data-tag="Github"
+           data-author="" >
+            <span class="post-title" title="我就是我">我就是我</span>
+            <span class="post-date" title="2019-08-28 10:54:52">2019/08/28</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/28/hexo加快访问速度/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo加快访问速度">hexo加快访问速度</span>
+            <span class="post-date" title="2019-08-28 07:57:34">2019/08/28</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/28/使用coding和hexo快速搭建博客/"
+           data-tag="hexo,codding"
+           data-author="" >
+            <span class="post-title" title="使用coding和hexo快速搭建博客">使用coding和hexo快速搭建博客</span>
+            <span class="post-date" title="2019-08-28 07:40:19">2019/08/28</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/28/怎么用Hostwinds搭建Wordpress博客网站（超详细图文教程）/"
+           data-tag="Wordpress"
+           data-author="" >
+            <span class="post-title" title="怎么用Hostwinds搭建Wordpress博客网站（超详细图文教程）">怎么用Hostwinds搭建Wordpress博客网站（超详细图文教程）</span>
+            <span class="post-date" title="2019-08-28 06:37:02">2019/08/28</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/28/唯美主题hexo-sakura使用教程/"
+           data-tag="主题"
+           data-author="" >
+            <span class="post-title" title="唯美主题hexo-sakura使用教程">唯美主题hexo-sakura使用教程</span>
+            <span class="post-date" title="2019-08-28 06:17:39">2019/08/28</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/27/Jekyll建立Github博客/"
+           data-tag="Github"
+           data-author="" >
+            <span class="post-title" title="Jekyll建立Github博客">Jekyll建立Github博客</span>
+            <span class="post-date" title="2019-08-27 09:24:52">2019/08/27</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/hexo-添加自定义页面/"
+           data-tag="hexo,自定义"
+           data-author="" >
+            <span class="post-title" title="hexo 添加自定义页面">hexo 添加自定义页面</span>
+            <span class="post-date" title="2019-08-26 15:19:58">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/腾讯视频如何转换MP4格式的2种方法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="腾讯视频如何转换MP4格式的2种方法">腾讯视频如何转换MP4格式的2种方法</span>
+            <span class="post-date" title="2019-08-26 13:24:52">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/支付宝诞生的故事/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="支付宝诞生的故事">支付宝诞生的故事</span>
+            <span class="post-date" title="2019-08-26 13:24:52">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/关于第三方支付，看这篇文章就够了！/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="关于第三方支付，看这篇文章就够了！">关于第三方支付，看这篇文章就够了！</span>
+            <span class="post-date" title="2019-08-26 10:49:25">2019/08/26</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/26/JAVA 排序之选择排序、堆排序/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="JAVA 排序之选择排序、堆排序">JAVA 排序之选择排序、堆排序</span>
+            <span class="post-date" title="2019-08-26 10:45:53">2019/08/26</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/26/Java 排序之插入排序、希尔排序/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="Java 排序之插入排序、希尔排序">Java 排序之插入排序、希尔排序</span>
+            <span class="post-date" title="2019-08-26 10:43:53">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/✍神奇的一行代码/"
+           data-tag="代码"
+           data-author="" >
+            <span class="post-title" title="✍神奇的一行代码">✍神奇的一行代码</span>
+            <span class="post-date" title="2019-08-26 09:55:09">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/Http转入Https的完整攻略/"
+           data-tag="http,https"
+           data-author="" >
+            <span class="post-title" title="Http转入Https的完整攻略">Http转入Https的完整攻略</span>
+            <span class="post-date" title="2019-08-26 09:40:16">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/Hexo-博客部署到腾讯云服务器全流程/"
+           data-tag="hexo,服务器"
+           data-author="" >
+            <span class="post-title" title="Hexo 博客部署到腾讯云服务器全流程">Hexo 博客部署到腾讯云服务器全流程</span>
+            <span class="post-date" title="2019-08-26 09:29:32">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/腾讯云COS图床制作/"
+           data-tag="图床"
+           data-author="" >
+            <span class="post-title" title="腾讯云COS图床制作">腾讯云COS图床制作</span>
+            <span class="post-date" title="2019-08-26 09:22:57">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/码云-hexo搭建个性博客/"
+           data-tag="hexo,码云"
+           data-author="" >
+            <span class="post-title" title="码云+hexo搭建个性博客">码云+hexo搭建个性博客</span>
+            <span class="post-date" title="2019-08-26 09:09:04">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/hexo部署至FTP-COS/"
+           data-tag="hexo,部署"
+           data-author="" >
+            <span class="post-title" title="hexo部署至FTP-COS">hexo部署至FTP-COS</span>
+            <span class="post-date" title="2019-08-26 09:04:20">2019/08/26</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/26/为什么说-Java-程序员到了必须掌握-Spring-Boot-的时候？/"
+           data-tag="Java,Spring Boot"
+           data-author="" >
+            <span class="post-title" title="为什么说 Java 程序员到了必须掌握 Spring Boot 的时候？">为什么说 Java 程序员到了必须掌握 Spring Boot 的时候？</span>
+            <span class="post-date" title="2019-08-26 08:47:02">2019/08/26</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/26/你真的了解-Cookie-和-Session-吗/"
+           data-tag="Cookie,Session"
+           data-author="" >
+            <span class="post-title" title="你真的了解 Cookie 和 Session 吗?">你真的了解 Cookie 和 Session 吗?</span>
+            <span class="post-date" title="2019-08-26 08:44:36">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/Hexo 博客开启 https (SSL 证书)/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo 博客开启 https (SSL 证书)">Hexo 博客开启 https (SSL 证书)</span>
+            <span class="post-date" title="2019-08-26 07:43:53">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/用七牛云搭建一个属于自己的图床/"
+           data-tag="图床"
+           data-author="" >
+            <span class="post-title" title="用七牛云搭建一个属于自己的图床">用七牛云搭建一个属于自己的图床</span>
+            <span class="post-date" title="2019-08-26 07:43:53">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/25/hexo博客常用插件及教程/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo博客常用插件及教程">hexo博客常用插件及教程</span>
+            <span class="post-date" title="2019-08-25 10:45:53">2019/08/25</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/25/hexo-创建文章、标签、分类/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo 创建文章、标签、分类">hexo 创建文章、标签、分类</span>
+            <span class="post-date" title="2019-08-25 08:53:10">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/25/SpringBoot入门系列：第三篇 日志输出/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot入门系列：第三篇 日志输出">SpringBoot入门系列：第三篇 日志输出</span>
+            <span class="post-date" title="2019-08-25 07:33:08">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/25/SpringBoot入门系列：第二篇 再学Hello World/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot入门系列：第二篇 再学Hello World">SpringBoot入门系列：第二篇 再学Hello World</span>
+            <span class="post-date" title="2019-08-25 07:33:08">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/25/SpringBoot入门系列：第四篇 日志详解/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot入门系列：第四篇 日志详解">SpringBoot入门系列：第四篇 日志详解</span>
+            <span class="post-date" title="2019-08-25 07:33:08">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/25/SpringBoot入门系列：第一篇-Hello-World/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot入门系列：第一篇 Hello World">SpringBoot入门系列：第一篇 Hello World</span>
+            <span class="post-date" title="2019-08-25 07:30:08">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/spring boot入门教程——Spring Boot快速入门指南/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="spring boot入门教程——Spring Boot快速入门指南">spring boot入门教程——Spring Boot快速入门指南</span>
+            <span class="post-date" title="2019-08-24 11:07:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot ( 七 ) ：springboot + mybatis 多数据源最简解决方案/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot ( 七 ) ：springboot + mybatis 多数据源最简解决方案">SpringBoot ( 七 ) ：springboot + mybatis 多数据源最简解决方案</span>
+            <span class="post-date" title="2019-08-24 11:00:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot (六) ：如何优雅的使用 mybatis/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot (六) ：如何优雅的使用 mybatis">SpringBoot (六) ：如何优雅的使用 mybatis</span>
+            <span class="post-date" title="2019-08-24 10:57:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot(五) ：spring data jpa 的使用/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot(五) ：spring data jpa 的使用">SpringBoot(五) ：spring data jpa 的使用</span>
+            <span class="post-date" title="2019-08-24 10:47:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot (四) ：thymeleaf 使用详解/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot (四) ：thymeleaf 使用详解">SpringBoot (四) ：thymeleaf 使用详解</span>
+            <span class="post-date" title="2019-08-24 10:30:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot (三) ：Spring Boot 中 Redis 的使用/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot (三) ：Spring Boot 中 Redis 的使用">SpringBoot (三) ：Spring Boot 中 Redis 的使用</span>
+            <span class="post-date" title="2019-08-24 10:27:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot ( 二 ) ：web 综合开发/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot ( 二 ) ：web 综合开发">SpringBoot ( 二 ) ：web 综合开发</span>
+            <span class="post-date" title="2019-08-24 10:17:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot (一) ：入门篇/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot (一) ：入门篇">SpringBoot (一) ：入门篇</span>
+            <span class="post-date" title="2019-08-24 10:07:28">2019/08/24</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/24/读书语录5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录5">读书语录5</span>
+            <span class="post-date" title="2019-08-24 07:07:28">2019/08/24</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/23/述说《邻家诗话》/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="述说《邻家诗话》">述说《邻家诗话》</span>
+            <span class="post-date" title="2019-08-23 15:54:32">2019/08/23</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/23/在虚拟机安装Win7出现：directory ezboot not/"
+           data-tag="虚拟机"
+           data-author="" >
+            <span class="post-title" title="在虚拟机安装Win7出现：directory ezboot not">在虚拟机安装Win7出现：directory ezboot not</span>
+            <span class="post-date" title="2019-08-23 12:56:08">2019/08/23</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/23/虚拟机安装系统图文教程/"
+           data-tag="虚拟机"
+           data-author="" >
+            <span class="post-title" title="虚拟机安装系统图文教程">虚拟机安装系统图文教程</span>
+            <span class="post-date" title="2019-08-23 12:36:08">2019/08/23</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/23/轻松装Win10：VMware-Workstation-12虚拟机下载/"
+           data-tag="虚拟机"
+           data-author="" >
+            <span class="post-title" title="轻松装Win10：VMware Workstation 12虚拟机下载">轻松装Win10：VMware Workstation 12虚拟机下载</span>
+            <span class="post-date" title="2019-08-23 11:58:08">2019/08/23</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/23/读书语录4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录4">读书语录4</span>
+            <span class="post-date" title="2019-08-23 07:05:23">2019/08/23</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/22/用phpnow搭建PHP环境/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="用phpnow搭建PHP环境">用phpnow搭建PHP环境</span>
+            <span class="post-date" title="2019-08-22 16:29:58">2019/08/22</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/22/程序员-520-表白方式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="程序员 520 表白方式">程序员 520 表白方式</span>
+            <span class="post-date" title="2019-08-22 16:04:07">2019/08/22</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/22/PanDownload网盘下载/"
+           data-tag="PanDownload"
+           data-author="" >
+            <span class="post-title" title="PanDownload网盘下载">PanDownload网盘下载</span>
+            <span class="post-date" title="2019-08-22 15:25:16">2019/08/22</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/22/npm安装教程/"
+           data-tag="npm"
+           data-author="" >
+            <span class="post-title" title="npm安装教程">npm安装教程</span>
+            <span class="post-date" title="2019-08-22 14:27:47">2019/08/22</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/22/web前端企业命名参考/"
+           data-tag="css,HTML"
+           data-author="" >
+            <span class="post-title" title="web前端企业命名参考">web前端企业命名参考</span>
+            <span class="post-date" title="2019-08-22 12:21:08">2019/08/22</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/22/Spring-boot-入门篇/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="Spring boot 入门篇">Spring boot 入门篇</span>
+            <span class="post-date" title="2019-08-22 10:33:35">2019/08/22</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/22/100道Java基础面试题收集整理（附答案）/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="100道Java基础面试题收集整理（附答案）">100道Java基础面试题收集整理（附答案）</span>
+            <span class="post-date" title="2019-08-22 10:27:28">2019/08/22</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/22/读书语录3/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录3">读书语录3</span>
+            <span class="post-date" title="2019-08-22 07:04:29">2019/08/22</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/22/读书语录2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录2">读书语录2</span>
+            <span class="post-date" title="2019-08-22 07:03:08">2019/08/22</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/22/读书语录1/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录1">读书语录1</span>
+            <span class="post-date" title="2019-08-22 06:59:37">2019/08/22</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/22/颍河四桥“靓”起来了/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="颍河四桥“靓”起来了">颍河四桥“靓”起来了</span>
+            <span class="post-date" title="2019-08-22 06:52:38">2019/08/22</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/22/还记得19年前的QQ2000吗？/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="还记得19年前的QQ2000吗？">还记得19年前的QQ2000吗？</span>
+            <span class="post-date" title="2019-08-22 06:38:47">2019/08/22</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/22/MikuTools全能网站/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="MikuTools全能网站">MikuTools全能网站</span>
+            <span class="post-date" title="2019-08-22 06:35:39">2019/08/22</span>
+        </a>
+        
+        <a  class="前端开发 JavaScript "
+           href="/2019/08/21/8个有用的JavaScript技巧/"
+           data-tag="JavaScript"
+           data-author="" >
+            <span class="post-title" title="8个有用的JavaScript技巧">8个有用的JavaScript技巧</span>
+            <span class="post-date" title="2019-08-21 16:47:09">2019/08/21</span>
+        </a>
+        
+        <a  class="前端开发 JavaScript "
+           href="/2019/08/21/为什么学习-JavaScript/"
+           data-tag="JavaScript"
+           data-author="" >
+            <span class="post-title" title="为什么学习 JavaScript?">为什么学习 JavaScript?</span>
+            <span class="post-date" title="2019-08-21 16:40:51">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP 语法/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 语法">PHP 语法</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP-简介/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 简介">PHP 简介</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP 5 echo 和 print 语句/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 5 echo 和 print 语句">PHP 5 echo 和 print 语句</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP EOF(heredoc) 使用说明/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP EOF(heredoc) 使用说明">PHP EOF(heredoc) 使用说明</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP 变量/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 变量">PHP 变量</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP 安装/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 安装">PHP 安装</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/21/学习推荐菜鸟教程/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="学习推荐菜鸟教程">学习推荐菜鸟教程</span>
+            <span class="post-date" title="2019-08-21 16:19:37">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/php入门视频教程/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="php入门视频教程">php入门视频教程</span>
+            <span class="post-date" title="2019-08-21 16:00:16">2019/08/21</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/21/Java实现简单记事本/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="Java实现简单记事本">Java实现简单记事本</span>
+            <span class="post-date" title="2019-08-21 09:38:21">2019/08/21</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/21/为什么有的笨人一旦开窍，其人生就像开挂一样/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="为什么有的笨人一旦开窍，其人生就像开挂一样">为什么有的笨人一旦开窍，其人生就像开挂一样</span>
+            <span class="post-date" title="2019-08-21 09:12:27">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/20/详细教程-Tomcat的安装和配置/"
+           data-tag="Tomcat,服务器,java"
+           data-author="" >
+            <span class="post-title" title="详细教程:Tomcat的安装和配置">详细教程:Tomcat的安装和配置</span>
+            <span class="post-date" title="2019-08-20 09:20:35">2019/08/20</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/20/在IDEA中添加类注释与方法注释模板/"
+           data-tag="idea"
+           data-author="" >
+            <span class="post-title" title="在IDEA中添加类注释与方法注释模板">在IDEA中添加类注释与方法注释模板</span>
+            <span class="post-date" title="2019-08-20 09:10:49">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/你要安静的努力，然后悄无声息的变强/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="你要安静的努力，然后悄无声息的变强">你要安静的努力，然后悄无声息的变强</span>
+            <span class="post-date" title="2019-08-20 09:09:36">2019/08/20</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/20/Vue管理后台框架选择推荐/"
+           data-tag="Vue,框架"
+           data-author="" >
+            <span class="post-title" title="Vue管理后台框架选择推荐">Vue管理后台框架选择推荐</span>
+            <span class="post-date" title="2019-08-20 09:08:07">2019/08/20</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/20/你永远不知道别人有多努力/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="你永远不知道别人有多努力">你永远不知道别人有多努力</span>
+            <span class="post-date" title="2019-08-20 09:06:23">2019/08/20</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/20/vue-248-个知识点（面试题）/"
+           data-tag="Vue"
+           data-author="" >
+            <span class="post-title" title="vue 248+个知识点（面试题）">vue 248+个知识点（面试题）</span>
+            <span class="post-date" title="2019-08-20 09:03:43">2019/08/20</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/20/高逼格Android转场动画/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="高逼格Android转场动画">高逼格Android转场动画</span>
+            <span class="post-date" title="2019-08-20 08:55:20">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/​​一入古风误终身……/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="一入古风误终身……">一入古风误终身……</span>
+            <span class="post-date" title="2019-08-20 08:47:28">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/青春如此美好/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="青春如此美好">青春如此美好</span>
+            <span class="post-date" title="2019-08-20 08:44:19">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/好多话忍着憋着后来就懒得说了/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="好多话忍着憋着后来就懒得说了">好多话忍着憋着后来就懒得说了</span>
+            <span class="post-date" title="2019-08-20 08:39:44">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/城市非官方短片《心在颍上》/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="城市非官方短片《心在颍上》">城市非官方短片《心在颍上》</span>
+            <span class="post-date" title="2019-08-20 08:36:05">2019/08/20</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/CSS3中Flex弹性布局该如何灵活运用？/"
+           data-tag="css,Flex"
+           data-author="" >
+            <span class="post-title" title="CSS3中Flex弹性布局该如何灵活运用？">CSS3中Flex弹性布局该如何灵活运用？</span>
+            <span class="post-date" title="2019-08-19 16:31:18">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/HTML-JavaScript自己动手做日历/"
+           data-tag="HTML,JavaScript"
+           data-author="" >
+            <span class="post-title" title="HTML+JavaScript自己动手做日历">HTML+JavaScript自己动手做日历</span>
+            <span class="post-date" title="2019-08-19 14:26:45">2019/08/19</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/19/风筝误分享/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="风筝误分享">风筝误分享</span>
+            <span class="post-date" title="2019-08-19 11:30:05">2019/08/19</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/19/Hexo博客中插入音乐-视频/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo博客中插入音乐/视频/">Hexo博客中插入音乐/视频/</span>
+            <span class="post-date" title="2019-08-19 10:54:31">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/带你入门-CSS-Grid-布局/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="带你入门 CSS Grid 布局">带你入门 CSS Grid 布局</span>
+            <span class="post-date" title="2019-08-19 09:36:19">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/弹性和模型介绍/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="弹性和模型介绍">弹性和模型介绍</span>
+            <span class="post-date" title="2019-08-19 09:31:18">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/延迟加载-Lazyload-三种实现方式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="延迟加载(Lazyload)三种实现方式">延迟加载(Lazyload)三种实现方式</span>
+            <span class="post-date" title="2019-08-19 09:29:12">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/HTML5网页音乐播放器/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="HTML5网页音乐播放器">HTML5网页音乐播放器</span>
+            <span class="post-date" title="2019-08-19 09:25:25">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/极简网页设计技巧，打造简约之美/"
+           data-tag="网页设计"
+           data-author="" >
+            <span class="post-title" title="极简网页设计技巧，打造简约之美">极简网页设计技巧，打造简约之美</span>
+            <span class="post-date" title="2019-08-19 09:22:21">2019/08/19</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/19/创意网站介绍/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="创意网站介绍">创意网站介绍</span>
+            <span class="post-date" title="2019-08-19 09:18:58">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/酷炫的鼠标点击特效/"
+           data-tag="鼠标点击,点击特效"
+           data-author="" >
+            <span class="post-title" title="酷炫的鼠标点击特效">酷炫的鼠标点击特效</span>
+            <span class="post-date" title="2019-08-19 09:09:46">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/HTML5鼠标点击显示圆点动画特效/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="HTML5鼠标点击显示圆点动画特效">HTML5鼠标点击显示圆点动画特效</span>
+            <span class="post-date" title="2019-08-19 09:05:37">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/实用的JavaScript鼠标特效/"
+           data-tag="JavaScript,js"
+           data-author="" >
+            <span class="post-title" title="实用的JavaScript鼠标特效">实用的JavaScript鼠标特效</span>
+            <span class="post-date" title="2019-08-19 08:58:16">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/鼠标点击网页出现爱心特效/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="鼠标点击网页出现爱心特效">鼠标点击网页出现爱心特效</span>
+            <span class="post-date" title="2019-08-19 08:47:17">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/浅谈前后端路由与前后端渲染/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="浅谈前后端路由与前后端渲染">浅谈前后端路由与前后端渲染</span>
+            <span class="post-date" title="2019-08-19 08:43:10">2019/08/19</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/19/焦虑熊表情包来啦ʕ•ᴥ•ʔ/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="焦虑熊表情包来啦ʕ•ᴥ•ʔ">焦虑熊表情包来啦ʕ•ᴥ•ʔ</span>
+            <span class="post-date" title="2019-08-19 08:38:18">2019/08/19</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/19/四季插画日历/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="四季插画日历">四季插画日历</span>
+            <span class="post-date" title="2019-08-19 08:30:09">2019/08/19</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/不要遗忘那份情怀，守住自己的承诺……/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="不要遗忘那份情怀，守住自己的承诺……">不要遗忘那份情怀，守住自己的承诺……</span>
+            <span class="post-date" title="2019-08-18 14:53:43">2019/08/18</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/18/11种高效单词记忆法，你想要的都有！/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="11种高效单词记忆法，你想要的都有！">11种高效单词记忆法，你想要的都有！</span>
+            <span class="post-date" title="2019-08-18 11:55:09">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/像草根一样紧贴着地面/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="像草根一样紧贴着地面">像草根一样紧贴着地面</span>
+            <span class="post-date" title="2019-08-18 11:04:10">2019/08/18</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/18/数字整除-题解-Java描述/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="数字整除-题解(Java描述)">数字整除-题解(Java描述)</span>
+            <span class="post-date" title="2019-08-18 10:25:29">2019/08/18</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/18/JS实现行星的椭圆运动轨迹/"
+           data-tag="JavaScript,js"
+           data-author="" >
+            <span class="post-title" title="JS实现行星的椭圆运动轨迹">JS实现行星的椭圆运动轨迹</span>
+            <span class="post-date" title="2019-08-18 10:20:19">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/现在的努力，是为了小时候吹过的牛逼！/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="现在的努力，是为了小时候吹过的牛逼！">现在的努力，是为了小时候吹过的牛逼！</span>
+            <span class="post-date" title="2019-08-18 10:16:36">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/每个人都有自己的活法，没必要去复制别人的生活/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="每个人都有自己的活法，没必要去复制别人的生活">每个人都有自己的活法，没必要去复制别人的生活</span>
+            <span class="post-date" title="2019-08-18 10:14:32">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/时间在变，人也在变，回不去就是回不去了/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="时间在变，人也在变，回不去就是回不去了">时间在变，人也在变，回不去就是回不去了</span>
+            <span class="post-date" title="2019-08-18 10:13:16">2019/08/18</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/18/利用QQ空间登录实现查看别人QQ密码/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="利用QQ空间登录实现查看别人QQ密码">利用QQ空间登录实现查看别人QQ密码</span>
+            <span class="post-date" title="2019-08-18 10:09:56">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/蛋炒饭的制作方法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="蛋炒饭的制作方法">蛋炒饭的制作方法</span>
+            <span class="post-date" title="2019-08-18 10:08:16">2019/08/18</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/18/网站显示已经运行多久时间/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="网站显示已经运行多久时间">网站显示已经运行多久时间</span>
+            <span class="post-date" title="2019-08-18 10:05:27">2019/08/18</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/18/个人博客-博客大全-搜集全网优秀个人博客/"
+           data-tag="博客"
+           data-author="" >
+            <span class="post-title" title="个人博客_博客大全_搜集全网优秀个人博客">个人博客_博客大全_搜集全网优秀个人博客</span>
+            <span class="post-date" title="2019-08-18 10:00:07">2019/08/18</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/18/【安卓】短信伪造工具-短信伪造神器/"
+           data-tag="安卓"
+           data-author="" >
+            <span class="post-title" title="【安卓】短信伪造工具_短信伪造神器">【安卓】短信伪造工具_短信伪造神器</span>
+            <span class="post-date" title="2019-08-18 09:57:26">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/从学会管理时间开始/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="从学会管理时间开始">从学会管理时间开始</span>
+            <span class="post-date" title="2019-08-18 09:51:53">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/富有品位的尤家花园/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="富有品位的尤家花园">富有品位的尤家花园</span>
+            <span class="post-date" title="2019-08-18 09:35:18">2019/08/18</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/17/给你几点建议，大学生要怎样合理去理财呢？/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="给你几点建议，大学生要怎样合理去理财呢？">给你几点建议，大学生要怎样合理去理财呢？</span>
+            <span class="post-date" title="2019-08-17 13:50:46">2019/08/17</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/17/角色与使命/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="角色与使命">角色与使命</span>
+            <span class="post-date" title="2019-08-17 08:48:44">2019/08/17</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/3-hexo快捷键说明/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo快捷键说明">3-hexo快捷键说明</span>
+            <span class="post-date" title="2019-08-16 08:57:27">2019/08/16</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/16/超详细轮播图，让你彻底明白轮播图！/"
+           data-tag="HTML,轮播图"
+           data-author="" >
+            <span class="post-title" title="超详细轮播图，让你彻底明白轮播图！">超详细轮播图，让你彻底明白轮播图！</span>
+            <span class="post-date" title="2019-08-16 08:57:27">2019/08/16</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/16/Java-基础编程练习题-1/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="Java 基础编程练习题">Java 基础编程练习题</span>
+            <span class="post-date" title="2019-08-16 08:55:58">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/智慧树自动刷课代码/"
+           data-tag="智慧树"
+           data-author="" >
+            <span class="post-title" title="智慧树自动刷课代码">智慧树自动刷课代码</span>
+            <span class="post-date" title="2019-08-16 08:54:42">2019/08/16</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/16/给大家谈谈我怎么理解编程/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="给大家谈谈我怎么理解编程">给大家谈谈我怎么理解编程</span>
+            <span class="post-date" title="2019-08-16 08:53:58">2019/08/16</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/16/解决MySQL服务无法启动报错1067/"
+           data-tag="MySQL,mysql"
+           data-author="" >
+            <span class="post-title" title="解决MySQL服务无法启动报错1067">解决MySQL服务无法启动报错1067</span>
+            <span class="post-date" title="2019-08-16 08:51:57">2019/08/16</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/16/mysql从服务列表里消失了/"
+           data-tag="MySQL,mysql"
+           data-author="" >
+            <span class="post-title" title="mysql从服务列表里消失了">mysql从服务列表里消失了</span>
+            <span class="post-date" title="2019-08-16 08:50:27">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/如何将自己的网站上传至服务器并通过域名进行访问/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="如何将自己的网站上传至服务器并通过域名进行访问">如何将自己的网站上传至服务器并通过域名进行访问</span>
+            <span class="post-date" title="2019-08-16 08:48:02">2019/08/16</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/16/鸿蒙OS将向全球开发者开源！/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="鸿蒙OS将向全球开发者开源！">鸿蒙OS将向全球开发者开源！</span>
+            <span class="post-date" title="2019-08-16 08:46:43">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/Python入门篇/"
+           data-tag="Python"
+           data-author="" >
+            <span class="post-title" title="Python入门篇">Python入门篇</span>
+            <span class="post-date" title="2019-08-16 08:41:05">2019/08/16</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/16/善待自己，给压力一个出口/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="善待自己，给压力一个出口">善待自己，给压力一个出口</span>
+            <span class="post-date" title="2019-08-16 08:39:19">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/安卓模拟器/"
+           data-tag="模拟器"
+           data-author="" >
+            <span class="post-title" title="安卓模拟器">安卓模拟器</span>
+            <span class="post-date" title="2019-08-16 07:11:34">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/免费视频剪辑软件，值得一看/"
+           data-tag="剪辑"
+           data-author="" >
+            <span class="post-title" title="免费视频剪辑软件，值得一看">免费视频剪辑软件，值得一看</span>
+            <span class="post-date" title="2019-08-16 07:09:41">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/从第三方下载Chrome插件及安装/"
+           data-tag="Chrome"
+           data-author="" >
+            <span class="post-title" title="从第三方下载Chrome插件及安装">从第三方下载Chrome插件及安装</span>
+            <span class="post-date" title="2019-08-16 07:07:27">2019/08/16</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/盘点一下免费好用的图床/"
+           data-tag="图床"
+           data-author="" >
+            <span class="post-title" title="盘点一下免费好用的图床">盘点一下免费好用的图床</span>
+            <span class="post-date" title="2019-08-16 07:02:28">2019/08/16</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/16/学生管理系统-登录功能/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="学生管理系统-登录功能">学生管理系统-登录功能</span>
+            <span class="post-date" title="2019-08-16 06:58:11">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/一键切换IP【易语言】/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="一键切换IP【易语言】">一键切换IP【易语言】</span>
+            <span class="post-date" title="2019-08-16 06:46:40">2019/08/16</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/16/数码宝贝八人徽章等图赏/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数码宝贝八人徽章等图赏">数码宝贝八人徽章等图赏</span>
+            <span class="post-date" title="2019-08-16 06:38:34">2019/08/16</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/Hexo-页脚增加工信部备案和公安网备案展示/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo 页脚增加工信部备案和公安网备案展示">Hexo 页脚增加工信部备案和公安网备案展示</span>
+            <span class="post-date" title="2019-08-16 06:27:41">2019/08/16</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/Hexo-NexT-主题6-x版本的使用配置与美化/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo NexT 主题6.x版本的使用配置与美化">Hexo NexT 主题6.x版本的使用配置与美化</span>
+            <span class="post-date" title="2019-08-16 06:21:45">2019/08/16</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/Hexo-页脚增加网站运行时间统计/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo 页脚增加网站运行时间统计">Hexo 页脚增加网站运行时间统计</span>
+            <span class="post-date" title="2019-08-16 05:55:07">2019/08/16</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/JavaScript入门介绍/"
+           data-tag="JavaScript,js"
+           data-author="" >
+            <span class="post-title" title="JavaScript入门介绍">JavaScript入门介绍</span>
+            <span class="post-date" title="2019-08-15 18:27:25">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/Hexo搭建手册/"
+           data-tag="hexo,Hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo搭建手册">Hexo搭建手册</span>
+            <span class="post-date" title="2019-08-15 18:21:35">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/Node-js基本语法/"
+           data-tag="node.js,Node.js"
+           data-author="" >
+            <span class="post-title" title="Node.js基本语法">Node.js基本语法</span>
+            <span class="post-date" title="2019-08-15 18:17:55">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/Vue-js框架/"
+           data-tag="Vue,Vue.js"
+           data-author="" >
+            <span class="post-title" title="Vue.js框架">Vue.js框架</span>
+            <span class="post-date" title="2019-08-15 18:07:44">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/如何使用-Feed-订阅-GitHub-Issues/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="如何使用 Feed 订阅 GitHub Issues">如何使用 Feed 订阅 GitHub Issues</span>
+            <span class="post-date" title="2019-08-15 18:03:16">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/Gitment：使用-GitHub-Issues-搭建评论系统/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Gitment：使用 GitHub Issues 搭建评论系统">Gitment：使用 GitHub Issues 搭建评论系统</span>
+            <span class="post-date" title="2019-08-15 18:01:09">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/浏览器唤起QQ方法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="浏览器唤起QQ方法">浏览器唤起QQ方法</span>
+            <span class="post-date" title="2019-08-15 17:18:11">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/图床收集-推荐/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="图床收集&amp;推荐">图床收集&amp;推荐</span>
+            <span class="post-date" title="2019-08-15 17:15:52">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/Hexo使用细节及图片不显示问题/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo使用细节及图片不显示问题">Hexo使用细节及图片不显示问题</span>
+            <span class="post-date" title="2019-08-15 16:39:11">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/辅助函数（Helpers）/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="辅助函数（Helpers）">辅助函数（Helpers）</span>
+            <span class="post-date" title="2019-08-15 14:58:47">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/Front-matter/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Front-matter">Front-matter</span>
+            <span class="post-date" title="2019-08-15 14:56:57">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo常用指令/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo常用指令">hexo常用指令</span>
+            <span class="post-date" title="2019-08-15 14:52:27">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/资源文件夹/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="资源文件夹">资源文件夹</span>
+            <span class="post-date" title="2019-08-15 14:48:59">2019/08/15</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/15/蒹葭采采/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="蒹葭采采">蒹葭采采</span>
+            <span class="post-date" title="2019-08-15 12:54:56">2019/08/15</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/15/我成了六零后/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="我成了六零后">我成了六零后</span>
+            <span class="post-date" title="2019-08-15 12:50:17">2019/08/15</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/15/逍遥派/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="逍遥派">逍遥派</span>
+            <span class="post-date" title="2019-08-15 12:45:53">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/Java高级篇（一）——线程/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="Java高级篇（一）——线程">Java高级篇（一）——线程</span>
+            <span class="post-date" title="2019-08-15 12:37:05">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/Java进阶篇（六）——Swing程序设计（上）/"
+           data-tag="Java,java,Swing"
+           data-author="" >
+            <span class="post-title" title="Java进阶篇（六）——Swing程序设计（上）">Java进阶篇（六）——Swing程序设计（上）</span>
+            <span class="post-date" title="2019-08-15 12:32:07">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/Java进阶篇（六）——Swing程序设计（下）/"
+           data-tag="Java,java,Swing"
+           data-author="" >
+            <span class="post-title" title="Java进阶篇（六）——Swing程序设计（下）">Java进阶篇（六）——Swing程序设计（下）</span>
+            <span class="post-date" title="2019-08-15 12:32:05">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/java-final关键字的几种用法/"
+           data-tag="Java,java,final,常量"
+           data-author="" >
+            <span class="post-title" title="[java]final关键字的几种用法">[java]final关键字的几种用法</span>
+            <span class="post-date" title="2019-08-15 12:29:24">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/浅析Java中的final关键字/"
+           data-tag="Java,final"
+           data-author="" >
+            <span class="post-title" title="浅析Java中的final关键字">浅析Java中的final关键字</span>
+            <span class="post-date" title="2019-08-15 12:24:59">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/数据结构有哪些/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构有哪些">数据结构有哪些</span>
+            <span class="post-date" title="2019-08-15 12:20:47">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/什么是数据结构/"
+           data-tag="Java,数据结构"
+           data-author="" >
+            <span class="post-title" title="什么是数据结构">什么是数据结构</span>
+            <span class="post-date" title="2019-08-15 12:17:47">2019/08/15</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/15/mac-IntelliJ-IDEA2018激活/"
+           data-tag="idea,Java"
+           data-author="" >
+            <span class="post-title" title="mac IntelliJ IDEA2018激活">mac IntelliJ IDEA2018激活</span>
+            <span class="post-date" title="2019-08-15 12:15:14">2019/08/15</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/15/IntelliJ-IDEA2018版下载安装教程以及详细步骤/"
+           data-tag="idea,IDEA,Java"
+           data-author="" >
+            <span class="post-title" title="IntelliJ IDEA2018版下载安装教程以及详细步骤">IntelliJ IDEA2018版下载安装教程以及详细步骤</span>
+            <span class="post-date" title="2019-08-15 12:11:15">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/Java连接MySQL数据库——含步骤和代码/"
+           data-tag="Java,MySQL"
+           data-author="" >
+            <span class="post-title" title="Java连接MySQL数据库——含步骤和代码">Java连接MySQL数据库——含步骤和代码</span>
+            <span class="post-date" title="2019-08-15 12:06:25">2019/08/15</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/15/Java-通过JDBC连接并操作Mysql数据库/"
+           data-tag="Java,JDBC,MySQL"
+           data-author="" >
+            <span class="post-title" title="Java 通过JDBC连接并操作Mysql数据库">Java 通过JDBC连接并操作Mysql数据库</span>
+            <span class="post-date" title="2019-08-15 12:03:41">2019/08/15</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/15/java连接mysql数据库的详细步骤/"
+           data-tag="Java,MySQL,java,数据库"
+           data-author="" >
+            <span class="post-title" title="java连接mysql数据库的详细步骤">java连接mysql数据库的详细步骤</span>
+            <span class="post-date" title="2019-08-15 11:59:35">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/一句话想起在驾校/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="一句话想起在驾校">一句话想起在驾校</span>
+            <span class="post-date" title="2019-08-15 11:57:46">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/长大后才明白的真相/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="长大后才明白的真相">长大后才明白的真相</span>
+            <span class="post-date" title="2019-08-15 11:56:08">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/你弱不禁风是经不起台风吧/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="你弱不禁风是经不起台风吧">你弱不禁风是经不起台风吧</span>
+            <span class="post-date" title="2019-08-15 11:54:37">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/时光易老，人心易变/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="时光易老，人心易变">时光易老，人心易变</span>
+            <span class="post-date" title="2019-08-15 11:52:46">2019/08/15</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/15/生活很现实的经典说说带图片/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="生活很现实的经典说说带图片">生活很现实的经典说说带图片</span>
+            <span class="post-date" title="2019-08-15 11:49:25">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo-插入视频和音乐播放器/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo 插入视频和音乐播放器">hexo 插入视频和音乐播放器</span>
+            <span class="post-date" title="2019-08-15 10:51:56">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/视频分享/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频分享">视频分享</span>
+            <span class="post-date" title="2019-08-15 10:30:38">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/等你在颍上/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="等你在颍上">等你在颍上</span>
+            <span class="post-date" title="2019-08-15 10:30:38">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo中输入数学公式/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo中输入数学公式">hexo中输入数学公式</span>
+            <span class="post-date" title="2019-08-15 10:19:35">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo教程-基本配置-更换主题/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo教程:基本配置+更换主题">hexo教程:基本配置+更换主题</span>
+            <span class="post-date" title="2019-08-15 10:05:57">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo教程：github-page-独立域名搭建/"
+           data-tag="hexo,GitHub,gitbash"
+           data-author="" >
+            <span class="post-title" title="hexo教程：github page+独立域名搭建">hexo教程：github page+独立域名搭建</span>
+            <span class="post-date" title="2019-08-15 09:51:16">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/JavaScript简介/"
+           data-tag="JavaScript"
+           data-author="" >
+            <span class="post-title" title="JavaScript简介">JavaScript简介</span>
+            <span class="post-date" title="2019-08-15 09:41:11">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/GitHub最全前端资源汇总/"
+           data-tag="GitHub,前端"
+           data-author="" >
+            <span class="post-title" title="GitHub最全前端资源汇总">GitHub最全前端资源汇总</span>
+            <span class="post-date" title="2019-08-15 09:33:16">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/14/脱离文档流和恢复文档流的方法/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="脱离文档流和恢复文档流的方法">脱离文档流和恢复文档流的方法</span>
+            <span class="post-date" title="2019-08-14 18:41:54">2019/08/14</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/14/前端开发体系建设/"
+           data-tag="CSS,HTMK,JS"
+           data-author="" >
+            <span class="post-title" title="前端开发体系建设">前端开发体系建设</span>
+            <span class="post-date" title="2019-08-14 18:38:10">2019/08/14</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/14/PHP介绍/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP介绍">PHP介绍</span>
+            <span class="post-date" title="2019-08-14 17:18:06">2019/08/14</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/14/HTML5新特征/"
+           data-tag="HTML,HTML5"
+           data-author="" >
+            <span class="post-title" title="HTML5新特征">HTML5新特征</span>
+            <span class="post-date" title="2019-08-14 17:15:48">2019/08/14</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/14/人生若只如初见-《围城》/"
+           data-tag="reading"
+           data-author="" >
+            <span class="post-title" title="人生若只如初见-《围城》">人生若只如初见-《围城》</span>
+            <span class="post-date" title="2019-08-14 17:09:14">2019/08/14</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/14/Java-基础编程练习题/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="Java 基础编程练习题">Java 基础编程练习题</span>
+            <span class="post-date" title="2019-08-14 17:01:47">2019/08/14</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/14/markdown编辑器用法/"
+           data-tag="Markdown,Typora"
+           data-author="" >
+            <span class="post-title" title="markdown编辑器用法">markdown编辑器用法</span>
+            <span class="post-date" title="2019-08-14 16:58:01">2019/08/14</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/14/Apache和Apache-Tomcat的区别是什么？/"
+           data-tag="Apache,Tomcat,服务器"
+           data-author="" >
+            <span class="post-title" title="Apache和Apache Tomcat的区别是什么？">Apache和Apache Tomcat的区别是什么？</span>
+            <span class="post-date" title="2019-08-14 16:54:38">2019/08/14</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/14/hexo教程搜索SEO+阅读量统计+访问量统计+评论系统/"
+           data-tag="hexo,3-hexo,nodejs,GitHub"
+           data-author="" >
+            <span class="post-title" title="hexo教程搜索SEO+阅读量统计+访问量统计+评论系统">hexo教程搜索SEO+阅读量统计+访问量统计+评论系统</span>
+            <span class="post-date" title="2019-08-14 11:03:41">2019/08/14</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/14/hexo教程基本配置+更换主题+多终端工作+coding page部署分流/"
+           data-tag="hexo,3-hexo,nodejs,GitHub"
+           data-author="" >
+            <span class="post-title" title="hexo教程基本配置+更换主题+多终端工作+coding page部署分流">hexo教程基本配置+更换主题+多终端工作+coding page部署分流</span>
+            <span class="post-date" title="2019-08-14 10:38:41">2019/08/14</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/14/如何优雅地发布Hexo博客/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="如何优雅地发布Hexo博客">如何优雅地发布Hexo博客</span>
+            <span class="post-date" title="2019-08-14 10:36:24">2019/08/14</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/14/GitHub-Hexo-搭建个人博客史上最详细教程/"
+           data-tag="hexo,3-hexo,nodejs,GitHub"
+           data-author="" >
+            <span class="post-title" title="GitHub+Hexo 搭建个人博客史上最详细教程">GitHub+Hexo 搭建个人博客史上最详细教程</span>
+            <span class="post-date" title="2019-08-14 10:35:41">2019/08/14</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/Java面试题大全31-40/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java面试题大全31-40">Java面试题大全31-40</span>
+            <span class="post-date" title="2019-08-12 15:26:56">2019/08/12</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/Java面试题大全21-30/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java面试题大全21-30">Java面试题大全21-30</span>
+            <span class="post-date" title="2019-08-12 15:08:56">2019/08/12</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/Java面试题大全11-20/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java面试题大全11-20">Java面试题大全11-20</span>
+            <span class="post-date" title="2019-08-12 14:59:52">2019/08/12</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/Java面试题大全2-10/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java面试题大全2-10">Java面试题大全2-10</span>
+            <span class="post-date" title="2019-08-12 14:55:52">2019/08/12</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/面试指南，求职必看/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="面试指南，求职必看">面试指南，求职必看</span>
+            <span class="post-date" title="2019-08-12 14:54:52">2019/08/12</span>
+        </a>
+        
+        <a  class="开篇博客 "
+           href="/2019/08/12/开篇博客/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="开篇博客">开篇博客</span>
+            <span class="post-date" title="2019-08-12 08:47:04">2019/08/12</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-Http转入Https的完整攻略" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Http转入Https的完整攻略</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="技术介绍">技术介绍</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">http</a>
+            
+            <a href="javascript:" class="color1">https</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-08-26 09:50:08'>2019-08-26 09:40</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:10k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP、HTTPS、HTTP-2、SSL、TLS：这些都是什么鬼？"><span class="toc-text">HTTP、HTTPS、HTTP/2、SSL、TLS：这些都是什么鬼？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Https协议都提供了些什么？"><span class="toc-text">Https协议都提供了些什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#密码学基础简介"><span class="toc-text">密码学基础简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#保密性"><span class="toc-text">保密性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完整性"><span class="toc-text">完整性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#身份验证"><span class="toc-text">身份验证</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#按身份验证（IDENTITY-VALIDATION）的类型分类"><span class="toc-text">按身份验证（IDENTITY VALIDATION）的类型分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#按域覆盖的数量（NUMBER-OF-DOMAINS-COVERED）分类"><span class="toc-text">按域覆盖的数量（NUMBER OF DOMAINS COVERED）分类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加密算法组合"><span class="toc-text">加密算法组合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关键的密钥"><span class="toc-text">关键的密钥</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置步骤"><span class="toc-text">配置步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤综述"><span class="toc-text">步骤综述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步：创建私钥和证书签名请求"><span class="toc-text">第一步：创建私钥和证书签名请求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CPanel"><span class="toc-text">CPanel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Linux，Free-BSD"><span class="toc-text">Linux，Free BSD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#windows系统上的INTERNET-INFORMATION-SERVER-IIS"><span class="toc-text">windows系统上的INTERNET INFORMATION SERVER (IIS)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步：获得HTTPS证书"><span class="toc-text">第二步：获得HTTPS证书</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#获取HTTPS证书步骤"><span class="toc-text">获取HTTPS证书步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自签名证书的步骤"><span class="toc-text">自签名证书的步骤</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步：为你的网站安装HTTPS证书"><span class="toc-text">第三步：为你的网站安装HTTPS证书</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CPanel-1"><span class="toc-text">CPanel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LINUX-FREEBSD"><span class="toc-text">LINUX FREEBSD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#windows系统上的INTERNET-INFORMATION-SERVER-IIS-1"><span class="toc-text">windows系统上的INTERNET INFORMATION SERVER (IIS)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MIXED-CONTENT警告"><span class="toc-text">MIXED-CONTENT警告</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试您的服务器"><span class="toc-text">测试您的服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#续订"><span class="toc-text">续订</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#撤销"><span class="toc-text">撤销</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>现如今，由于隐私保护的原因，用户在网页上提供他们的个人信息时，往往会在网页上寻找有没有代表使用了Https协议的挂锁标志；Chrome和FireFox浏览器在没有使用Https提供表单的网页上明确标记了不安全标记，而这会影响到这个网页在搜索引擎上的优先级排序，通常也会对用户的隐私造成严重影响，这些都说明了Https是当下的必然趋势。此外，现在免费获取Https证书的方法多种多样，只要你愿意，把自己的网站转为使用Https就不是问题。</p>
+<p>对于没有经验的使用者来说，设置Https协议可能有点困难，它需要在不同的部分上完成许多步骤，也需要加密和服务器配置方面的专业知识，而且通常看起来十分复杂。 在这篇攻略中，我将讲解各个独立的部分和步骤，也将清楚地介绍配置Https的各个阶段。你应该会觉得这些不难，如果你的托管服务器提供商（hosting provider）也提供HTTPS证书，有可能你能轻松快速地在控制面板（control panel）上执行所有操作。 我已经在cPanel，Apache HTTP服务器的管理员（administrators），Linux和Unix上的Nginx以及Windows上的Internet Information Server中列出了共享托管计划的所有者的详细说明。 让我们先从基础知识开始吧！</p>
+<h2 id="HTTP、HTTPS、HTTP-2、SSL、TLS：这些都是什么鬼？"><a href="#HTTP、HTTPS、HTTP-2、SSL、TLS：这些都是什么鬼？" class="headerlink" title="HTTP、HTTPS、HTTP/2、SSL、TLS：这些都是什么鬼？"></a>HTTP、HTTPS、HTTP/2、SSL、TLS：这些都是什么鬼？</h2><p>标题中的首字母缩略词都是用于描述客户端和服务器之间的通信过程的，但这些往往被不熟悉内部知识的人搞混。 超文本传输协议（Hypertext Transfer Protocol，HTTP）是一种基本的通信协议，它要求客户端和服务器都必须实现才能在两者之间进行通信，它涵盖了请求、响应、会话、缓存、身份验证等等操作。HTTP协议和HTML（Hypertext Markup Language，超文本标记语言）是从1989年由Tim Berners-Lee及其在CERN的团队开始实现的。协议的第一个正式版本（HTTP 1.0）于1996年发布，不久之后又在1997年发布了目前广泛采用的版本（HTTP 1.1）。 协议以明文方式在浏览器和服务器之间传输信息，允许传输信息的网络查看传输的信息。这就带来了安全问题，也因此引入了HTTP Secure（HTTPS）协议，它允许客户端和服务器首先建立一个加密的通信信道，然后通过它传递明文HTTP消息，有效地保护他们免受窃听。 创建加密信道使用的协议是传输层安全协议（Transport Layer Security，TLS），以前叫做安全套接层（Secure Socket Layer ，SSL），SSL3.0就是被TLS1.0替代的，所以术语SSL和TLS通常可互换使用，它们的区别在于SSL是Netscape公司开发的协议，而TLS是IETF标准。在撰写本文时，所有版本的SSL（1.0,2.0,3.0）由于各种安全问题而被淘汰，并将在当前浏览器中产生警告，而TLS的三个版本（1.0,1.1,1.2）正在使用中，1.3还在草稿阶段。 因此，在1996、1997年左右，我们得到了目前互联网的稳定版本（HTTP 1.1，有或没有SSL和TLS），这仍然为今天的大多数网站提供着支持。以前，HTTP用于非敏感信息的传输（例如阅读新闻），而HTTPS用于敏感信息的传输（例如身份验证和电子商务）; 然而，对隐私的益发关注导致网络浏览器（如Google Chrome）现在将HTTP网站标记为“not private”，并将在未来对HTTP引入警告。 越来越多的网站正在采用的HTTP协议下一代版本HTTP/2增加了新功能（压缩，复用，优先级排序）以减少延迟并提高性能和安全性。 在HTTP版本1.1中，安全连接是可选项（这意味着HTTP和/或HTTPS是相互独立的），而在HTTP/2中它是强制性的。即使该标准并未在HTTP/2的定义中添加必须使用TLS，但大多数浏览器厂商还是表示他们只会用TLS实现对HTTP/2的支持。</p>
+<h2 id="Https协议都提供了些什么？"><a href="#Https协议都提供了些什么？" class="headerlink" title="Https协议都提供了些什么？"></a>Https协议都提供了些什么？</h2><p>一开始为什么要使用Https协议呢？主要是出于以下三个原因： 1. 保密性 这个协议保护了通信双方在互联网等公共传输环境下传输消息时不被其他方窃听。例如，不用HTTPS协议的话，Wi-Fi的主人可以在Wi-Fi的使用者在线购买时看到信用卡密码等私人信息。 2. 完整性 Https协议能确保信息完整不变地到达目的地。例如，我们的Wi-Fi使用者可以给我们阅读的网页添加额外的广告，也可以降低我们的图像的质量以节省带宽，或者是更改我们阅读的文章的内容，而HTTPS协议可确保网页无法被修改。 3. 身份验证 Https协议可以确保网站是从我们所期待的地方发来的。例如，当我们向服务器发送获取example.com网页的请求时，Wi-Fi的主人可以向浏览器返回一个假网页，而HTTPS协议可以确保example.com确实是网站example.com。一些证书甚至可以检查该网站运营者的法定身份，例如网站yourbank.com运营者是YourBank，Inc.</p>
+<h2 id="密码学基础简介"><a href="#密码学基础简介" class="headerlink" title="密码学基础简介"></a>密码学基础简介</h2><p>保密性，完整性和身份验证不是HTTPS的特定概念：它们是密码学的核心概念，我们再来深入了解一下。</p>
+<h3 id="保密性"><a href="#保密性" class="headerlink" title="保密性"></a>保密性</h3><p>保密性可以保护信息免受未经授权的第三方阅读，意味着对隐私信息的保护程度。该过程通常是将称为明文的信息的可读（或可听、可见）形式转换成有噪声干扰的，不可读的密文，这个过程称为加密。将不可读的密文转回可读明文的逆过程称为解密。有许多密码学函数（或算法）可用来加密和解密信息。 为了让双方能够沟通，他们应该就两件事情达成一致： 1、他们将使用哪种算法（密码函数）？ 2、选定了算法后，他们将用什么作为这个算法的关键参数（例如密码、密钥） 有两种主要的加密方式： 1、对称加密算法 双方共享一个相同的不公开的密钥。 2、非对称加密算法 密钥分为私钥（不公开的）和公钥（公开的），私钥只有一方拥有。非对称加密算法是公钥基础设施（PKI）的基础。 对称加密算法需要双方都有一个共享的密钥，发送方用密钥将信息加密，而接收方用相同的方法和密钥进行解密还原得到信息（见下图）。这种算法的问题在于双方要想安全地传输信息，就必须先传输密钥，而密钥的安全传输无法通过将密钥加密来实现，就需要有一种新的安全传输方法。<img src="https://s2.ax1x.com/2019/08/26/mRWZNV.png" alt></p>
+<p>非对称加密算法可以来解决这个问题-这种算法是基于公钥和私钥的，使用公钥进行加密，使用对应的私钥进行解密。 那么它是如何工作的呢？让我们假设有两方需要进行通信– Alice和Bob。他们都有一对钥匙：私钥和公钥。私钥只有他们各自的所有者才知道; 任何人都可以使用公钥。 如果Alice想向Bob发消息，她将获取Bob的公钥，用公钥加密明文后向他发送密文，然后Bob可以使用自己的私钥进行解密。 同样地，如果Bob想向Alice发消息，她将获取Alice的公钥，用公钥加密明文后向他发送密文，然后Alice可以使用自己的私钥进行解密。如下图所示</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRWn9U.png" alt></p>
+<p>我们什么时候使用对称加密算法，什么时候使用非对称加密算法呢？非对称加密算法通常用于客户端和服务器之间交换密钥。在现实生活中一般不需要进行双向非对称通信-这是足够的，如果一方当事人（我们只是把它称为一个服务器，为简单起见）有密钥的集合，所以它可以接受的加密消息。它真正保护信息的安全性只有一个方向 - 从客户端到服务器，因为用公钥加密的信息只能使用私钥解密; 因此，只有服务器可以解密它。另一个方向不受保护 - 使用服务器的私钥加密的信息可以由任何人的公钥解密。 那一般什么时候使用对称加密算法，什么时候使用非对称加密算法呢？非对称加密算法通常用于客户端和服务器之间交换密钥。现实生活中一般不需要使用非对称加密算法进行 然后使用对称加密算法来保护通信中的实际数据，因为它比非对称加密快得多。双方（客户端和服务器）有了先前交换的密钥，就能够对信息进行加密和解密，而且只有他们能够进行。 这就是为什么握手的第一个非对称部分也被称为密钥交换，而实际通信中用于加密的算法才被真正称为加密算法。</p>
+<h3 id="完整性"><a href="#完整性" class="headerlink" title="完整性"></a>完整性</h3><p>HTTPS解决的另一个问题是数据的完整性：（1）信息是否全部成功获得，（2）是否被转接中的某人修改。为了确保信息完整成功传输，HTTPS使用了消息摘要算法。（译者注：这种算法基本思路是计算每条消息的消息认证码，如果传输后消息的消息认证码与传输前相同，则可认为消息在传输过程中没有被改变）。计算消息的消息认证码（MAC）是哈希算法，在获得消息认证码（可以理解为消息的标签）的过程中，哈希算法有以下几个重要特征： 1、更改消息一定会改变消息认证码 2、两个不同的消息一定会生成不同的标签 3、无法从消息认证码还原为消息本身。</p>
+<h3 id="身份验证"><a href="#身份验证" class="headerlink" title="身份验证"></a>身份验证</h3><p>什么是身份验证？ 公钥基础设施在现实中的应用存在一个问题：双方无法知道对方的真实身份—双方在物理上是分开的。为了证明另一方的身份，需要引入一个双方都信任的第三方:证书颁发机构（certificate authority，CA）。证书颁发机构负责颁发证书，证书包括以下内容：声明域名“example.com”（这个域名代表唯一标识符）与公钥“XXX”相关联；在某些情况下（例如，具有EV和OV证书—见下文），CA还将检查哪家公司控制该域名；此证书由哪家证书颁发机构认证；该认证有效时间区间是什么。所有这些信息都录入一个叫做HTTPS证书的文档里。打个比方，就像一个政府机构（代表所有人都信任的第三方）向一个人发出ID或护照（代表证书），那么这个ID的所有者就会得到信任政府的人的信任（假设ID不是假的，当然这种假设不在这个例子的讨论范围之内）。 证书颁发机构（CA）是有公信力去颁发证书的机构，Windows，MacOS，ios和Android等操作系统和Firefox等浏览器都有自己认为可信的证书颁发机构列表，您可以用一下方法查看您的浏览器或操作系统信任哪些证书颁发机构： 1、Firefox：“选项”→“高级”→“证书”→“查看证书”→“权限” 2、Windows：“控制面板”→“Internet选项”→“内容” - “证书”→“受信任的根证书颁发机构/中级认证机构” 3、Mac：“应用程序”→“实用程序”→“钥匙串访问”。在“类别”下选择“证书” 如果证书在可信证书列表里或证书已经被可信任的一方认证过了，那么浏览器或操作系统会检查并认为证书是可信任的，这种信任的传递机制被称为信任链：</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRWKc4.png" alt="img"></p>
+<p>这种机制使得我们自己可以添加其他没有被认证过的证书颁发机构，当我们想用自己签名的证书时这种机制就派上用场了（一会会讨论这种情况）。 大多数情况仅要求客户端知道服务器的身份即可，比如说网购用户需要知道自己访问的网站是否来源于淘宝，所以只有网站需要证书，而有的情况要求客户端和服务器都应该向对方表明自己的身份，比如说电子政务系统，这意味着双方都应该向对方发送证书以证明自己的身份，这种情况不在本文的讨论范围之内。 HTTPS证书的类型 HTTPS证书有很多种，它们可以按照以下标准进行分类：</p>
+<h4 id="按身份验证（IDENTITY-VALIDATION）的类型分类"><a href="#按身份验证（IDENTITY-VALIDATION）的类型分类" class="headerlink" title="按身份验证（IDENTITY VALIDATION）的类型分类"></a>按身份验证（IDENTITY VALIDATION）的类型分类</h4><ol>
+<li><p>域验证（Domain validated，DV） 这是最常见的一种证书，DV证书负责验证域是和一个特定公钥匹配的，浏览器与服务器建立安全连接，并显示一个锁着的挂锁标志，点击挂锁标志将显示“本网站不提供所有权信息”。这种验证仅要求网站拥有域，DV证书只能确保这确实是该域对应的公钥，浏览器不显示域背后的法律实体。DV证书通常很便宜（每年10美元），甚至是免费的。</p>
+</li>
+<li><p>扩展验证（Extended validation，EV） EV证书可以验证网站背后的法律实体，这是最可靠的证书类型，它是在CA检查了域背后的法律实体后才颁发的，CA会采用以下方法进行检查： 检查实体是否控制着域，例如DV证书 检查政府业务记录，以确保法律实体确实注册了 检查独立的业务目录 打一个核实电话 检查证书中的所有域名（EV证书显式禁止通配符） 除了锁着的挂锁标志，EV证书还会在URL之前显示经过验证的法律实体（通常是注册公司）的名称。某些设备（如iOS Safari）仅显示经过验证的法律实体，完全不显示URL。单击标记将显示法律实体的相关详细信息，如名称、街道地址等，费用在每年150到300美元之间。</p>
+</li>
+<li><p>组织验证（Organization validated，OV） 像EV一样，OV证书会验证网站背后的法律实体，但与EV不同的是，OV证书不会在浏览器界面中显示经过验证的法定实体的名称，也就是说OV具有较高的验证要求但却不会向用户展示较高的验证要求带来的优势，因此，OV证书不太受欢迎。OV证书的价格在每年40到100美元之间。</p>
+<h4 id="按域覆盖的数量（NUMBER-OF-DOMAINS-COVERED）分类"><a href="#按域覆盖的数量（NUMBER-OF-DOMAINS-COVERED）分类" class="headerlink" title="按域覆盖的数量（NUMBER OF DOMAINS COVERED）分类"></a>按域覆盖的数量（NUMBER OF DOMAINS COVERED）分类</h4><p>在以前，HTTPS证书通常只在CN域中包含一个域，后来为了允许一个证书适用于多个域，HTTPS证书加入了“主题替代名称”（subject alternative name，SAN）字段。近来，所有HTTPS证书都被创建为一样的：即使那些只包含一个域的证书也会把该域的SAN（以及该域的www版本的SAN）添加进证书。然而，由于历史原因，许多证书的供应商仍然出售单域和多域HTTPS证书。</p>
+</li>
+<li><p>单域证书 这是最常见的一种证书类型，对域名和域名的www版本都有效。</p>
+</li>
+<li><p>多域证书（UCC / SAN） 这种类型的证书也称为统一通信证书（Unified Communications Certificate ，UCC）或主题备用名称（Subject Alternative Names ，SAN），可以适用于多个域（有数量的上限）。它不限于单个域，您可以混合不同的域和子域，证书本身价格通常包括3到5个域，但您可以花费额外的费用来包括更多的域。建议将这种证书用于相互关联的网站，因为客户端在检查网站时的证书将会看到主域和其他域。</p>
+</li>
+<li><p>通配符 这种类型的证书可以覆盖主域和不受限制的子域，比如说它可以覆盖example.com,<a href="http://www.example.com,mail.example.com,ftp.example.com等等。它的限制是它只适用于主域的子域。" target="_blank" rel="noopener">www.example.com,mail.example.com,ftp.example.com等等。它的限制是它只适用于主域的子域。</a></p>
+</li>
+</ol>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>简要概括起来，HTTPS的四个部分需要加密： 1、初始密钥交换：用非对称加密算法（包括私钥和公钥）加密 2、身份验证（证书颁发机构颁发的HTTPS证书）：用非对称加密算法（包括私钥和公钥）加密 3、实际意义上的新息加密：用对称加密算法加密 4、信息的摘要：用哈希算法加密 每部分都使用一组密钥大小不同的常用加密算法（其中一些已被弃用）进行加密。客户端和服务器在握手时协商他们将使用哪些算法 - 从大约十几个公钥算法（密钥交换算法）中选择一个，十几个对称密钥（信息加密）算法中选择一个，再从三种消息摘要（哈希）算法中选择一个，这些算法可以选取数百种组合。 例如，设置ECDHE-RSA-AES256-GCM-SHA384意味着使用椭圆曲线Diffie-Hellman（Elliptic Curve Diffie-Hellman Ephemeral，ECDHE）密钥交换算法来交换密钥，CA使用Rivest-Shamir-Adleman（RSA）算法签署了证书; 对称消息加密将使用256位密钥和GCM模式的Advanced Encryption Standard（AES）加密算法; 并使用SHA安全散列算法生成384位消息摘要来验证消息的完整性。（有一个综合的算法组合列表。） 也就是说，加密算法有一定的选择空间。</p>
+<h3 id="加密算法组合"><a href="#加密算法组合" class="headerlink" title="加密算法组合"></a>加密算法组合</h3><p>在决定使用怎样的加密算法组合时要兼顾兼容性和安全性：与旧浏览器的兼容性需要服务器支持较旧的加密算法，然而，许多较旧的密码算法后来被认为是不安全的。 OpenSSL以加密强度的顺序列出了支持的组合（见上文），其中最安全的位于顶部，底部最弱。以这种方式设计，因为在客户端和服务器之间的初始握手期间，要使用的组合被协商，直到发现由双方支持的匹配。首先尝试最安全的组合是有道理的，只有在没有其他方式的情况下才逐渐降低安全性。 Mozilla SSL配置生成器是一个非常有用和强烈推荐的资源，建议在服务器上启用什么加密方法，稍后我们将使用实际的服务器配置。</p>
+<h3 id="关键的密钥"><a href="#关键的密钥" class="headerlink" title="关键的密钥"></a>关键的密钥</h3><p>椭圆曲线密码学（ECC）证书比RSA证书更快，使用更少的CPU，这对移动客户端尤为重要。然而，一些服务，如亚马逊，CloudFront和Heroku，在撰写本文时还没有支持ECC证书。 一般我们认为256位的ECC密钥就足够了。 Rivest Shamir Adleman（RSA）证书较慢，但与更多种类较旧的服务器兼容。RSA密钥较大，因此2048位RSA密钥在保证安全的情况下是最小的。4096位以上的RSA证书可能会损害性能 - 他们也可能被一个2048位的中介机构签署，破坏了大部分额外的安全性！ 您可能已经注意到上述声明的流动性和缺少任何数字 - 这是因为一台服务器上的重负载不在另一台服务器上。确定对性能的影响的最佳方法是通过您的真实网站和真实访问者来监控服务器上的负载。即使这样会随着时间的推移而改变。</p>
+<h2 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h2><h3 id="步骤综述"><a href="#步骤综述" class="headerlink" title="步骤综述"></a>步骤综述</h3><p>要获取HTTPS证书，请按以下步骤进行： 1、创建私钥-公钥对，并准备证书签名请求（ Certificate Signing Request，CSR），包括法定组织的信息和公钥。 2、联系认证机构，并根据CSR请求HTTPS证书。 3、获取签名的HTTPS证书并将其安装在您的Web服务器上。 这个步骤中需要用到一组包含公钥基础设施（PKI）的不同组件的文件：私钥，公钥，CSR和签名的HTTPS证书。然而，不同的组织用使用不同的名称（和文件扩展名）来识别同一个东西，让事情变得更复杂了。 首先，有两种流行的存储信息的格式–DER和PEM。第一个（DER）是二进制的，第二个（PEM）是一个base64编码（文本）DER文件。默认情况下，Windows直接使用DER格式，开源世界（Linux和UNIX）使用PEM格式。有一些工具（OpenSSL）负责在他们之间转换。 我们将在下面的步骤中作为示例使用的文件如下： 1、example.com.key 这个PEM格式的文件包含私钥。扩展名.key不是标准要求，所以有些可能使用它作为扩展名，有些可能用其他的扩展名，这个文件只能由系统超级用户进行保护和访问。 2、example.com.pub 这个PEM格式的文件包含公钥。因为可以从私有密钥生成公钥，所以实际上你并不需要这个文件（它从来没有显示出来），这里列出来只是为了便于说明。 3、example.com.csr 这是证书签名请求，是一个包含组织信息和服务器的公钥的PEM格式的文件，应该把它发送到颁发HTTPS证书的证书颁发机构。 4、example.com.crt 此HTTPS证书由证书颁发机构签署。它是一个PEM格式的文件，包括服务器的公钥，组织信息，CA签名，有效时间的区间等。扩展名.crt不是标准要求， 其他常见的扩展包括.cert和.cer。 文件名（和扩展名）不是标准要求， 他们可以是你喜欢的任何东西。我选择了这个命名约定，因为我认为它具有说明性，可以更明显地说明哪个组件具有什么功能。只要在整个过程中引用命令行中相应的密钥证书文件和服务器配置文件，您就可以使用任何您喜欢的命名法则。 私钥是具有一定长度的随机生成的字符串（我们将使用2048位），它看起来像这样子的：</p>
+<pre><code>-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEAm+036O2PlUQbKbSSs2ik6O6TYy6+Zsas5oAk3GioGLl1RW9N
+i8kagqdnD69Et29m1vl5OIPsBoW3OWb1aBW5e3J0x9prXI1W/fpvuP9NmrHBUN4E
+S17VliRpfVH3aHfPC8rKpv3GvHYOcfOmMN+HfBZlUeKJKs6c5WmSVdnZB0R4UAWu
+Q30aHEBVqtrhgHqYDBokVe0/H4wmwZEIQTINWniCOFR5UphJf5nP8ljGbmPxNTnf
+b/iHS/chjcjF7TGMG36e7EBoQijZEUQs5IBCeVefOnFLK5jLx+BC//X+FNzByDil
+Tt+l28I/3ZN1ujhak73YFbWjjLR2tjtp+LQgNQIDAQABAoIBAEAO2KVM02wTKsWb
+dZlXKEi5mrtofLhkbqvTgVE7fbOKnW8FJuqCl+2NMH31F1n03l765p4dNF4JmRhv
+/+ne4vCgOPHR/cFsH4z/0d5CpHMlC7JZQ5JjR4QDOYNOpUG51smVamPoZjkOlyih
+XGk/q72CxeU6F/gKIdLt6Dx03wBosIq9IAE8LwdMnioeuj18qaVg195OMeIOriIn
+tpWP4eFya5rTpIFfIdHdIxyXsd6hF/LrRc9BMWTY1/uOLrpYjTf7chbdNaxhwH7k
+buvKxBvCvmXmd6v/AeQQAXbUkdSnbTKDaB9B7IlUTcDJyPBJXvFS1IzzjN6vV+06
+XBwHx5ECgYEAyRZLzwnA3bw8Ep9mDw8JHDQoGuQkFEMLqRdRRoZ+hxnBD9V9M0T6
+HRiUFOizEVoXxf6zPtHm/T7cRD8AFqB+pA/Nv0ug6KpwUjA4Aihf5ADp0gem0DNw
+YlVkCA6Bu7c9IUlE0hwF7RLB7YrryJVJit9AymmUTUUHCQTWW2yBhC8CgYEAxoHS
+HGXthin5owOTNPwLwPfU2o7SybkDBKyW69uTi0KxAl3610DjyA/cV2mxIcFlPv1y
+HualGd9eNoeCMBy/AUtjzI0K77yeRpjj321rj6k8c8bYWPHH539SiBXLWTY/WQ0w
+pxfT3d/Z4QMh5d6p+p5f3UIrXESYQd+fAaG5tNsCgYEAksTdTB4YUT9EsWr6eN9G
+jPlclFQUKV3OMvq77bfYvg8EJORz32nnDDmWS7SUjoOtemwutBlMeWbaKk25aMp3
+5JNMXuV6apeMJ9Dd8GU7qBUqlIvVK31/96XPvzmnYzWZPqRVwO2HPcRFG3YcJmkg
+JmZQyexJvCQ3wFNxiYUm+y0CgYBXQSMhFnCUg4jWbbDcHlnwRT+LnjHrN2arPE3O
+eKLfGL6DotmqmjxFaStaRPv2MXMWgAMUsB8sQzG/WEsSaOBQaloAxJJlFIyhzXyE
+bi1UZXhMD8BzQDu1dxLI/IN4wE6SDykumVuocEfuDxlsWDZxEgJjWD2E/iXK9seG
+yRa+9wKBgEydVz+C1ECLI/dOWb20UC9nGQ+2dMa+3dsmvFwSJJatQv9NGaDUdxmU
+hRVzWgogZ8dZ9oH8IY3U0owNRfO65VGe0sN00sQtMoweEQi0SN0J6FePiVCnl7pf
+lvYBaemLrW2YI2B7zk5fTm6ng9BW/B1KfrH9Vm5wLQBchAN8Pjbu
+-----END RSA PRIVATE KEY-----</code></pre><p>切记要保持私钥的私密性！也就是说你需要严格规定它的权限是600（只有root用户才能进行读写），不能将它开放给其他任何用户。 和私钥对应的是公钥，看起来像是这样的：</p>
+<pre><code>-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm+036O2PlUQbKbSSs2ik
+6O6TYy6+Zsas5oAk3GioGLl1RW9Ni8kagqdnD69Et29m1vl5OIPsBoW3OWb1aBW5
+e3J0x9prXI1W/fpvuP9NmrHBUN4ES17VliRpfVH3aHfPC8rKpv3GvHYOcfOmMN+H
+fBZlUeKJKs6c5WmSVdnZB0R4UAWuQ30aHEBVqtrhgHqYDBokVe0/H4wmwZEIQTIN
+WniCOFR5UphJf5nP8ljGbmPxNTnfb/iHS/chjcjF7TGMG36e7EBoQijZEUQs5IBC
+eVefOnFLK5jLx+BC//X+FNzByDilTt+l28I/3ZN1ujhak73YFbWjjLR2tjtp+LQg
+NQIDAQAB
+-----END PUBLIC KEY-----</code></pre><p>证书签名请求看起来像是这样的：</p>
+<pre><code>-----BEGIN CERTIFICATE REQUEST-----
+MIICzjCCAbYCAQAwgYgxFDASBgNVBAMMC2V4YW1wbGUuY29tMQswCQYDVQQLDAJJ
+VDEPMA0GA1UECAwGTG9uZG9uMRIwEAYDVQQKDAlBQ01FIEluYy4xIDAeBgkqhkiG
+9w0BCQEWEWFkbWluQGV4YW1wbGUuY29tMQswCQYDVQQGEwJHQjEPMA0GA1UEBwwG
+TG9uZG9uMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm+036O2PlUQb
+KbSSs2ik6O6TYy6+Zsas5oAk3GioGLl1RW9Ni8kagqdnD69Et29m1vl5OIPsBoW3
+OWb1aBW5e3J0x9prXI1W/fpvuP9NmrHBUN4ES17VliRpfVH3aHfPC8rKpv3GvHYO
+cfOmMN+HfBZlUeKJKs6c5WmSVdnZB0R4UAWuQ30aHEBVqtrhgHqYDBokVe0/H4wm
+wZEIQTINWniCOFR5UphJf5nP8ljGbmPxNTnfb/iHS/chjcjF7TGMG36e7EBoQijZ
+EUQs5IBCeVefOnFLK5jLx+BC//X+FNzByDilTt+l28I/3ZN1ujhak73YFbWjjLR2
+tjtp+LQgNQIDAQABoAAwDQYJKoZIhvcNAQELBQADggEBAGIQVhXfuWdINNfceNPm
+CkAGv4yzpx88L34bhO1Dw4PYWnoS2f7ItuQA5zNk9EJhjkwK8gYspK7mPkvHDbFa
+Um7lPSWsm3gjd3pU7dIaHxQ+0AW9lOw5ukiBlO4t3qgt+jTVZ3EhMbR0jDSyjTrY
+kTgfuqQrGOQSmLb5XviEtCcN0rseWib3fKIl8DM69JiA2AALxyk7DCkS1BqLNChT
+pnbgvtlUhc4yFXNCtwPGskXIvLsCn2LRy+qdsPM776kDLgD36hK0Wu14Lpsoa/p+
+ZRuwKqTjdaV23o2aUMULyCRuITlghEEkRdJsaXadHXtNd5I5vDJOAAt46PIXcyEZ
+aQY=
+-----END CERTIFICATE REQUEST-----</code></pre><p>这个特定的CSR包含服务器的公钥和有关组织ACME Inc.的详细信息，该组织位于英国伦敦，并拥有该域名example.com。 最后，签名的HTTPS证书如下所示：</p>
+<pre><code>-----BEGIN CERTIFICATE-----
+MIIDjjCCAnYCCQCJdR6v1+W5RzANBgkqhkiG9w0BAQUFADCBiDEUMBIGA1UEAwwL
+ZXhhbXBsZS5jb20xCzAJBgNVBAsMAklUMQ8wDQYDVQQIDAZMb25kb24xEjAQBgNV
+BAoMCUFDTUUgSW5jLjEgMB4GCSqGSIb3DQEJARYRYWRtaW5AZXhhbXBsZS5jb20x
+CzAJBgNVBAYTAkdCMQ8wDQYDVQQHDAZMb25kb24wHhcNMTYwNDE5MTAzMjI1WhcN
+MTcwNDE5MTAzMjI1WjCBiDEUMBIGA1UEAwwLZXhhbXBsZS5jb20xCzAJBgNVBAsM
+AklUMQ8wDQYDVQQIDAZMb25kb24xEjAQBgNVBAoMCUFDTUUgSW5jLjEgMB4GCSqG
+SIb3DQEJARYRYWRtaW5AZXhhbXBsZS5jb20xCzAJBgNVBAYTAkdCMQ8wDQYDVQQH
+DAZMb25kb24wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCb7Tfo7Y+V
+RBsptJKzaKTo7pNjLr5mxqzmgCTcaKgYuXVFb02LyRqCp2cPr0S3b2bW+Xk4g+wG
+hbc5ZvVoFbl7cnTH2mtcjVb9+m+4/02ascFQ3gRLXtWWJGl9Ufdod88Lysqm/ca8
+dg5x86Yw34d8FmVR4okqzpzlaZJV2dkHRHhQBa5DfRocQFWq2uGAepgMGiRV7T8f
+jCbBkQhBMg1aeII4VHlSmEl/mc/yWMZuY/E1Od9v+IdL9yGNyMXtMYwbfp7sQGhC
+KNkRRCzkgEJ5V586cUsrmMvH4EL/9f4U3MHIOKVO36Xbwj/dk3W6OFqTvdgVtaOM
+tHa2O2n4tCA1AgMBAAEwDQYJKoZIhvcNAQEFBQADggEBABwwkE7wX5gmZMRYugSS
+7peSx83Oac1ikLnUDMMOU8WmqxaLTTZQeuoq5W23xWQWgcTtfjP9vfV50jFzXwat
+5Ch3OQUS53d06hX5EiVrmTyDgybPVlfbq5147MBEC0ePGxG6uV+Ed+oUYX4OM/bB
+XiFa4z7eamG+Md2d/A1cB54R3LH6vECLuyJrF0+sCGJJAGumJGhjcOdpvUVt5gvD
+FIgT9B04VJnaBatEgWbn9x50EP4j41PNFGx/A0CCLgbTs8kZCdhE4QFMxU9T+T9t
+rXgaspIi7RA4xkSE7x7B8NbvSlgP79/qUe80Z7d8Oolva6dTZduByr0CejdfhLhi
+mNU=
+-----END CERTIFICATE-----</code></pre><p>上面的这些部分要连接起来并且应该能相互匹配。最终连接起来生成的证书仅仅是起说明作用 - 这也就是为什么被叫做自签名证书，因为它不是被权威的认证机构签名的。 下面的配置步骤将以cPanel，Linux，FreeBSD和Windows的实际步骤进行说明。这是一个通用的过程，适用于各种证书。</p>
+<h3 id="第一步：创建私钥和证书签名请求"><a href="#第一步：创建私钥和证书签名请求" class="headerlink" title="第一步：创建私钥和证书签名请求"></a>第一步：创建私钥和证书签名请求</h3><p>在以下示例中，我们将使用2048位的RSA证书，因为它们具有广泛的兼容性。如果您的服务器提供商支持ECC的话（例如，如果你不使用Heroku或AWS），那你可能更喜欢使用ECC。下面我们按照不同的环境来讲解如何进行这一步。</p>
+<h4 id="CPanel"><a href="#CPanel" class="headerlink" title="CPanel"></a>CPanel</h4><p>1、登录至服务器的CPanel 2、向下滚动到“security”部分，点击“SSL/TLS.”</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRWlu9.png" alt></p>
+<p>3、你现在处于“SSL / TLS Maneger”的主界面。单击“Private Keys（KEY）”创建一个新的私钥。</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRW3H1.png" alt></p>
+<p>4、你会转到下面这个页面，在“Key size”框中选择2048 bit，点击“Generate”。</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRWdjH.png" alt></p>
+<p>5、然后新的私钥就产生了，你会看到确认界面</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRWDHI.png" alt></p>
+<p>6、如果你返回“private keys”界面，你会看到你的新密钥被列出来了</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRW64f.png" alt></p>
+<p>7、返回 “SSL/TLS Manager”主界面. 点击“Certificate Signing Requests (CSR)” 来创建一个新的证书请求。</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRW28S.png" alt></p>
+<p>8、您现在将看到“Generate Service Request”表单。选择先前创建的私钥并填写表格，回答所有问题（他们将在您的签名证书中公开），特别注意“Domains”部分，该部分应与你请求HTTPS证书的域名完全相符。仅包含顶级域（example.com）; CA通常也会添加www子域（即<a href="http://www.example.com）。完成后，单击“Generate”按钮。" target="_blank" rel="noopener">www.example.com）。完成后，单击“Generate”按钮。</a></p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRWTU0.png" alt="img"></p>
+<p>9、然后新的CSR就生成啦，你会看到一个确认页面</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRW75V.png" alt="img"></p>
+<p>10、如果你回到“Certificate Signing Request”页面，你将看到你的新的CSR列表：</p>
+<p><img src="https://s2.ax1x.com/2019/08/26/mRWq8U.png" alt></p>
+<h4 id="Linux，Free-BSD"><a href="#Linux，Free-BSD" class="headerlink" title="Linux，Free BSD"></a>Linux，Free BSD</h4><p>1、首先确认你已经安装好了openssl，可以在终端中输入以下命令来确认：</p>
+<pre><code>openssl version</code></pre><p>如果输入命令后啥都没有显示，那就根据你的系统选择下面的命令来安装openssl：</p>
+<pre><code>Debian, Ubuntu and clones
+sudo apt-get install openssl
+Red Hat, CentOS and clones
+sudo yum install openssl
+FreeBSD
+make -C /usr/ports/security/openssl install clean</code></pre><p>2、接下来，使用下面这个命令生成私钥和CSR：</p>
+<pre><code>openssl req -newkey rsa:2048 -nodes -keyout example.com.key -out example.com.csr</code></pre><p>然后私钥就生成啦，你需要回答一些问题以生成CSR</p>
+<pre><code>Generating a 2048 bit RSA private key
+........................+++
+................................................................+++
+writing new private key to &#39;example.com.key&#39;
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter ‘.&#39;, the field will be left blank.</code></pre><p>正确回答所有问题（他们将在您的签名证书中公开），特别注意“Common Name”部分（例如server FQDN or YOUR name），该部分应与你请求HTTPS证书的域名完全相符。仅包含顶级域（example.com）; CA通常也会添加www子域（即<a href="http://www.example.com）。" target="_blank" rel="noopener">www.example.com）。</a></p>
+<pre><code>Country Name (2 letter code) [AU]:GB
+State or Province Name (full name) [Some-State]:London
+Locality Name (eg, city) []:London
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:ACME Inc.
+Organizational Unit Name (eg, section) []:IT
+Common Name (e.g. server FQDN or YOUR name) []:example.com
+Email Address []:admin@example.com
+
+Please enter the following &#39;extra&#39; attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:</code></pre><h4 id="windows系统上的INTERNET-INFORMATION-SERVER-IIS"><a href="#windows系统上的INTERNET-INFORMATION-SERVER-IIS" class="headerlink" title="windows系统上的INTERNET INFORMATION SERVER (IIS)"></a>windows系统上的INTERNET INFORMATION SERVER (IIS)</h4><p>1、打开“开始”→“管理工具”→“INTERNET INFORMATION SERVER（IIS）”。单击服务器名称。双击中间那一栏的“Server Certificates”：</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy0trsxkj30fe0dp0wq.jpg" alt="img"></p>
+<p>2、单击右边那一栏的“Create Certificate Request”</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy1avywcj30fe0dptb0.jpg" alt="img"></p>
+<p>3、输入您的组织的详细信息，特别注意“Common Name”，这应该和您的域名相匹配。点击“Next”。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy1no4fpj30fe0bo75q.jpg" alt="img"></p>
+<p>4、保留默认的“Cryptographic Service Provider.”，将“Bit length”设置为2048，点击“Next”</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy24bu45j30fe0botab.jpg" alt="img"></p>
+<p>5、浏览一个地方来存储CSR，点击“Finish”</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy2j8lsjj30fe0boab1.jpg" alt="img"></p>
+<h3 id="第二步：获得HTTPS证书"><a href="#第二步：获得HTTPS证书" class="headerlink" title="第二步：获得HTTPS证书"></a>第二步：获得HTTPS证书</h3><p>为了获得您的网站证书，首先从HTTPS证书提供商处购买所选类型（DV，OV，EV，单站点，多站点，通配符 - 见上文）的HTTPS证书信用证。这一步完成后，你要提供CSR，你选择的域名需要的费用会从刚刚购买的信用额度中扣除。你需要提供（即粘贴在一个字段中或上传）整个CSR文本，包括—–BEGIN CERTIFICATE REQUEST—– 和 —–END CERTIFICATE REQUEST—– 这两行。如果您想要获得EV或OV证书，就需要提供请求这个证书的法律实体，你也就可能会被要求提供其他文件，以确认你代表该公司。然后，证书注册商将验证您的请求（和任何辅助支持文件）并签发签名的HTTPS证书。下面将分别讲解从HTTPS注册商处获取证书和自己对证书签名的步骤。</p>
+<h4 id="获取HTTPS证书步骤"><a href="#获取HTTPS证书步骤" class="headerlink" title="获取HTTPS证书步骤"></a>获取HTTPS证书步骤</h4><p>你的托管服务器提供商或HTTPS注册商可能有不同的产品和注册流程，但通用的过程应该类似。 1、查找HTTPS证书供应商。 2、选择一种类型的证书（DV，OV，EV，单站点，多站点，通配符），然后单击“添加到购物车”，指定首选付款方式并完成付款。 3、为您的域名激活新的HTTPS证书。您可以粘贴或上传证书签名请求。系统将从CSR中提取证书详细信息。 4、你需要选择“域控制验证”的方法 - 无论是通过电子邮件，上传HTML文件（基于HTTP）或将TXT记录添加到域区域文件（基于DNS）。按照您选择的DCV方法的说明进行验证。 5、等待几分钟，直到执行验证并发出HTTPS证书。下载签名的HTTPS证书。</p>
+<h4 id="自签名证书的步骤"><a href="#自签名证书的步骤" class="headerlink" title="自签名证书的步骤"></a>自签名证书的步骤</h4><p>你也可以自己签署证书，而不是从证书颁发机构处获得，如果是为了测试的话这样做很有效，因为它的加密方式与其他任何证书一样好，但不会被浏览器所信任，这将导致安全警告 – 你可以声明自己是任何你想声明的，但不会被受信任的第三方验证。如果用户信任网站，他们可以在浏览器中添加一个异常，这样会把证书存储起来并标为信任以供其以后访问。 上述示例证书是自签名证书，您可以将其用于域名example.com，这个证书会在其有效期内工作。 您可以在具有OpenSSL的任何平台上用下面这个命令创建自签名证书： openssl x509 -signkey example.com.key -in example.com.csr -req -days 365 -out example.com.crt 获得证书以后，你必须把它安装在你的服务器上，如果您使用来自同一托管服务器提供商的HTTPS注册服务（许多托管服务提供商也销售HTTPS证书），则可能会有一个自动的过程来安装并启用您新获得的网站的HTTPS证书。如果您在其他地方托管您的网站，则需要下载证书并配置您的服务器才能使用。</p>
+<h3 id="第三步：为你的网站安装HTTPS证书"><a href="#第三步：为你的网站安装HTTPS证书" class="headerlink" title="第三步：为你的网站安装HTTPS证书"></a>第三步：为你的网站安装HTTPS证书</h3><h4 id="CPanel-1"><a href="#CPanel-1" class="headerlink" title="CPanel"></a>CPanel</h4><p>1、返回“SSL/TLS Manager”主界面，点击“Certificates (CRT)”来打包新证书。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy5pxkp3j30fe094aga.jpg" alt="img"></p>
+<p>2、然后会转到“Paste, Upload or Generate” 页面，把从HTTPS注册商收到的证书的内容粘贴过来，或者使用 “Browse” 按钮上传。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy689kznj308b0pv41e.jpg" alt="img"></p>
+<p>3、粘贴HTTPS证书的内容时会进行解析，然后将纯文本值提供给你进行确认。查看内容，然后单击“Save Certificate”按钮。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy7f0n4bj30fe0kodko.jpg" alt="img"></p>
+<p>4、新的HTTPS证书会被保存，您将得到一个确认页面：</p>
+<p>5、如果你回到“Certificates (CRT)”主页面，你会发现上面列出了你的新的HTTPS证书：</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy8d8m4ij30fe06egne.jpg" alt="img"></p>
+<p>6、返回“SSL/TLS Manager”主界面，点击“Install and Manage SSL for your website (HTTPS)”来给你的网站分配一个新的证书。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy8uo41pj30fe094n2n.jpg" alt="img"></p>
+<p>7、你会看到“Install an SSL Website”表单。点击 “Browse Certificates”按钮然后选择你的HTTPS证书。从你的下拉单中选择你的网站域名（如果它没有被自动选出来的话）,然后检查 “Certificate”和“Private Key”区域都被填好了。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuy95psrqj30fe0yqqic.jpg" alt="img"></p>
+<p>8、测试一下看看能不能访问<a href="https://www.example.com了，如果一切正常的话你可能会希望把所有的http都转为https，在apache/" target="_blank" rel="noopener">https://www.example.com了，如果一切正常的话你可能会希望把所有的HTTP都转为HTTPS，在Apache</a> web server下只需要这样做就可以了：在网站的根目录下创建文件.htaccess, 并把以下几行代码粘贴进去：</p>
+<pre><code>RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]</code></pre><p>如果这个文件已经存在了，那么就把后两行代码粘贴进去就好了，粘贴的位置就在第一行代码的后面。</p>
+<h4 id="LINUX-FREEBSD"><a href="#LINUX-FREEBSD" class="headerlink" title="LINUX FREEBSD"></a>LINUX FREEBSD</h4><p>1、首先，将生成的私钥（example.com.key），证书签名请求（example.com.csr）和有效的HTTPS证书（example.com.crt）放在正确的位置上：</p>
+<pre><code>Debian, Ubuntu and clones, FreeBSD
+cp example.com.crt /etc/ssl/certs/
+cp example.com.key /etc/ssl/private/
+cp example.com.csr /etc/ssl/private/
+Red Hat, CentOS and clones
+cp example.com.crt /etc/pki/tls/certs/
+cp example.com.key /etc/pki/tls/private/
+cp example.com.csr /etc/pki/tls/private/
+restorecon -RvF /etc/pki</code></pre><p>2、这些文件的权限应该归root用户所有，需要用下面的命令将权限设置为600.</p>
+<pre><code>Debian, Ubuntu and clones
+chown -R root. /etc/ssl/certs /etc/ssl/private
+chmod -R 0600 /etc/ssl/certs /etc/ssl/private
+Red Hat, CentOS and clones
+chown -R root. /etc/pki/tls/certs /etc/pki/tls/private
+chmod -R 0600 /etc/pki/tls/certs /etc/pki/tls/private
+FreeBSD
+chown -R root:wheel /etc/ssl/certs /etc/ssl/private
+chmod -R 0600 /etc/ssl/certs /etc/ssl/private</code></pre><p>3、下面分APACHE和NGINX两种服务器讲解这一步 ① APACHE 要激活你的网站的HTTPS协议，你应该按一下步骤进行： 首先确定mod_ssl安装在你的服务器上，接着将接收的HTTPS证书（.crt）文件上传到您的服务器，最后编辑Apache服务器配置文件。 第一步是检查mod_ssl文件，根据不同的操作系统尝试执行以下命令，一定有一个是可以用的：</p>
+<pre><code>apache2 -M | grep ssl</code></pre><p>或</p>
+<pre><code>httpd -M | grep ssl</code></pre><p>如果mod_ssl文件成功安装了，你应该能看到以下信息：</p>
+<pre><code>ssl_module (shared)
+Syntax OK</code></pre><p>或者类似的消息 如果mod_ssl不存在或未启用，按以下步骤执行命令：</p>
+<pre><code>Debian, Ubuntu and clones
+sudo a2enmod ssl
+sudo service apache2 restart
+Red Hat, CentOS and clones
+sudo yum install mod_ssl
+sudo service httpd restart
+FreeBSD (选中SSL选项)
+make -C /usr/ports/www/apache24 config install clean
+apachectl restart</code></pre><p>第二步是编辑Apache配置文件（httpd.conf）：</p>
+<pre><code>Debian，Ubuntu
+/etc/apache2/apache2.conf
+Redhat，CentOS
+/etc/httpd/conf/httpd.conf
+FreeBSD的
+/usr/local/etc/apache2x/httpd.conf</code></pre><p>这个文件内容见附录httpd.conf.txt，文件使用前面提到的Mozilla SSL配置生成器（<a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/）生成的，检查它以获取最新的配置，记得要编辑证书和私钥的路径，提供的配置是根据中间的设置生成的：读取每个设置的限制条件和支持的浏览器配置，以确定哪个最适合你的情况。" target="_blank" rel="noopener">https://mozilla.github.io/server-side-tls/ssl-config-generator/）生成的，检查它以获取最新的配置，记得要编辑证书和私钥的路径，提供的配置是根据中间的设置生成的：读取每个设置的限制条件和支持的浏览器配置，以确定哪个最适合你的情况。</a> 一些对生成代码的修改是为了让网站从HTTP重定向到HTTPS和从非www重定向到www域（出于提高搜索引擎排名的目的）。 ② NGINX 编辑NGINX配置文件（nginx.conf）： Debian, Ubuntu, Red Hat, CentOS /etc/nginx/nginx.conf FreeBSD的 /usr/local/etc/nginx/nginx.conf 这个文件内容见附录nginx.conf.txt，文件使用前面提到的Mozilla SSL配置生成器（<a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/）生成的，检查它以获取最新的配置，记得要编辑证书和私钥的路径，提供的配置是根据中间的设置生成的：读取每个设置的限制条件和支持的浏览器配置，以确定哪个最适合你的情况。" target="_blank" rel="noopener">https://mozilla.github.io/server-side-tls/ssl-config-generator/）生成的，检查它以获取最新的配置，记得要编辑证书和私钥的路径，提供的配置是根据中间的设置生成的：读取每个设置的限制条件和支持的浏览器配置，以确定哪个最适合你的情况。</a> 生成器自动生成用于处理从HTTP到HTTPS的重定向的代码，并直接启用HTTP / 2！</p>
+<h4 id="windows系统上的INTERNET-INFORMATION-SERVER-IIS-1"><a href="#windows系统上的INTERNET-INFORMATION-SERVER-IIS-1" class="headerlink" title="windows系统上的INTERNET INFORMATION SERVER (IIS)"></a>windows系统上的INTERNET INFORMATION SERVER (IIS)</h4><p>1、打开“开始”→“管理工具”→“INTERNET INFORMATION SERVER（IIS）”。单击服务器名称。双击中间那一栏的“Server Certificates”：</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuydbir08j30fe0dp0wq.jpg" alt="img"></p>
+<p>2、在右边那一栏栏中点击“Complete Certificate Request”。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuydorbwsj30fe0dp40z.jpg" alt="img"></p>
+<p>3、选择你从CA获得的签名证书文件（example.com.crt）。在“Friendly name”这一栏中输入一些名称，以便稍后区分证书。将新证书存储在“Personal” certificate store (IIS 8+)中。点击“OK”。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuye3yr34j30fe0boq4c.jpg" alt="img"></p>
+<p>4、如果一切正常，您应该看到证书列在“Server Certificates” 下。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuyek2ejmj30fe0bw0v1.jpg" alt="img"></p>
+<p>5、点开服务器名称。在“sites”下，选择要为其分配HTTPS证书的网站。从右侧那一列中单击“Bindings”</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuyf0tm55j30fe0bwado.jpg" alt="img"></p>
+<p>6、在“Site bindings”窗口, 点击“Add”按钮。</p>
+<p><img src="https://ws1.sinaimg.cn/large/005S1Vjily1fiuyfdff0mj30fe090dg7.jpg" alt="img"></p>
+<p>7、在新窗口中做如下选择： “Type”: “https” “IP address”: “All Unassigned” “Port”: “443” 在“SSL Certificate”这一栏, 通过选刚刚设定的friendly name来选择安装好的HTTPS证书，点击“OK.”按钮</p>
+<p>8、你现在应该已经为此网站安装好了HTTP和HTTPS。</p>
+<h4 id="MIXED-CONTENT警告"><a href="#MIXED-CONTENT警告" class="headerlink" title="MIXED-CONTENT警告"></a>MIXED-CONTENT警告</h4><p>您可能会在地址栏旁边收到一个警告信号，并显示一条消息，如“连接不安全！本页的部分内容不安全（如图像）。”，这并不意味着您的安装是错误的，只需确保无论是本地的还是远程服务器上的所有资源（图像，样式表，脚本等）的链接，都不能以<a href="http://xn--%2C(-tz2czm83bp3m2ya265avxeswhcw3aen8am6ezr9fe6e/images/image.png，/styles/style.css等等）或相对于当前文档（../images/image.png）的路径指向所有资源，或者它们应该是以https://开头的完整的URL，例如" target="_blank" rel="noopener">http://为起始即可，应该使用相对于根（/images/image.png，/styles/style.css等等）或相对于当前文档（../images/image.png）的路径指向所有资源，或者它们应该是以https://开头的完整的URL，例如</a></p>
+<pre><code>&lt;script src=&quot;https://code.jquery.com/jquery-3.1.0.min.js&quot;&gt;&lt;/script&gt;。</code></pre><p>这些提示可以消除MIXED-CONTENT警告，您的浏览器应显示封闭的挂锁，而不会有感叹号。</p>
+<h4 id="测试您的服务器"><a href="#测试您的服务器" class="headerlink" title="测试您的服务器"></a>测试您的服务器</h4><p>配置好服务器并在网站上使HTTPS运行后，我强烈建议你使用Qualys SSL Server测试检查其安全配置。这将对您的网站进行扫描，包括对其配置的全面评估，可能的弱点和建议。按照这方面的建议，进一步改善您的服务器的安全配置。</p>
+<h4 id="续订"><a href="#续订" class="headerlink" title="续订"></a>续订</h4><p>您的证书在一段时间内有效，通常为一年。不要等到最后一刻才更新，您的注册商将在更新日期接近时开始发送电子邮件。当您第一次收到提醒时，请尽快发出新的证书，该过程几乎相同：创建新的证书签名请求，获取新的HTTPS证书，并将其安装在您的服务器上。证书的有效期将在签字时开始运行，将在当前证书到期后一年内启动设置。因此，您的旧证书和新证书都将有效，旧证书到期后的一年时间也将有效。在重叠期间，您将能够确保在旧的证书过期之前新证书也能正常工作。</p>
+<h4 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h4><p>如果你的服务器遭到入侵，或者您认为有人可能获取了你的私钥，则应立即撤销当前的HTTPS证书。不同的注册商有不同的过程，但通常是在注册商的特殊数据库中将受到损害的证书标记为不活动，然后发出新的HTTPS证书。当然，尽快撤销目前的证书，这样没有人可以冒充你，只有在调查和解决了安全漏洞的原因之后才能获得新的证书。详细内容请向您的注册服务商寻求帮助。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以加QQ（2602138376） </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Http转入Https的完整攻略</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">10k</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Zevs">Zevs</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-08-26, 09:40:16</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-26, 09:50:08</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/26/Http转入Https的完整攻略/" title="Http转入Https的完整攻略">http://zhsh666.xyz/2019/08/26/Http转入Https的完整攻略/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="/js/gitment.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'http://zhsh666.xyz/2019/08/26/Http转入Https的完整攻略/', // 可选。默认为 location.href
+        owner: 'Zevs6',
+        repo: 'Zevs6.github.io',
+        oauth: {
+            client_id: '18b468126f8247522ee7',
+            client_secret: '5690a9fd74b6c10ae45cf9b9bd33ea34a1f166cf',
+        },
+    })
+    gitment.render('comments')
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p id="sitetime"></p>
+<p class="footer-entry">©2019 ®Zevs<span> | ✿网站字词总数：<code class="site_word_count"></code>字</span></p>
+
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2019,08,13,00,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML="网站已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+	siteTime();
+</script>
+
+<p>√本站访问人数：<code class="site_uv"></code>人次 | ◎本站总访问量：<code class="site_pv"></code>次</p>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9143eb90f928be2d7df47517e5f3de98";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#hexo','#3-hexo','#CSS3','#小程序','#css','#Flex','#Apache','#Tomcat','#服务器','#HBuilder','#HTML','#JavaScript','#HTML5','#idea','#IDEA','#Java','#jsp','#js','#JDBC','#MySQL','#Github','#node.js','#Node.js','#PHP','#PanDownload','#Python','#java','#SpringBoot','#Vue','#框架','#wordpress','#WampServer','#WordPress','#自定义','#nodejs','#GitHub','#gitbash','#部署','#final','#常量','#数据库','#飘落特效','#jquery','#mysql','#Markdown','#Typora','#npm','#jsDeliver','#cnd','#1+x','#代码','#安卓','#博客','#纪念','#reading','#数据结构','#Chrome','#Cookie','#Session','#codding','#剪辑','#缘起','#虚拟机','#模拟器','#Wordpress','#智慧树','#图床','#码云','#网站收录','#CSS','#轮播图','#鼠标点击','#点击特效','#jsDelivr','#PicGo','#前端','#Hexo','#Swing','#南京三日游','#主题','#Lsky Pro','#宝塔','#Android','#Vue.js','#Spring Boot','#网页设计','#http','#https','#多线程','#HTMK','#JS',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://cdn.jsdelivr.net/gh/Zevs6/blogimg/img/5459e6ed98435.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    <a class="dynamic-menu site_url"   href="/photo">相册</a>
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://pic.iqy.ink/">图床</a>
+    
+    
+    <a class="dynamic-menu " target="_self"   href="https://z.zhsh666.xyz/">主题切换</a>
+    
+</div>
+
+
+
+<!--给WordPress网站添加鼠标点击爆炸五颜六色特效-->
+    <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+<script type="text/javascript" src="http://a-oss.zmki.cn/20190502/baozatexiao.js"></script>
+<!-- 飘落特效
+<script src="https://cdn.bootcss.com/jquery/1.2.4/jquery.min.js"></script> 
+<script src="https://cdn.mom1.cn/1/su.js"></script> 
+<script type="text/javascript">jQuery(document).ready(function($){ $('body').wpSuperSnow({ flakes: ['https://cdn.mom1.cn/1/007.png','https://cdn.mom1.cn/1//006.png','https://cdn.mom1.cn/1//004.png','https://cdn.mom1.cn/1/002.png','https://cdn.mom1.cn/1/001.png','https://cdn.mom1.cn/1/003.png','https://cdn.mom1.cn/1/002.png','https://cdn.mom1.cn/1/001.png'], totalFlakes: '290', zIndex: '999999', maxSize: '30', maxDuration: '20', useFlakeTrans: false }); });</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-7988318233886821",
+          enable_page_level_ads: true
+     });
+</script>
+<!--自动推送工具代码-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</html>

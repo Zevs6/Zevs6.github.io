@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="img/favicon.ico"/>
+		<title>技术探讨 有一种思念，是淡淡的幸福-zs个人博客网站</title>
+		<link rel="stylesheet" href="css/Technical.css" />
+		<link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<header>
+			<h1><a href="/">ZhangShuai </a></h1>
+			<p>有一种思念，是淡淡的幸福；有一种幸福，是常常的牵挂；有一种牵挂，是远远地欣赏.......</p>
+		</header>
+		<div class="navswf">
+			<object id="customMenu" data="img/nav.swf" width="628" height="70" type="application/x-shockwave-flash"><param name="allowScriptAccess" value="always"><param name="allownetworking" value="all"><param name="allowFullScreen" value="true"><param name="wmode" value="transparent"><param name="menu" value="false"><param name="scale" value="noScale"><param name="salign" value="1"></object>
+
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="index.html">网站首页</a>
+					</li>
+					<li>
+						<a href="about .html">关于我</a>
+					</li>
+					<li>
+						<a href="Broken .html">碎言碎语</a>
+					</li>
+					<li>
+						<a href="Technical.html">技术探讨</a>
+					</li>
+					<li>
+						<a href="life.html">慢生活</a>
+					</li>
+					<li>
+						<a href="photo .html">我的相册</a>
+					</li>
+					<li>
+						<a href="message .html">留言版</a>
+					</li>
+					<li>
+						<a href="Login.html" target="_blank">登录</a>/
+						<a href="reg.html" target="_blank">注册</a>
+					</li>
+				</ul>
+				<script src="js/silder.js"></script>
+				<nav/>
+		</div>
+
+		<div class="main">
+			<div id="header">
+				<div id="blogTitle">
+					<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/wenyi1992/">OverFitting</a></h1>
+					<h2>装轮子，改轮子，造轮子</h2>
+				</div>
+			</div>
+
+			<div class="post">
+				<h1 class="postTitle">
+						<a class="postTitle2" href="/">超详细轮播图，让你彻底明白轮播图！</a>
+			</h1>
+				<div class="blogpost">
+					<p>　　刚开始学JavaScript时候很多新手都会尝试写一些简单的小项目，轮播图应该是写的最多的。但是很多时候对于基础不是很好的新手，虽然参照别人的代码能写出来一些轮播图，但其中的一些细节和过程可能还是一知半解甚至不懂，我作为一个新手刚刚写了几种常见的轮播图，里面的各种细节也花了不少时间弄懂，这里为大家介绍一种简单易懂且很完善的轮播图写法。里面的细节我会一一详细说明，希望和各位初入JavaScript的小伙伴一起进步。</p>
+					<p>　　轮播图的思路其实很简单：就是用JavaScript来控制轮播的图片的样式，可以控制display：none or block 可以控制opacity：‘0’ or ‘1’ 也可以通过z-index来控制图片的摆放顺序。(注意：这里的图片一般是通过绝对定位放在一个div盒子里面，图片堆叠在一起)。思路很清晰，那么我们就来看看代码(代码是本人自己手写的)。具体细节我会在代码中一一解释：&nbsp;</p>
+				</div>
+				<div class="cnblogs_code">
+					<div>
+						<a href="#" onclick="copyCnblogsCode(this)" title="复制代码"><img src="img/copycode.gif" alt="复制代码"></a>
+					</div>
+					<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+        *{
+            margin:0;
+            padding:0;
+        }
+        #main{
+            width: 730px;
+            height: 454px;
+            margin: 100px auto;
+            position: relative;
+        
+        }
+        #main .scollimg{
+            width: 730px;
+            height: 454px;
+            position: relative;
+        }
+        #main .scollimg img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #main .btn{
+            width: 730px;
+            height: 220px;
+            position: absolute;
+            top:117px;
+            left:0;
+        }
+        #main .btn&gt;div{
+            width: 100px;
+            height: 220px;
+            background: #fff;
+            opacity: 0;
+        }
+        #main .btn：hover&gt;div{
+            opacity: 0.35;
+        }
+        #main .btn #btnleft{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #main .btn #btnright{
+            position: absolute;
+            top: 0;
+            right:0;
+        }
+        <span style="color: green;"> /*左右button里的三角形*/</span>
+        .triangle{
+             margin-top: 50px;
+            width: 0;
+            height: 0;
+            border-width:70px 40px;
+            border-style: solid;
+        }
+
+        #main .btn #btnleft .triangle{
+            border-color: transparent #ccc transparent  transparent;
+        }
+        #main .btn #btnright .triangle{
+            margin-left: 20px;
+            border-color: transparent transparent transparent #ccc;
+        }
+        #main .item{
+            position: absolute;
+            bottom: 30px;
+            left: 70px;
+            width: 200px;
+            height: 16px;
+        }
+        #main .item span{
+            width: 16px;
+            height: 16px;
+            background: #ccc;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        #main .item span:hover{
+            cursor: pointer;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="main"&gt;
+        &lt;div class="scollimg"&gt;
+            &lt;img src="images/1.jpg" alt=""&gt;
+            &lt;img src="images/2.jpg" alt=""&gt;
+            &lt;img src="images/3.jpg" alt=""&gt;
+        &lt;/div&gt;
+        &lt;div class="btn"&gt;
+            &lt;div id="btnleft"&gt;&lt;div class="triangle"&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div id="btnright"&gt;&lt;div class="triangle"&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="item"&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script type="text/javascript"&gt;
+        window.onload=function(){
+            autoMove('img','span');
+        }
+
+        <span style="color: green;">//轮播图函数</span>
+       function autoMove(tagImg,tagSpan){
+            var imgs=document.getElementsByTagName(tagImg);
+            var spans=document.getElementsByTagName(tagSpan);
+            <span style="color: green;">//每次轮播后样式</span>
+            <span style="color: green;">/*轮播到哪个位置，就对哪个位置的图片样式进行设置，
+           首先让所有的图片样式opacity变为0，
+         然后对移动到的位置的样式进行设置opacity为1*/</span>
+            function InitMove(index){
+                for(var i=0;i&lt;imgs.length;i++){
+                    imgs[i].style.opacity='0';
+                    spans[i].style.background='#ccc';
+                }
+                imgs[index].style.opacity='1';
+                spans[index].style.background='red';
+            }
+            <span style="color: green;">//第一次初始化</span>
+            InitMove(0);
+            <span style="color: green;">//轮播过程的变换函数
+        /*前面已经初始化了图片最开始看到的效果，接着轮播的话会隐藏第一张出现第二张
+         这里count从1开始（图片的初始化位置是count为0的情况），count=1执行
+         一次InitMove(count),使第一张隐藏第二张出现，依次执行。
+         当count==imgs.leghth时由于*图片最后一张的位置是imgs.length-1,
+          所以此时把count置为0；相当于轮播图轮回依次重新开始。*/</span>
+            var count=1;
+            function fMove(){
+               if(count==imgs.length){
+                    count=0;
+                }
+                InitMove(count);
+                count++;
+            }
+            <span style="color: green;">//设置自动轮播定时器；</span>
+            var scollMove=setInterval(fMove,2500);
+
+             <span style="color: green;">//点击移动图片；
+        /*这里就是点击左右移动的button来让图片根据用户的点击左右移动；需要注意一点
+           就是每次点击左移动或右移动需要首先清除定时器，等移动完了在重新添加定时器
+           不然的话你点击移动后图片虽然该变了，但是由于定时器还没动到这张图片上面，
+           所以就需要等待定时器移动到你移动到的那张图片上面让后才开始定时轮播。
+            比如如果你从开始就点击移动图片，一直移动到最后一张那么你就要等待两个
+               定时器的时间才能看到自动轮播。*/</span>
+            var btnleft=document.getElementById('btnleft');
+            var btnright=document.getElementById('btnright');
+            btnleft.onclick=function(){
+                clearInterval(scollMove);
+                if(count==0){
+                    count=imgs.length;
+                }
+                count--;
+                InitMove(count);
+                scollMove=setInterval(fMove,2500);
+            };
+            btnright.onclick=function(){
+                clearInterval(scollMove);
+                fMove();
+                scollMove=setInterval(fMove,2500);
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+				</div>
+				<p style="font-size: 16px; color: white;">最终效果：<img src="img/908065-20161003134921895-589497732.png" alt="" width="500px" height="300px"></p>
+
+			</div>
+
+			<div class="blog_right">
+				<div class="newsItem">
+					<h3 class="catListTitle">公告</h3>
+					<div id="blog-news">
+						<div id="profile_block">昵称：
+							<a href="">OverFitting</a><br>园龄：
+							<a href="" title="入园时间：2016-03-08">3年2个月</a><br>粉丝：
+							<a href="">18</a><br>关注：
+							<a href="">0</a>
+							<div id="p_b_follow">
+								<a>+加关注</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="newsItem">
+					<h3 class="catListTitle">日历</h3>
+					<img src="img/rili.png" width="320px" height="260px" />
+				</div>
+
+				<div class="newsItem">
+					<h3 class="catListTitle">搜索</h3>
+					<div id="search">
+						<div class="div_my_zzk"><input type="text" class="input_my_zzk">&nbsp;<input type="button" value="找找看" id="btnZzk"></div>
+						<div class="div_my_zzk"><input type="text" class="input_my_zzk">&nbsp;<input type="button" value="谷歌搜索" id="btnZzk"></div>
+					</div>
+				</div>
+
+				<div class="newsItem">
+					<h3 class="catListTitle">推荐排行榜</h3>
+					<div id="TopDiggPostsBlock">
+						<ul>
+							<li>
+								<a href="">1. 超详细轮播图，让你彻底明白轮播图！(4)</a>
+							</li>
+							<li>
+								<a href="">2. 深入理解JavaScript——闭包(3)</a>
+							</li>
+							<li>
+								<a href="">3. 决策树(2)</a>
+							</li>
+							<li>
+								<a href="">4. 爬虫关于ip管理池的应用(2)</a>
+							</li>
+							<li>
+								<a href="">5. 关于JavaScript变量提升的理解(2)</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				
+				<div class="newsItem">
+					<h3 class="catListTitle">阅读排行榜</h3>
+					<div id="TopDiggPostsBlock">
+						<ul>
+							<li>
+								<a href="">1. 决策树(32115)</a>
+							</li>
+							<li>
+								<a href="">2. 深入理解JavaScript——闭包(43994)</a>
+							</li>
+							<li>
+								<a href="">3.超详细轮播图，让你彻底明白轮播图(51916)</a>
+							</li>
+							<li>
+								<a href="">4. 爬虫关于ip管理池的应用(2372)</a>
+							</li>
+							<li>
+								<a href="">5. 关于JavaScript变量提升的理解(1592)</a>
+							</li>
+							<li>
+								<a href="">6. Python中的decode的一些基本用法(2349)</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				
+				<div class="newsItem">
+					<h3 class="catListTitle">评论排行榜</h3>
+					<div id="TopDiggPostsBlock">
+						<ul>
+							<li>
+								<a href="">1. 超详细轮播图，让你彻底明白轮播图！(99+)</a>
+							</li>
+							<li>
+								<a href="">2. 深入理解JavaScript——闭包(66+)</a>
+							</li>
+							<li>
+								<a href="">3. 决策树(520+)</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="newsItem">
+					<h3 class="catListTitle">最新评论</h3>
+					<div id="TopDiggPostsBlock">
+						<ul>
+							<li>
+								<a href="">1. Re:超详细轮播图，让你彻底明白轮播图！</a>
+								<p>@Runlin嗯嗯，这样用户体验更好一些，谢谢指正！……</p>
+								<span style="float: right;">--Frank_暗影</span>
+								<p>&nbsp;</p>
+							</li>
+							<li>
+								<a href="">2. Re决策树</a>
+								<p>@小风扇有个基础概念错了，就是“熵”！怎么能说是“代价”呢，应该叫做不稳定性，从信息角度讲，就是“平均信息量”和“代价”无关啊……</p>
+								<span style="float: right;">--君君_1984</span>
+								<p>&nbsp;</p>
+							</li>
+							<li>
+								<a href="">3. Re决策树</a>
+								<p>总结的很好！但是公式看起来太累了，建议排版一下。</p>
+								<span style="float: right;">--小风扇</span>
+								<p>&nbsp;</p>
+							</li>
+							<li>
+								<a href="">4. Re:超详细轮播图，让你彻底明白轮播图！</a>
+								<p>鼠标移到Div上要让定时器停止，左右按钮的clearintervel可以去掉</p>
+								<span style="float: right;">--Runlin</span>
+								<p>&nbsp;</p>
+							</li>
+							<li>
+								<a href="">5. Re:超详细轮播图，让你彻底明白轮播图！</a>
+								<p>@Runlin其实可以插入HTML代码的，这样更直观……</p>
+								<span style="float: right;">--Runlin</span>
+								<p>&nbsp;</p>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				
+				<div class="newsItem">
+					<h3 class="catListTitle">文章分类</h3>
+					<div id="TopDiggPostsBlock">
+						<ul>
+							<li>
+								<a href="">算法（1）</a>
+							</li>
+							<li>
+								<a href="">数据结构（2）</a>
+							</li>
+							<li>
+								<a href="">类的继承（3）</a>
+							</li>
+							<li>
+								<a href="">指针的深入（4）</a>
+							</li>
+							<li>
+								<a href="">封装多态性（5）</a>
+							</li>
+							<li>
+								<a href="">构造方法（6）</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				
+				<div style="width: 100%;">
+					<img src="img/24442-20190528102721281-881479913.png" style="width: 100%;" />
+				</div>
+
+			</div>
+		</div>
+		<div class="clear"></div>
+		<footer>
+			<div class="footer-bottom">
+				<p>版权所有 CopyRight&copy;2019 Design by zhangshuai</p>
+			</div>
+		</footer>
+	</body>
+
+</html>

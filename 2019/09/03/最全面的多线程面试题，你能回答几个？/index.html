@@ -1,0 +1,3436 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>最全面的多线程面试题，你能回答几个？ | 皮皮猪~个人博客</title>
+  <meta name="keywords" content=" 多线程 ">
+  <meta name="description" content="最全面的多线程面试题，你能回答几个？ | 皮皮猪~个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="http://zhsh666.xyz/404/index-1.html">
+<meta property="og:site_name" content="皮皮猪~个人博客">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-14T08:53:08.535Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="404">
+
+
+<link rel="icon" href="/img/favicon.ico">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/gruvbox-dark.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.png" />
+</a>
+<div class="author">
+    <span>Zevs</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/7b54b38528d8" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="weibo" href="https://weibo.com/5824301643/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo&amp;is_all=1" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="csdn" href="https://blog.csdn.net/weixin_43958049" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-csdn"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/u/4189459" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:2602138376@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=https://shang.qq.com/wpa/qunwpa?idkey=79e326c19a9ebf8ac3b7375a8711cd3b7a7680fae68de5b2253849a328936ab4&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+<a class="more-menus">更多菜单</a>
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(238)</small></div></li>
+    
+        
+            
+            <li><div data-rel="搭建技术">搭建技术<small>(50)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="前端开发"><i class="fold iconfont icon-right"></i>前端开发<small>(39)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="JavaScript">JavaScript<small>(2)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="随笔">随笔<small>(46)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="技术介绍">技术介绍<small>(31)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="后端开发"><i class="fold iconfont icon-right"></i>后端开发<small>(16)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="PHP">PHP<small>(8)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Java"><i class="fold iconfont icon-right"></i>Java<small>(40)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="千问">千问<small>(5)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="读书">读书<small>(14)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="开篇博客">开篇博客<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    <a class="dynamic-menu site_url"   href="/photo">相册</a>
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://pic.iqy.ink/">图床</a>
+    
+    
+    <a class="dynamic-menu " target="_self"   href="https://z.zhsh666.xyz/">主题切换</a>
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="238">
+<input type="hidden" id="yelog_site_word_count" value="500.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://chuangzaoshi.com/">【创造师】</a></li>
+            
+            <li><a target="_blank" href="http://yelog.org/">【叶落阁】</a></li>
+            
+            <li><a target="_blank" href="https://www.qxxmx.com">【草莓酱】</a></li>
+            
+            <li><a target="_blank" href="https://wxy97.com/">【王旭阳】</a></li>
+            
+            <li><a target="_blank" href="https://www.liaoxuefeng.com/wiki/1022910821149312">【廖雪峰】</a></li>
+            
+            <li><a target="_blank" href="https://xian6ge.cn/posts/82ce1911/">【贤柳阁】</a></li>
+            
+            <li><a target="_blank" href="https://rzfyu.com/">【非汝鱼】</a></li>
+            
+            <li><a target="_blank" href="https://oriheart.top/">【梨花诗】</a></li>
+            
+            <li><a target="_blank" href="https://yremp.live/">【流  年】</a></li>
+            
+            <li><a target="_blank" href="https://2heng.xin/">【樱花庄】</a></li>
+            
+            <li><a target="_blank" href="https://yremp.club/">【yremp】</a></li>
+            
+            <li><a target="_blank" href="http://bbs.kdays.net/index">【KDays论坛】</a></li>
+            
+            <li><a target="_blank" href="https://myau.moe/">【myau】</a></li>
+            
+            <li><a target="_blank" href="https://marmomento.github.io/">【marmomento】</a></li>
+            
+            <li><a target="_blank" href="https://zhsh666.xyz">【Zevs】</a></li>
+            
+            <li><a target="_blank" href="https://powerlrl.github.io/">【LinYo】</a></li>
+            
+            <li><a target="_blank" href="https://jackym06.github.io/">【MaoLi】</a></li>
+            
+            <li><a target="_blank" href="http://fangzh.top/2018/2018090514/">【FangL】</a></li>
+            
+            <li><a target="_blank" href="http://litten.me">【Litten】</a></li>
+            
+            <li><a target="_blank" href="https://imsun.net/">【Sun】</a></li>
+            
+            <li><a target="_blank" href="http://hfanss.com/">【HFan】</a></li>
+            
+            <li><a target="_blank" href="https://www.whyvv.top/">【Whyvv】</a></li>
+            
+            <li><a target="_blank" href="https://staunchkai.com/">【STAUN】</a></li>
+            
+            <li><a target="_blank" href="https://blog.creat.kim/">【DS Blog】</a></li>
+            
+            <li><a target="_blank" href="https://blog.wzdxy.com/">【WZdxy】</a></li>
+            
+            <li><a target="_blank" href="http://www.zhaojun.im/">【ZJK】</a></li>
+            
+            <li><a target="_blank" href="https://www.cnblogs.com/zhsh666/">【blog】</a></li>
+            
+            <li><a target="_blank" href="https://www.php.cn">【PHP】</a></li>
+            
+            <li><a target="_blank" href="https://hellowangheng.github.io/">【WangH】</a></li>
+            
+            <li><a target="_blank" href="https://blog.damonare.cn/">【Damonare】</a></li>
+            
+            <li><a target="_blank" href="https://claiyre.github.io/">【Claiyre】</a></li>
+            
+            <li><a target="_blank" href="https://blog.slomoo.cn/">【Slomoo】</a></li>
+            
+            <li><a target="_blank" href="https://blog.givensir.cn/">【GivenSir】</a></li>
+            
+            <li><a target="_blank" href="https://laustar.fun/">【laustar】</a></li>
+            
+            <li><a target="_blank" href="https://www.mckinleylu.com/">【McKinley】</a></li>
+            
+            <li><a target="_blank" href="http://cnm.one/">【喵帕斯】</a></li>
+            
+            <li><a target="_blank" href="http://ibruce.info/">【不如】</a></li>
+            
+            <li><a target="_blank" href="https://xdlrt.github.io/">【小居】</a></li>
+            
+            <li><a target="_blank" href="http://damonare.cn/">【念念】</a></li>
+            
+            <li><a target="_blank" href="https://helloqingfeng.github.io/">【清风】</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">3-hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">CSS3</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">小程序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">css</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Flex</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Apache</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Tomcat</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">服务器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">HBuilder</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">HTML</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">JavaScript</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">HTML5</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">idea</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">IDEA</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Java</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">jsp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">JDBC</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">MySQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Github</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">node.js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Node.js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">PHP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">PanDownload</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Python</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">java</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">SpringBoot</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Vue</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">框架</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">wordpress</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">WampServer</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">WordPress</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">自定义</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">nodejs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">GitHub</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">gitbash</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">部署</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">final</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">常量</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">数据库</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">飘落特效</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">jquery</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">mysql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Markdown</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Typora</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">npm</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">jsDeliver</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cnd</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">1+x</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">代码</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">安卓</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">博客</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">纪念</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">reading</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数据结构</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Chrome</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Cookie</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Session</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">codding</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">剪辑</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">缘起</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">虚拟机</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">模拟器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Wordpress</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">智慧树</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">图床</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">码云</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网站收录</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CSS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">轮播图</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">鼠标点击</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">点击特效</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">jsDelivr</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PicGo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">前端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">Swing</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">南京三日游</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">主题</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Lsky Pro</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">宝塔</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Android</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Vue.js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Spring Boot</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网页设计</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">http</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">https</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">多线程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">HTMK</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">JS</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="开篇博客 "
+           href="/2019/08/14/纪念博客搭建完成/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="纪念博客搭建完成">纪念博客搭建完成</span>
+            <span class="post-date" title="2019-08-14 09:42:38">2019/08/14</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/10/11/happy birthday/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="致自己生日快乐，写给自己22岁生日！">致自己生日快乐，写给自己22岁生日！</span>
+            <span class="post-date" title="2019-10-11 10:30:00">2019/10/11</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/21/准备度过一个怎样的大学生活？/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="准备度过一个怎样的大学生活？">准备度过一个怎样的大学生活？</span>
+            <span class="post-date" title="2019-09-21 11:20:28">2019/09/21</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/09/21/永远并不远 五种可能注定要衰落的编程语言/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="永远并不远 五种可能注定要衰落的编程语言">永远并不远 五种可能注定要衰落的编程语言</span>
+            <span class="post-date" title="2019-09-21 11:14:28">2019/09/21</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/09/21/漫画：《程序员十二时辰》/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="漫画：《程序员十二时辰》，内容过于真实">漫画：《程序员十二时辰》，内容过于真实</span>
+            <span class="post-date" title="2019-09-21 11:03:28">2019/09/21</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/09/21/HBuilder-App/"
+           data-tag="HBuilder"
+           data-author="" >
+            <span class="post-title" title="HBuilder如何打包App方法">HBuilder如何打包App方法</span>
+            <span class="post-date" title="2019-09-21 10:42:28">2019/09/21</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/20/school/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="清晨的电子学院图片分享！">清晨的电子学院图片分享！</span>
+            <span class="post-date" title="2019-09-20 13:06:28">2019/09/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/20/总有一束光能照亮我们的生活/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="总有一束光能照亮我们的生活！">总有一束光能照亮我们的生活！</span>
+            <span class="post-date" title="2019-09-20 13:01:28">2019/09/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/18/9.18/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="今天是9.18,向所有爱国抗日的志士们致敬!">今天是9.18,向所有爱国抗日的志士们致敬!</span>
+            <span class="post-date" title="2019-09-18 09:25:25">2019/09/18</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/09/17/Apache Tomcat下载、安装、配置图文教程/"
+           data-tag="Tomcat"
+           data-author="" >
+            <span class="post-title" title="Apache Tomcat下载、安装、配置图文教程">Apache Tomcat下载、安装、配置图文教程</span>
+            <span class="post-date" title="2019-09-17 12:57:25">2019/09/17</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/17/GitHub上50个最受欢迎的PHP开源项目【2019】/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="GitHub上50个最受欢迎的PHP开源项目【2019】">GitHub上50个最受欢迎的PHP开源项目【2019】</span>
+            <span class="post-date" title="2019-09-17 12:56:25">2019/09/17</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/17/PHP怎么连接Mysql数据库/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP怎么连接Mysql数据库">PHP怎么连接Mysql数据库</span>
+            <span class="post-date" title="2019-09-17 12:55:25">2019/09/17</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/17/PHP怎么实现分页功能？（图文+视频教程）/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP怎么实现分页功能？（图文+视频教程）">PHP怎么实现分页功能？（图文+视频教程）</span>
+            <span class="post-date" title="2019-09-17 12:54:25">2019/09/17</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/17/php经典趣味算法/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="php经典趣味算法">php经典趣味算法</span>
+            <span class="post-date" title="2019-09-17 12:52:25">2019/09/17</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/15/last-day/"
+           data-tag="南京三日游"
+           data-author="" >
+            <span class="post-title" title="南京三日游随笔">南京三日游随笔</span>
+            <span class="post-date" title="2019-09-15 21:43:25">2019/09/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/15/day3/"
+           data-tag="南京三日游"
+           data-author="" >
+            <span class="post-title" title="南京三日游day3">南京三日游day3</span>
+            <span class="post-date" title="2019-09-15 20:34:25">2019/09/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/14/day2/"
+           data-tag="南京三日游"
+           data-author="" >
+            <span class="post-title" title="南京三日游day2">南京三日游day2</span>
+            <span class="post-date" title="2019-09-14 18:16:25">2019/09/14</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/13/day1/"
+           data-tag="南京三日游"
+           data-author="" >
+            <span class="post-title" title="南京三日游day1">南京三日游day1</span>
+            <span class="post-date" title="2019-09-13 20:16:25">2019/09/13</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/12/CSS3-border/"
+           data-tag="CSS3"
+           data-author="" >
+            <span class="post-title" title="CSS3：不可思议的border属性">CSS3：不可思议的border属性</span>
+            <span class="post-date" title="2019-09-12 13:03:25">2019/09/12</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/09/10/Sakura樱花主题添加可爱的看板娘（详细教程）/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Sakura樱花主题添加可爱的看板娘（详细教程）">Sakura樱花主题添加可爱的看板娘（详细教程）</span>
+            <span class="post-date" title="2019-09-10 18:26:37">2019/09/10</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/09/09/WampServer/"
+           data-tag="WampServer"
+           data-author="" >
+            <span class="post-title" title="解决WampServer服务安装后MySQL无法启动且呈现橘黄色">解决WampServer服务安装后MySQL无法启动且呈现橘黄色</span>
+            <span class="post-date" title="2019-09-09 20:00:25">2019/09/09</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/09/03/通过JSP网页连接Mysql数据库/"
+           data-tag="jsp"
+           data-author="" >
+            <span class="post-title" title="通过JSP网页连接Mysql数据库">通过JSP网页连接Mysql数据库</span>
+            <span class="post-date" title="2019-09-03 22:56:18">2019/09/03</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/09/03/什么是JSP/"
+           data-tag="jsp"
+           data-author="" >
+            <span class="post-title" title="什么是JSP">什么是JSP</span>
+            <span class="post-date" title="2019-09-03 22:29:18">2019/09/03</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/09/03/JSP实现简单的用户登录和注册/"
+           data-tag="jsp"
+           data-author="" >
+            <span class="post-title" title="JSP实现简单的用户登录和注册">JSP实现简单的用户登录和注册</span>
+            <span class="post-date" title="2019-09-03 22:29:18">2019/09/03</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/09/03/JSP基础知识/"
+           data-tag="jsp"
+           data-author="" >
+            <span class="post-title" title="JSP基础知识">JSP基础知识</span>
+            <span class="post-date" title="2019-09-03 21:49:18">2019/09/03</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/03/10行代码实现小程序支付功能！/"
+           data-tag="小程序"
+           data-author="" >
+            <span class="post-title" title="10行代码实现小程序支付功能！">10行代码实现小程序支付功能！</span>
+            <span class="post-date" title="2019-09-03 15:04:44">2019/09/03</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/03/最全面的多线程面试题，你能回答几个？/"
+           data-tag="多线程"
+           data-author="" >
+            <span class="post-title" title="最全面的多线程面试题，你能回答几个？">最全面的多线程面试题，你能回答几个？</span>
+            <span class="post-date" title="2019-09-03 14:59:31">2019/09/03</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/09/03/分享几个实用的HEXO博客功能插件/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="分享几个实用的HEXO博客功能插件">分享几个实用的HEXO博客功能插件</span>
+            <span class="post-date" title="2019-09-03 14:55:01">2019/09/03</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/02/明猫不做暗事/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="明猫不做暗事">明猫不做暗事</span>
+            <span class="post-date" title="2019-09-02 20:17:01">2019/09/02</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/09/02/天地人间静静语/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="天地人间静静语">天地人间静静语</span>
+            <span class="post-date" title="2019-09-02 14:17:01">2019/09/02</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/09/02/“1-X”中级Web前端证书对应课程分析/"
+           data-tag="1+x"
+           data-author="" >
+            <span class="post-title" title="“1+X”中级Web前端证书对应课程分析">“1+X”中级Web前端证书对应课程分析</span>
+            <span class="post-date" title="2019-09-02 12:20:42">2019/09/02</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/09/02/优化hexo访问速度-将hexo部署到云主机VPS/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="优化hexo访问速度-将hexo部署到云主机VPS">优化hexo访问速度-将hexo部署到云主机VPS</span>
+            <span class="post-date" title="2019-09-02 07:51:50">2019/09/02</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/09/01/Github+jsDelivr+PicGo 打造稳定快速、高效免费图床/"
+           data-tag="Github,jsDelivr,PicGo"
+           data-author="" >
+            <span class="post-title" title="Github+jsDelivr+PicGo 打造稳定快速、高效免费图床">Github+jsDelivr+PicGo 打造稳定快速、高效免费图床</span>
+            <span class="post-date" title="2019-09-01 12:42:49">2019/09/01</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/31/九月你好/"
+           data-tag="纪念"
+           data-author="" >
+            <span class="post-title" title="九月你好">九月你好</span>
+            <span class="post-date" title="2019-08-31 10:10:28">2019/08/31</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/30/回首过往/"
+           data-tag="缘起"
+           data-author="" >
+            <span class="post-title" title="回首过往">回首过往</span>
+            <span class="post-date" title="2019-08-30 07:43:53">2019/08/30</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/网站收录提交入口/"
+           data-tag="网站收录"
+           data-author="" >
+            <span class="post-title" title="网站收录提交入口">网站收录提交入口</span>
+            <span class="post-date" title="2019-08-29 10:01:53">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/宝塔安装Lsky Pro图床教程/"
+           data-tag="图床,Lsky Pro,宝塔"
+           data-author="" >
+            <span class="post-title" title="宝塔安装Lsky Pro图床教程">宝塔安装Lsky Pro图床教程</span>
+            <span class="post-date" title="2019-08-29 09:34:18">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/WordPress程序搭建个人博客教程，如何快速建站？/"
+           data-tag="WordPress"
+           data-author="" >
+            <span class="post-title" title="WordPress程序搭建个人博客教程，如何快速建站？">WordPress程序搭建个人博客教程，如何快速建站？</span>
+            <span class="post-date" title="2019-08-29 09:23:59">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/使用wordpress建站流程的八个步骤/"
+           data-tag="wordpress"
+           data-author="" >
+            <span class="post-title" title="使用wordpress建站流程的八个步骤">使用wordpress建站流程的八个步骤</span>
+            <span class="post-date" title="2019-08-29 09:15:04">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/WP建站入门基础知识/"
+           data-tag="wordpress"
+           data-author="" >
+            <span class="post-title" title="WP建站入门基础知识">WP建站入门基础知识</span>
+            <span class="post-date" title="2019-08-29 09:10:33">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/有关wordpress建站的7个必知常识/"
+           data-tag="wordpress"
+           data-author="" >
+            <span class="post-title" title="有关wordpress建站的7个必知常识">有关wordpress建站的7个必知常识</span>
+            <span class="post-date" title="2019-08-29 09:07:20">2019/08/29</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/29/CSS3爱心飘落特效/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="CSS3爱心飘落特效">CSS3爱心飘落特效</span>
+            <span class="post-date" title="2019-08-29 09:01:09">2019/08/29</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/29/jquery实现web页面樱花飘落特效/"
+           data-tag="飘落特效,jquery"
+           data-author="" >
+            <span class="post-title" title="jquery实现web页面樱花飘落特效">jquery实现web页面樱花飘落特效</span>
+            <span class="post-date" title="2019-08-29 08:57:09">2019/08/29</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/29/很漂亮的网页飘落特效代码/"
+           data-tag="飘落特效,代码"
+           data-author="" >
+            <span class="post-title" title="很漂亮的网页飘落特效代码">很漂亮的网页飘落特效代码</span>
+            <span class="post-date" title="2019-08-29 08:48:16">2019/08/29</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/29/jsDeliver-github使用教程，免费的cnd/"
+           data-tag="jsDeliver,cnd"
+           data-author="" >
+            <span class="post-title" title="jsDeliver+github使用教程，免费的cdn">jsDeliver+github使用教程，免费的cdn</span>
+            <span class="post-date" title="2019-08-29 06:52:46">2019/08/29</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/28/资源分享/"
+           data-tag="css,HTML,JavaScript,Java"
+           data-author="" >
+            <span class="post-title" title="资源分享">资源分享</span>
+            <span class="post-date" title="2019-08-28 14:54:52">2019/08/28</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/28/我就是我/"
+           data-tag="Github"
+           data-author="" >
+            <span class="post-title" title="我就是我">我就是我</span>
+            <span class="post-date" title="2019-08-28 10:54:52">2019/08/28</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/28/hexo加快访问速度/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo加快访问速度">hexo加快访问速度</span>
+            <span class="post-date" title="2019-08-28 07:57:34">2019/08/28</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/28/使用coding和hexo快速搭建博客/"
+           data-tag="hexo,codding"
+           data-author="" >
+            <span class="post-title" title="使用coding和hexo快速搭建博客">使用coding和hexo快速搭建博客</span>
+            <span class="post-date" title="2019-08-28 07:40:19">2019/08/28</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/28/怎么用Hostwinds搭建Wordpress博客网站（超详细图文教程）/"
+           data-tag="Wordpress"
+           data-author="" >
+            <span class="post-title" title="怎么用Hostwinds搭建Wordpress博客网站（超详细图文教程）">怎么用Hostwinds搭建Wordpress博客网站（超详细图文教程）</span>
+            <span class="post-date" title="2019-08-28 06:37:02">2019/08/28</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/28/唯美主题hexo-sakura使用教程/"
+           data-tag="主题"
+           data-author="" >
+            <span class="post-title" title="唯美主题hexo-sakura使用教程">唯美主题hexo-sakura使用教程</span>
+            <span class="post-date" title="2019-08-28 06:17:39">2019/08/28</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/27/Jekyll建立Github博客/"
+           data-tag="Github"
+           data-author="" >
+            <span class="post-title" title="Jekyll建立Github博客">Jekyll建立Github博客</span>
+            <span class="post-date" title="2019-08-27 09:24:52">2019/08/27</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/hexo-添加自定义页面/"
+           data-tag="hexo,自定义"
+           data-author="" >
+            <span class="post-title" title="hexo 添加自定义页面">hexo 添加自定义页面</span>
+            <span class="post-date" title="2019-08-26 15:19:58">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/腾讯视频如何转换MP4格式的2种方法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="腾讯视频如何转换MP4格式的2种方法">腾讯视频如何转换MP4格式的2种方法</span>
+            <span class="post-date" title="2019-08-26 13:24:52">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/支付宝诞生的故事/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="支付宝诞生的故事">支付宝诞生的故事</span>
+            <span class="post-date" title="2019-08-26 13:24:52">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/关于第三方支付，看这篇文章就够了！/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="关于第三方支付，看这篇文章就够了！">关于第三方支付，看这篇文章就够了！</span>
+            <span class="post-date" title="2019-08-26 10:49:25">2019/08/26</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/26/JAVA 排序之选择排序、堆排序/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="JAVA 排序之选择排序、堆排序">JAVA 排序之选择排序、堆排序</span>
+            <span class="post-date" title="2019-08-26 10:45:53">2019/08/26</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/26/Java 排序之插入排序、希尔排序/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="Java 排序之插入排序、希尔排序">Java 排序之插入排序、希尔排序</span>
+            <span class="post-date" title="2019-08-26 10:43:53">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/✍神奇的一行代码/"
+           data-tag="代码"
+           data-author="" >
+            <span class="post-title" title="✍神奇的一行代码">✍神奇的一行代码</span>
+            <span class="post-date" title="2019-08-26 09:55:09">2019/08/26</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/26/Http转入Https的完整攻略/"
+           data-tag="http,https"
+           data-author="" >
+            <span class="post-title" title="Http转入Https的完整攻略">Http转入Https的完整攻略</span>
+            <span class="post-date" title="2019-08-26 09:40:16">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/Hexo-博客部署到腾讯云服务器全流程/"
+           data-tag="hexo,服务器"
+           data-author="" >
+            <span class="post-title" title="Hexo 博客部署到腾讯云服务器全流程">Hexo 博客部署到腾讯云服务器全流程</span>
+            <span class="post-date" title="2019-08-26 09:29:32">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/腾讯云COS图床制作/"
+           data-tag="图床"
+           data-author="" >
+            <span class="post-title" title="腾讯云COS图床制作">腾讯云COS图床制作</span>
+            <span class="post-date" title="2019-08-26 09:22:57">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/码云-hexo搭建个性博客/"
+           data-tag="hexo,码云"
+           data-author="" >
+            <span class="post-title" title="码云+hexo搭建个性博客">码云+hexo搭建个性博客</span>
+            <span class="post-date" title="2019-08-26 09:09:04">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/hexo部署至FTP-COS/"
+           data-tag="hexo,部署"
+           data-author="" >
+            <span class="post-title" title="hexo部署至FTP-COS">hexo部署至FTP-COS</span>
+            <span class="post-date" title="2019-08-26 09:04:20">2019/08/26</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/26/为什么说-Java-程序员到了必须掌握-Spring-Boot-的时候？/"
+           data-tag="Java,Spring Boot"
+           data-author="" >
+            <span class="post-title" title="为什么说 Java 程序员到了必须掌握 Spring Boot 的时候？">为什么说 Java 程序员到了必须掌握 Spring Boot 的时候？</span>
+            <span class="post-date" title="2019-08-26 08:47:02">2019/08/26</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/26/你真的了解-Cookie-和-Session-吗/"
+           data-tag="Cookie,Session"
+           data-author="" >
+            <span class="post-title" title="你真的了解 Cookie 和 Session 吗?">你真的了解 Cookie 和 Session 吗?</span>
+            <span class="post-date" title="2019-08-26 08:44:36">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/Hexo 博客开启 https (SSL 证书)/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo 博客开启 https (SSL 证书)">Hexo 博客开启 https (SSL 证书)</span>
+            <span class="post-date" title="2019-08-26 07:43:53">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/26/用七牛云搭建一个属于自己的图床/"
+           data-tag="图床"
+           data-author="" >
+            <span class="post-title" title="用七牛云搭建一个属于自己的图床">用七牛云搭建一个属于自己的图床</span>
+            <span class="post-date" title="2019-08-26 07:43:53">2019/08/26</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/25/hexo博客常用插件及教程/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo博客常用插件及教程">hexo博客常用插件及教程</span>
+            <span class="post-date" title="2019-08-25 10:45:53">2019/08/25</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/25/hexo-创建文章、标签、分类/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo 创建文章、标签、分类">hexo 创建文章、标签、分类</span>
+            <span class="post-date" title="2019-08-25 08:53:10">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/25/SpringBoot入门系列：第三篇 日志输出/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot入门系列：第三篇 日志输出">SpringBoot入门系列：第三篇 日志输出</span>
+            <span class="post-date" title="2019-08-25 07:33:08">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/25/SpringBoot入门系列：第二篇 再学Hello World/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot入门系列：第二篇 再学Hello World">SpringBoot入门系列：第二篇 再学Hello World</span>
+            <span class="post-date" title="2019-08-25 07:33:08">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/25/SpringBoot入门系列：第四篇 日志详解/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot入门系列：第四篇 日志详解">SpringBoot入门系列：第四篇 日志详解</span>
+            <span class="post-date" title="2019-08-25 07:33:08">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/25/SpringBoot入门系列：第一篇-Hello-World/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot入门系列：第一篇 Hello World">SpringBoot入门系列：第一篇 Hello World</span>
+            <span class="post-date" title="2019-08-25 07:30:08">2019/08/25</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/spring boot入门教程——Spring Boot快速入门指南/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="spring boot入门教程——Spring Boot快速入门指南">spring boot入门教程——Spring Boot快速入门指南</span>
+            <span class="post-date" title="2019-08-24 11:07:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot ( 七 ) ：springboot + mybatis 多数据源最简解决方案/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot ( 七 ) ：springboot + mybatis 多数据源最简解决方案">SpringBoot ( 七 ) ：springboot + mybatis 多数据源最简解决方案</span>
+            <span class="post-date" title="2019-08-24 11:00:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot (六) ：如何优雅的使用 mybatis/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot (六) ：如何优雅的使用 mybatis">SpringBoot (六) ：如何优雅的使用 mybatis</span>
+            <span class="post-date" title="2019-08-24 10:57:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot(五) ：spring data jpa 的使用/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot(五) ：spring data jpa 的使用">SpringBoot(五) ：spring data jpa 的使用</span>
+            <span class="post-date" title="2019-08-24 10:47:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot (四) ：thymeleaf 使用详解/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot (四) ：thymeleaf 使用详解">SpringBoot (四) ：thymeleaf 使用详解</span>
+            <span class="post-date" title="2019-08-24 10:30:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot (三) ：Spring Boot 中 Redis 的使用/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot (三) ：Spring Boot 中 Redis 的使用">SpringBoot (三) ：Spring Boot 中 Redis 的使用</span>
+            <span class="post-date" title="2019-08-24 10:27:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot ( 二 ) ：web 综合开发/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot ( 二 ) ：web 综合开发">SpringBoot ( 二 ) ：web 综合开发</span>
+            <span class="post-date" title="2019-08-24 10:17:28">2019/08/24</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/24/SpringBoot (一) ：入门篇/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="SpringBoot (一) ：入门篇">SpringBoot (一) ：入门篇</span>
+            <span class="post-date" title="2019-08-24 10:07:28">2019/08/24</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/24/读书语录5/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录5">读书语录5</span>
+            <span class="post-date" title="2019-08-24 07:07:28">2019/08/24</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/23/述说《邻家诗话》/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="述说《邻家诗话》">述说《邻家诗话》</span>
+            <span class="post-date" title="2019-08-23 15:54:32">2019/08/23</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/23/在虚拟机安装Win7出现：directory ezboot not/"
+           data-tag="虚拟机"
+           data-author="" >
+            <span class="post-title" title="在虚拟机安装Win7出现：directory ezboot not">在虚拟机安装Win7出现：directory ezboot not</span>
+            <span class="post-date" title="2019-08-23 12:56:08">2019/08/23</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/23/虚拟机安装系统图文教程/"
+           data-tag="虚拟机"
+           data-author="" >
+            <span class="post-title" title="虚拟机安装系统图文教程">虚拟机安装系统图文教程</span>
+            <span class="post-date" title="2019-08-23 12:36:08">2019/08/23</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/23/轻松装Win10：VMware-Workstation-12虚拟机下载/"
+           data-tag="虚拟机"
+           data-author="" >
+            <span class="post-title" title="轻松装Win10：VMware Workstation 12虚拟机下载">轻松装Win10：VMware Workstation 12虚拟机下载</span>
+            <span class="post-date" title="2019-08-23 11:58:08">2019/08/23</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/23/读书语录4/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录4">读书语录4</span>
+            <span class="post-date" title="2019-08-23 07:05:23">2019/08/23</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/22/用phpnow搭建PHP环境/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="用phpnow搭建PHP环境">用phpnow搭建PHP环境</span>
+            <span class="post-date" title="2019-08-22 16:29:58">2019/08/22</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/22/程序员-520-表白方式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="程序员 520 表白方式">程序员 520 表白方式</span>
+            <span class="post-date" title="2019-08-22 16:04:07">2019/08/22</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/22/PanDownload网盘下载/"
+           data-tag="PanDownload"
+           data-author="" >
+            <span class="post-title" title="PanDownload网盘下载">PanDownload网盘下载</span>
+            <span class="post-date" title="2019-08-22 15:25:16">2019/08/22</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/22/npm安装教程/"
+           data-tag="npm"
+           data-author="" >
+            <span class="post-title" title="npm安装教程">npm安装教程</span>
+            <span class="post-date" title="2019-08-22 14:27:47">2019/08/22</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/22/web前端企业命名参考/"
+           data-tag="css,HTML"
+           data-author="" >
+            <span class="post-title" title="web前端企业命名参考">web前端企业命名参考</span>
+            <span class="post-date" title="2019-08-22 12:21:08">2019/08/22</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/22/Spring-boot-入门篇/"
+           data-tag="Java,java,SpringBoot"
+           data-author="" >
+            <span class="post-title" title="Spring boot 入门篇">Spring boot 入门篇</span>
+            <span class="post-date" title="2019-08-22 10:33:35">2019/08/22</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/22/100道Java基础面试题收集整理（附答案）/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="100道Java基础面试题收集整理（附答案）">100道Java基础面试题收集整理（附答案）</span>
+            <span class="post-date" title="2019-08-22 10:27:28">2019/08/22</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/22/读书语录3/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录3">读书语录3</span>
+            <span class="post-date" title="2019-08-22 07:04:29">2019/08/22</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/22/读书语录2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录2">读书语录2</span>
+            <span class="post-date" title="2019-08-22 07:03:08">2019/08/22</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/22/读书语录1/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="读书语录1">读书语录1</span>
+            <span class="post-date" title="2019-08-22 06:59:37">2019/08/22</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/22/颍河四桥“靓”起来了/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="颍河四桥“靓”起来了">颍河四桥“靓”起来了</span>
+            <span class="post-date" title="2019-08-22 06:52:38">2019/08/22</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/22/还记得19年前的QQ2000吗？/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="还记得19年前的QQ2000吗？">还记得19年前的QQ2000吗？</span>
+            <span class="post-date" title="2019-08-22 06:38:47">2019/08/22</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/22/MikuTools全能网站/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="MikuTools全能网站">MikuTools全能网站</span>
+            <span class="post-date" title="2019-08-22 06:35:39">2019/08/22</span>
+        </a>
+        
+        <a  class="前端开发 JavaScript "
+           href="/2019/08/21/8个有用的JavaScript技巧/"
+           data-tag="JavaScript"
+           data-author="" >
+            <span class="post-title" title="8个有用的JavaScript技巧">8个有用的JavaScript技巧</span>
+            <span class="post-date" title="2019-08-21 16:47:09">2019/08/21</span>
+        </a>
+        
+        <a  class="前端开发 JavaScript "
+           href="/2019/08/21/为什么学习-JavaScript/"
+           data-tag="JavaScript"
+           data-author="" >
+            <span class="post-title" title="为什么学习 JavaScript?">为什么学习 JavaScript?</span>
+            <span class="post-date" title="2019-08-21 16:40:51">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP 语法/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 语法">PHP 语法</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP-简介/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 简介">PHP 简介</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP 5 echo 和 print 语句/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 5 echo 和 print 语句">PHP 5 echo 和 print 语句</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP EOF(heredoc) 使用说明/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP EOF(heredoc) 使用说明">PHP EOF(heredoc) 使用说明</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP 变量/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 变量">PHP 变量</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/PHP 安装/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP 安装">PHP 安装</span>
+            <span class="post-date" title="2019-08-21 16:28:26">2019/08/21</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/21/学习推荐菜鸟教程/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="学习推荐菜鸟教程">学习推荐菜鸟教程</span>
+            <span class="post-date" title="2019-08-21 16:19:37">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 PHP "
+           href="/2019/08/21/php入门视频教程/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="php入门视频教程">php入门视频教程</span>
+            <span class="post-date" title="2019-08-21 16:00:16">2019/08/21</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/21/Java实现简单记事本/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="Java实现简单记事本">Java实现简单记事本</span>
+            <span class="post-date" title="2019-08-21 09:38:21">2019/08/21</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/21/为什么有的笨人一旦开窍，其人生就像开挂一样/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="为什么有的笨人一旦开窍，其人生就像开挂一样">为什么有的笨人一旦开窍，其人生就像开挂一样</span>
+            <span class="post-date" title="2019-08-21 09:12:27">2019/08/21</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/20/详细教程-Tomcat的安装和配置/"
+           data-tag="Tomcat,服务器,java"
+           data-author="" >
+            <span class="post-title" title="详细教程:Tomcat的安装和配置">详细教程:Tomcat的安装和配置</span>
+            <span class="post-date" title="2019-08-20 09:20:35">2019/08/20</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/20/在IDEA中添加类注释与方法注释模板/"
+           data-tag="idea"
+           data-author="" >
+            <span class="post-title" title="在IDEA中添加类注释与方法注释模板">在IDEA中添加类注释与方法注释模板</span>
+            <span class="post-date" title="2019-08-20 09:10:49">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/你要安静的努力，然后悄无声息的变强/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="你要安静的努力，然后悄无声息的变强">你要安静的努力，然后悄无声息的变强</span>
+            <span class="post-date" title="2019-08-20 09:09:36">2019/08/20</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/20/Vue管理后台框架选择推荐/"
+           data-tag="Vue,框架"
+           data-author="" >
+            <span class="post-title" title="Vue管理后台框架选择推荐">Vue管理后台框架选择推荐</span>
+            <span class="post-date" title="2019-08-20 09:08:07">2019/08/20</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/20/你永远不知道别人有多努力/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="你永远不知道别人有多努力">你永远不知道别人有多努力</span>
+            <span class="post-date" title="2019-08-20 09:06:23">2019/08/20</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/20/vue-248-个知识点（面试题）/"
+           data-tag="Vue"
+           data-author="" >
+            <span class="post-title" title="vue 248+个知识点（面试题）">vue 248+个知识点（面试题）</span>
+            <span class="post-date" title="2019-08-20 09:03:43">2019/08/20</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/20/高逼格Android转场动画/"
+           data-tag="Android"
+           data-author="" >
+            <span class="post-title" title="高逼格Android转场动画">高逼格Android转场动画</span>
+            <span class="post-date" title="2019-08-20 08:55:20">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/​​一入古风误终身……/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="一入古风误终身……">一入古风误终身……</span>
+            <span class="post-date" title="2019-08-20 08:47:28">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/青春如此美好/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="青春如此美好">青春如此美好</span>
+            <span class="post-date" title="2019-08-20 08:44:19">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/好多话忍着憋着后来就懒得说了/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="好多话忍着憋着后来就懒得说了">好多话忍着憋着后来就懒得说了</span>
+            <span class="post-date" title="2019-08-20 08:39:44">2019/08/20</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/20/城市非官方短片《心在颍上》/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="城市非官方短片《心在颍上》">城市非官方短片《心在颍上》</span>
+            <span class="post-date" title="2019-08-20 08:36:05">2019/08/20</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/CSS3中Flex弹性布局该如何灵活运用？/"
+           data-tag="css,Flex"
+           data-author="" >
+            <span class="post-title" title="CSS3中Flex弹性布局该如何灵活运用？">CSS3中Flex弹性布局该如何灵活运用？</span>
+            <span class="post-date" title="2019-08-19 16:31:18">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/HTML-JavaScript自己动手做日历/"
+           data-tag="HTML,JavaScript"
+           data-author="" >
+            <span class="post-title" title="HTML+JavaScript自己动手做日历">HTML+JavaScript自己动手做日历</span>
+            <span class="post-date" title="2019-08-19 14:26:45">2019/08/19</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/19/风筝误分享/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="风筝误分享">风筝误分享</span>
+            <span class="post-date" title="2019-08-19 11:30:05">2019/08/19</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/19/Hexo博客中插入音乐-视频/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo博客中插入音乐/视频/">Hexo博客中插入音乐/视频/</span>
+            <span class="post-date" title="2019-08-19 10:54:31">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/带你入门-CSS-Grid-布局/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="带你入门 CSS Grid 布局">带你入门 CSS Grid 布局</span>
+            <span class="post-date" title="2019-08-19 09:36:19">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/弹性和模型介绍/"
+           data-tag="css"
+           data-author="" >
+            <span class="post-title" title="弹性和模型介绍">弹性和模型介绍</span>
+            <span class="post-date" title="2019-08-19 09:31:18">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/延迟加载-Lazyload-三种实现方式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="延迟加载(Lazyload)三种实现方式">延迟加载(Lazyload)三种实现方式</span>
+            <span class="post-date" title="2019-08-19 09:29:12">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/HTML5网页音乐播放器/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="HTML5网页音乐播放器">HTML5网页音乐播放器</span>
+            <span class="post-date" title="2019-08-19 09:25:25">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/极简网页设计技巧，打造简约之美/"
+           data-tag="网页设计"
+           data-author="" >
+            <span class="post-title" title="极简网页设计技巧，打造简约之美">极简网页设计技巧，打造简约之美</span>
+            <span class="post-date" title="2019-08-19 09:22:21">2019/08/19</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/19/创意网站介绍/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="创意网站介绍">创意网站介绍</span>
+            <span class="post-date" title="2019-08-19 09:18:58">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/酷炫的鼠标点击特效/"
+           data-tag="鼠标点击,点击特效"
+           data-author="" >
+            <span class="post-title" title="酷炫的鼠标点击特效">酷炫的鼠标点击特效</span>
+            <span class="post-date" title="2019-08-19 09:09:46">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/HTML5鼠标点击显示圆点动画特效/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="HTML5鼠标点击显示圆点动画特效">HTML5鼠标点击显示圆点动画特效</span>
+            <span class="post-date" title="2019-08-19 09:05:37">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/实用的JavaScript鼠标特效/"
+           data-tag="JavaScript,js"
+           data-author="" >
+            <span class="post-title" title="实用的JavaScript鼠标特效">实用的JavaScript鼠标特效</span>
+            <span class="post-date" title="2019-08-19 08:58:16">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/鼠标点击网页出现爱心特效/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="鼠标点击网页出现爱心特效">鼠标点击网页出现爱心特效</span>
+            <span class="post-date" title="2019-08-19 08:47:17">2019/08/19</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/19/浅谈前后端路由与前后端渲染/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="浅谈前后端路由与前后端渲染">浅谈前后端路由与前后端渲染</span>
+            <span class="post-date" title="2019-08-19 08:43:10">2019/08/19</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/19/焦虑熊表情包来啦ʕ•ᴥ•ʔ/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="焦虑熊表情包来啦ʕ•ᴥ•ʔ">焦虑熊表情包来啦ʕ•ᴥ•ʔ</span>
+            <span class="post-date" title="2019-08-19 08:38:18">2019/08/19</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/19/四季插画日历/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="四季插画日历">四季插画日历</span>
+            <span class="post-date" title="2019-08-19 08:30:09">2019/08/19</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/不要遗忘那份情怀，守住自己的承诺……/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="不要遗忘那份情怀，守住自己的承诺……">不要遗忘那份情怀，守住自己的承诺……</span>
+            <span class="post-date" title="2019-08-18 14:53:43">2019/08/18</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/18/11种高效单词记忆法，你想要的都有！/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="11种高效单词记忆法，你想要的都有！">11种高效单词记忆法，你想要的都有！</span>
+            <span class="post-date" title="2019-08-18 11:55:09">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/像草根一样紧贴着地面/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="像草根一样紧贴着地面">像草根一样紧贴着地面</span>
+            <span class="post-date" title="2019-08-18 11:04:10">2019/08/18</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/18/数字整除-题解-Java描述/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="数字整除-题解(Java描述)">数字整除-题解(Java描述)</span>
+            <span class="post-date" title="2019-08-18 10:25:29">2019/08/18</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/18/JS实现行星的椭圆运动轨迹/"
+           data-tag="JavaScript,js"
+           data-author="" >
+            <span class="post-title" title="JS实现行星的椭圆运动轨迹">JS实现行星的椭圆运动轨迹</span>
+            <span class="post-date" title="2019-08-18 10:20:19">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/现在的努力，是为了小时候吹过的牛逼！/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="现在的努力，是为了小时候吹过的牛逼！">现在的努力，是为了小时候吹过的牛逼！</span>
+            <span class="post-date" title="2019-08-18 10:16:36">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/每个人都有自己的活法，没必要去复制别人的生活/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="每个人都有自己的活法，没必要去复制别人的生活">每个人都有自己的活法，没必要去复制别人的生活</span>
+            <span class="post-date" title="2019-08-18 10:14:32">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/时间在变，人也在变，回不去就是回不去了/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="时间在变，人也在变，回不去就是回不去了">时间在变，人也在变，回不去就是回不去了</span>
+            <span class="post-date" title="2019-08-18 10:13:16">2019/08/18</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/18/利用QQ空间登录实现查看别人QQ密码/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="利用QQ空间登录实现查看别人QQ密码">利用QQ空间登录实现查看别人QQ密码</span>
+            <span class="post-date" title="2019-08-18 10:09:56">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/蛋炒饭的制作方法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="蛋炒饭的制作方法">蛋炒饭的制作方法</span>
+            <span class="post-date" title="2019-08-18 10:08:16">2019/08/18</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/18/网站显示已经运行多久时间/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="网站显示已经运行多久时间">网站显示已经运行多久时间</span>
+            <span class="post-date" title="2019-08-18 10:05:27">2019/08/18</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/18/个人博客-博客大全-搜集全网优秀个人博客/"
+           data-tag="博客"
+           data-author="" >
+            <span class="post-title" title="个人博客_博客大全_搜集全网优秀个人博客">个人博客_博客大全_搜集全网优秀个人博客</span>
+            <span class="post-date" title="2019-08-18 10:00:07">2019/08/18</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/18/【安卓】短信伪造工具-短信伪造神器/"
+           data-tag="安卓"
+           data-author="" >
+            <span class="post-title" title="【安卓】短信伪造工具_短信伪造神器">【安卓】短信伪造工具_短信伪造神器</span>
+            <span class="post-date" title="2019-08-18 09:57:26">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/从学会管理时间开始/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="从学会管理时间开始">从学会管理时间开始</span>
+            <span class="post-date" title="2019-08-18 09:51:53">2019/08/18</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/18/富有品位的尤家花园/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="富有品位的尤家花园">富有品位的尤家花园</span>
+            <span class="post-date" title="2019-08-18 09:35:18">2019/08/18</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/17/给你几点建议，大学生要怎样合理去理财呢？/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="给你几点建议，大学生要怎样合理去理财呢？">给你几点建议，大学生要怎样合理去理财呢？</span>
+            <span class="post-date" title="2019-08-17 13:50:46">2019/08/17</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/17/角色与使命/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="角色与使命">角色与使命</span>
+            <span class="post-date" title="2019-08-17 08:48:44">2019/08/17</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/3-hexo快捷键说明/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo快捷键说明">3-hexo快捷键说明</span>
+            <span class="post-date" title="2019-08-16 08:57:27">2019/08/16</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/16/超详细轮播图，让你彻底明白轮播图！/"
+           data-tag="HTML,轮播图"
+           data-author="" >
+            <span class="post-title" title="超详细轮播图，让你彻底明白轮播图！">超详细轮播图，让你彻底明白轮播图！</span>
+            <span class="post-date" title="2019-08-16 08:57:27">2019/08/16</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/16/Java-基础编程练习题-1/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="Java 基础编程练习题">Java 基础编程练习题</span>
+            <span class="post-date" title="2019-08-16 08:55:58">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/智慧树自动刷课代码/"
+           data-tag="智慧树"
+           data-author="" >
+            <span class="post-title" title="智慧树自动刷课代码">智慧树自动刷课代码</span>
+            <span class="post-date" title="2019-08-16 08:54:42">2019/08/16</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/16/给大家谈谈我怎么理解编程/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="给大家谈谈我怎么理解编程">给大家谈谈我怎么理解编程</span>
+            <span class="post-date" title="2019-08-16 08:53:58">2019/08/16</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/16/解决MySQL服务无法启动报错1067/"
+           data-tag="MySQL,mysql"
+           data-author="" >
+            <span class="post-title" title="解决MySQL服务无法启动报错1067">解决MySQL服务无法启动报错1067</span>
+            <span class="post-date" title="2019-08-16 08:51:57">2019/08/16</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/16/mysql从服务列表里消失了/"
+           data-tag="MySQL,mysql"
+           data-author="" >
+            <span class="post-title" title="mysql从服务列表里消失了">mysql从服务列表里消失了</span>
+            <span class="post-date" title="2019-08-16 08:50:27">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/如何将自己的网站上传至服务器并通过域名进行访问/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="如何将自己的网站上传至服务器并通过域名进行访问">如何将自己的网站上传至服务器并通过域名进行访问</span>
+            <span class="post-date" title="2019-08-16 08:48:02">2019/08/16</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/16/鸿蒙OS将向全球开发者开源！/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="鸿蒙OS将向全球开发者开源！">鸿蒙OS将向全球开发者开源！</span>
+            <span class="post-date" title="2019-08-16 08:46:43">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/Python入门篇/"
+           data-tag="Python"
+           data-author="" >
+            <span class="post-title" title="Python入门篇">Python入门篇</span>
+            <span class="post-date" title="2019-08-16 08:41:05">2019/08/16</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/16/善待自己，给压力一个出口/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="善待自己，给压力一个出口">善待自己，给压力一个出口</span>
+            <span class="post-date" title="2019-08-16 08:39:19">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/安卓模拟器/"
+           data-tag="模拟器"
+           data-author="" >
+            <span class="post-title" title="安卓模拟器">安卓模拟器</span>
+            <span class="post-date" title="2019-08-16 07:11:34">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/免费视频剪辑软件，值得一看/"
+           data-tag="剪辑"
+           data-author="" >
+            <span class="post-title" title="免费视频剪辑软件，值得一看">免费视频剪辑软件，值得一看</span>
+            <span class="post-date" title="2019-08-16 07:09:41">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/从第三方下载Chrome插件及安装/"
+           data-tag="Chrome"
+           data-author="" >
+            <span class="post-title" title="从第三方下载Chrome插件及安装">从第三方下载Chrome插件及安装</span>
+            <span class="post-date" title="2019-08-16 07:07:27">2019/08/16</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/盘点一下免费好用的图床/"
+           data-tag="图床"
+           data-author="" >
+            <span class="post-title" title="盘点一下免费好用的图床">盘点一下免费好用的图床</span>
+            <span class="post-date" title="2019-08-16 07:02:28">2019/08/16</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/16/学生管理系统-登录功能/"
+           data-tag="Java"
+           data-author="" >
+            <span class="post-title" title="学生管理系统-登录功能">学生管理系统-登录功能</span>
+            <span class="post-date" title="2019-08-16 06:58:11">2019/08/16</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/16/一键切换IP【易语言】/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="一键切换IP【易语言】">一键切换IP【易语言】</span>
+            <span class="post-date" title="2019-08-16 06:46:40">2019/08/16</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/16/数码宝贝八人徽章等图赏/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数码宝贝八人徽章等图赏">数码宝贝八人徽章等图赏</span>
+            <span class="post-date" title="2019-08-16 06:38:34">2019/08/16</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/Hexo-页脚增加工信部备案和公安网备案展示/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo 页脚增加工信部备案和公安网备案展示">Hexo 页脚增加工信部备案和公安网备案展示</span>
+            <span class="post-date" title="2019-08-16 06:27:41">2019/08/16</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/Hexo-NexT-主题6-x版本的使用配置与美化/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo NexT 主题6.x版本的使用配置与美化">Hexo NexT 主题6.x版本的使用配置与美化</span>
+            <span class="post-date" title="2019-08-16 06:21:45">2019/08/16</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/16/Hexo-页脚增加网站运行时间统计/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo 页脚增加网站运行时间统计">Hexo 页脚增加网站运行时间统计</span>
+            <span class="post-date" title="2019-08-16 05:55:07">2019/08/16</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/JavaScript入门介绍/"
+           data-tag="JavaScript,js"
+           data-author="" >
+            <span class="post-title" title="JavaScript入门介绍">JavaScript入门介绍</span>
+            <span class="post-date" title="2019-08-15 18:27:25">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/Hexo搭建手册/"
+           data-tag="hexo,Hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo搭建手册">Hexo搭建手册</span>
+            <span class="post-date" title="2019-08-15 18:21:35">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/Node-js基本语法/"
+           data-tag="node.js,Node.js"
+           data-author="" >
+            <span class="post-title" title="Node.js基本语法">Node.js基本语法</span>
+            <span class="post-date" title="2019-08-15 18:17:55">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/Vue-js框架/"
+           data-tag="Vue,Vue.js"
+           data-author="" >
+            <span class="post-title" title="Vue.js框架">Vue.js框架</span>
+            <span class="post-date" title="2019-08-15 18:07:44">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/如何使用-Feed-订阅-GitHub-Issues/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="如何使用 Feed 订阅 GitHub Issues">如何使用 Feed 订阅 GitHub Issues</span>
+            <span class="post-date" title="2019-08-15 18:03:16">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/Gitment：使用-GitHub-Issues-搭建评论系统/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Gitment：使用 GitHub Issues 搭建评论系统">Gitment：使用 GitHub Issues 搭建评论系统</span>
+            <span class="post-date" title="2019-08-15 18:01:09">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/浏览器唤起QQ方法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="浏览器唤起QQ方法">浏览器唤起QQ方法</span>
+            <span class="post-date" title="2019-08-15 17:18:11">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/图床收集-推荐/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="图床收集&amp;推荐">图床收集&amp;推荐</span>
+            <span class="post-date" title="2019-08-15 17:15:52">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/Hexo使用细节及图片不显示问题/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Hexo使用细节及图片不显示问题">Hexo使用细节及图片不显示问题</span>
+            <span class="post-date" title="2019-08-15 16:39:11">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/辅助函数（Helpers）/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="辅助函数（Helpers）">辅助函数（Helpers）</span>
+            <span class="post-date" title="2019-08-15 14:58:47">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/Front-matter/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Front-matter">Front-matter</span>
+            <span class="post-date" title="2019-08-15 14:56:57">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo常用指令/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo常用指令">hexo常用指令</span>
+            <span class="post-date" title="2019-08-15 14:52:27">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/资源文件夹/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="资源文件夹">资源文件夹</span>
+            <span class="post-date" title="2019-08-15 14:48:59">2019/08/15</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/15/蒹葭采采/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="蒹葭采采">蒹葭采采</span>
+            <span class="post-date" title="2019-08-15 12:54:56">2019/08/15</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/15/我成了六零后/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="我成了六零后">我成了六零后</span>
+            <span class="post-date" title="2019-08-15 12:50:17">2019/08/15</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/15/逍遥派/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="逍遥派">逍遥派</span>
+            <span class="post-date" title="2019-08-15 12:45:53">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/Java高级篇（一）——线程/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="Java高级篇（一）——线程">Java高级篇（一）——线程</span>
+            <span class="post-date" title="2019-08-15 12:37:05">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/Java进阶篇（六）——Swing程序设计（上）/"
+           data-tag="Java,java,Swing"
+           data-author="" >
+            <span class="post-title" title="Java进阶篇（六）——Swing程序设计（上）">Java进阶篇（六）——Swing程序设计（上）</span>
+            <span class="post-date" title="2019-08-15 12:32:07">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/Java进阶篇（六）——Swing程序设计（下）/"
+           data-tag="Java,java,Swing"
+           data-author="" >
+            <span class="post-title" title="Java进阶篇（六）——Swing程序设计（下）">Java进阶篇（六）——Swing程序设计（下）</span>
+            <span class="post-date" title="2019-08-15 12:32:05">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/java-final关键字的几种用法/"
+           data-tag="Java,java,final,常量"
+           data-author="" >
+            <span class="post-title" title="[java]final关键字的几种用法">[java]final关键字的几种用法</span>
+            <span class="post-date" title="2019-08-15 12:29:24">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/浅析Java中的final关键字/"
+           data-tag="Java,final"
+           data-author="" >
+            <span class="post-title" title="浅析Java中的final关键字">浅析Java中的final关键字</span>
+            <span class="post-date" title="2019-08-15 12:24:59">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/数据结构有哪些/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="数据结构有哪些">数据结构有哪些</span>
+            <span class="post-date" title="2019-08-15 12:20:47">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/什么是数据结构/"
+           data-tag="Java,数据结构"
+           data-author="" >
+            <span class="post-title" title="什么是数据结构">什么是数据结构</span>
+            <span class="post-date" title="2019-08-15 12:17:47">2019/08/15</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/15/mac-IntelliJ-IDEA2018激活/"
+           data-tag="idea,Java"
+           data-author="" >
+            <span class="post-title" title="mac IntelliJ IDEA2018激活">mac IntelliJ IDEA2018激活</span>
+            <span class="post-date" title="2019-08-15 12:15:14">2019/08/15</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/15/IntelliJ-IDEA2018版下载安装教程以及详细步骤/"
+           data-tag="idea,IDEA,Java"
+           data-author="" >
+            <span class="post-title" title="IntelliJ IDEA2018版下载安装教程以及详细步骤">IntelliJ IDEA2018版下载安装教程以及详细步骤</span>
+            <span class="post-date" title="2019-08-15 12:11:15">2019/08/15</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/15/Java连接MySQL数据库——含步骤和代码/"
+           data-tag="Java,MySQL"
+           data-author="" >
+            <span class="post-title" title="Java连接MySQL数据库——含步骤和代码">Java连接MySQL数据库——含步骤和代码</span>
+            <span class="post-date" title="2019-08-15 12:06:25">2019/08/15</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/15/Java-通过JDBC连接并操作Mysql数据库/"
+           data-tag="Java,JDBC,MySQL"
+           data-author="" >
+            <span class="post-title" title="Java 通过JDBC连接并操作Mysql数据库">Java 通过JDBC连接并操作Mysql数据库</span>
+            <span class="post-date" title="2019-08-15 12:03:41">2019/08/15</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/15/java连接mysql数据库的详细步骤/"
+           data-tag="Java,MySQL,java,数据库"
+           data-author="" >
+            <span class="post-title" title="java连接mysql数据库的详细步骤">java连接mysql数据库的详细步骤</span>
+            <span class="post-date" title="2019-08-15 11:59:35">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/一句话想起在驾校/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="一句话想起在驾校">一句话想起在驾校</span>
+            <span class="post-date" title="2019-08-15 11:57:46">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/长大后才明白的真相/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="长大后才明白的真相">长大后才明白的真相</span>
+            <span class="post-date" title="2019-08-15 11:56:08">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/你弱不禁风是经不起台风吧/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="你弱不禁风是经不起台风吧">你弱不禁风是经不起台风吧</span>
+            <span class="post-date" title="2019-08-15 11:54:37">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/时光易老，人心易变/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="时光易老，人心易变">时光易老，人心易变</span>
+            <span class="post-date" title="2019-08-15 11:52:46">2019/08/15</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/15/生活很现实的经典说说带图片/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="生活很现实的经典说说带图片">生活很现实的经典说说带图片</span>
+            <span class="post-date" title="2019-08-15 11:49:25">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo-插入视频和音乐播放器/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo 插入视频和音乐播放器">hexo 插入视频和音乐播放器</span>
+            <span class="post-date" title="2019-08-15 10:51:56">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/视频分享/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="视频分享">视频分享</span>
+            <span class="post-date" title="2019-08-15 10:30:38">2019/08/15</span>
+        </a>
+        
+        <a  class="随笔 "
+           href="/2019/08/15/等你在颍上/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="等你在颍上">等你在颍上</span>
+            <span class="post-date" title="2019-08-15 10:30:38">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo中输入数学公式/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo中输入数学公式">hexo中输入数学公式</span>
+            <span class="post-date" title="2019-08-15 10:19:35">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo教程-基本配置-更换主题/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo教程:基本配置+更换主题">hexo教程:基本配置+更换主题</span>
+            <span class="post-date" title="2019-08-15 10:05:57">2019/08/15</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/15/hexo教程：github-page-独立域名搭建/"
+           data-tag="hexo,GitHub,gitbash"
+           data-author="" >
+            <span class="post-title" title="hexo教程：github page+独立域名搭建">hexo教程：github page+独立域名搭建</span>
+            <span class="post-date" title="2019-08-15 09:51:16">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/JavaScript简介/"
+           data-tag="JavaScript"
+           data-author="" >
+            <span class="post-title" title="JavaScript简介">JavaScript简介</span>
+            <span class="post-date" title="2019-08-15 09:41:11">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/15/GitHub最全前端资源汇总/"
+           data-tag="GitHub,前端"
+           data-author="" >
+            <span class="post-title" title="GitHub最全前端资源汇总">GitHub最全前端资源汇总</span>
+            <span class="post-date" title="2019-08-15 09:33:16">2019/08/15</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/14/脱离文档流和恢复文档流的方法/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="脱离文档流和恢复文档流的方法">脱离文档流和恢复文档流的方法</span>
+            <span class="post-date" title="2019-08-14 18:41:54">2019/08/14</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/14/前端开发体系建设/"
+           data-tag="CSS,HTMK,JS"
+           data-author="" >
+            <span class="post-title" title="前端开发体系建设">前端开发体系建设</span>
+            <span class="post-date" title="2019-08-14 18:38:10">2019/08/14</span>
+        </a>
+        
+        <a  class="后端开发 "
+           href="/2019/08/14/PHP介绍/"
+           data-tag="PHP"
+           data-author="" >
+            <span class="post-title" title="PHP介绍">PHP介绍</span>
+            <span class="post-date" title="2019-08-14 17:18:06">2019/08/14</span>
+        </a>
+        
+        <a  class="前端开发 "
+           href="/2019/08/14/HTML5新特征/"
+           data-tag="HTML,HTML5"
+           data-author="" >
+            <span class="post-title" title="HTML5新特征">HTML5新特征</span>
+            <span class="post-date" title="2019-08-14 17:15:48">2019/08/14</span>
+        </a>
+        
+        <a  class="读书 "
+           href="/2019/08/14/人生若只如初见-《围城》/"
+           data-tag="reading"
+           data-author="" >
+            <span class="post-title" title="人生若只如初见-《围城》">人生若只如初见-《围城》</span>
+            <span class="post-date" title="2019-08-14 17:09:14">2019/08/14</span>
+        </a>
+        
+        <a  class="Java "
+           href="/2019/08/14/Java-基础编程练习题/"
+           data-tag="Java,java"
+           data-author="" >
+            <span class="post-title" title="Java 基础编程练习题">Java 基础编程练习题</span>
+            <span class="post-date" title="2019-08-14 17:01:47">2019/08/14</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/14/markdown编辑器用法/"
+           data-tag="Markdown,Typora"
+           data-author="" >
+            <span class="post-title" title="markdown编辑器用法">markdown编辑器用法</span>
+            <span class="post-date" title="2019-08-14 16:58:01">2019/08/14</span>
+        </a>
+        
+        <a  class="技术介绍 "
+           href="/2019/08/14/Apache和Apache-Tomcat的区别是什么？/"
+           data-tag="Apache,Tomcat,服务器"
+           data-author="" >
+            <span class="post-title" title="Apache和Apache Tomcat的区别是什么？">Apache和Apache Tomcat的区别是什么？</span>
+            <span class="post-date" title="2019-08-14 16:54:38">2019/08/14</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/14/hexo教程搜索SEO+阅读量统计+访问量统计+评论系统/"
+           data-tag="hexo,3-hexo,nodejs,GitHub"
+           data-author="" >
+            <span class="post-title" title="hexo教程搜索SEO+阅读量统计+访问量统计+评论系统">hexo教程搜索SEO+阅读量统计+访问量统计+评论系统</span>
+            <span class="post-date" title="2019-08-14 11:03:41">2019/08/14</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/14/hexo教程基本配置+更换主题+多终端工作+coding page部署分流/"
+           data-tag="hexo,3-hexo,nodejs,GitHub"
+           data-author="" >
+            <span class="post-title" title="hexo教程基本配置+更换主题+多终端工作+coding page部署分流">hexo教程基本配置+更换主题+多终端工作+coding page部署分流</span>
+            <span class="post-date" title="2019-08-14 10:38:41">2019/08/14</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/14/如何优雅地发布Hexo博客/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="如何优雅地发布Hexo博客">如何优雅地发布Hexo博客</span>
+            <span class="post-date" title="2019-08-14 10:36:24">2019/08/14</span>
+        </a>
+        
+        <a  class="搭建技术 "
+           href="/2019/08/14/GitHub-Hexo-搭建个人博客史上最详细教程/"
+           data-tag="hexo,3-hexo,nodejs,GitHub"
+           data-author="" >
+            <span class="post-title" title="GitHub+Hexo 搭建个人博客史上最详细教程">GitHub+Hexo 搭建个人博客史上最详细教程</span>
+            <span class="post-date" title="2019-08-14 10:35:41">2019/08/14</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/Java面试题大全31-40/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java面试题大全31-40">Java面试题大全31-40</span>
+            <span class="post-date" title="2019-08-12 15:26:56">2019/08/12</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/Java面试题大全21-30/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java面试题大全21-30">Java面试题大全21-30</span>
+            <span class="post-date" title="2019-08-12 15:08:56">2019/08/12</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/Java面试题大全11-20/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java面试题大全11-20">Java面试题大全11-20</span>
+            <span class="post-date" title="2019-08-12 14:59:52">2019/08/12</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/Java面试题大全2-10/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Java面试题大全2-10">Java面试题大全2-10</span>
+            <span class="post-date" title="2019-08-12 14:55:52">2019/08/12</span>
+        </a>
+        
+        <a  class="Java 千问 "
+           href="/2019/08/12/面试指南，求职必看/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="面试指南，求职必看">面试指南，求职必看</span>
+            <span class="post-date" title="2019-08-12 14:54:52">2019/08/12</span>
+        </a>
+        
+        <a  class="开篇博客 "
+           href="/2019/08/12/开篇博客/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="开篇博客">开篇博客</span>
+            <span class="post-date" title="2019-08-12 08:47:04">2019/08/12</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-最全面的多线程面试题，你能回答几个？" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">最全面的多线程面试题，你能回答几个？</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="前端开发">前端开发</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color4">多线程</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-04 18:08:36'>2019-09-03 14:59</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:13.9k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2、什么是线程安全"><span class="toc-text">2、什么是线程安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、编写多线程程序有几种实现方式？"><span class="toc-text">3、编写多线程程序有几种实现方式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、synchronized关键字的用法？"><span class="toc-text">4、synchronized关键字的用法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、简述synchronized-和java-util-concurrent-locks-Lock的异同？"><span class="toc-text">5、简述synchronized 和java.util.concurrent.locks.Lock的异同？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、当一个线程进入一个对象的synchronized方法A之后，其它线程是否可进入此对象的synchronized方法B？"><span class="toc-text">6、当一个线程进入一个对象的synchronized方法A之后，其它线程是否可进入此对象的synchronized方法B？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7、synchronized和ReentrantLock的区别"><span class="toc-text">7、synchronized和ReentrantLock的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8、举例说明同步和异步。"><span class="toc-text">8、举例说明同步和异步。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9、启动一个线程是调用run-还是start-方法？"><span class="toc-text">9、启动一个线程是调用run()还是start()方法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10、为什么需要run-和start-方法，我们可以只用run-方法来完成任务吗？"><span class="toc-text">10、为什么需要run()和start()方法，我们可以只用run()方法来完成任务吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11、什么是线程池（thread-pool）？"><span class="toc-text">11、什么是线程池（thread pool）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12、线程的基本状态以及状态之间的关系？"><span class="toc-text">12、线程的基本状态以及状态之间的关系？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13、Java中如何实现序列化，有什么意义？"><span class="toc-text">13、Java中如何实现序列化，有什么意义？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14、产生死锁的条件"><span class="toc-text">14、产生死锁的条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15、什么是线程饿死，什么是活锁？"><span class="toc-text">15、什么是线程饿死，什么是活锁？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16、什么导致线程阻塞"><span class="toc-text">16、什么导致线程阻塞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17、怎么检测一个线程是否持有对象监视器"><span class="toc-text">17、怎么检测一个线程是否持有对象监视器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18、请说出与线程同步以及线程调度相关的方法。"><span class="toc-text">18、请说出与线程同步以及线程调度相关的方法。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19、sleep-、join（）、yield（）有什么区别"><span class="toc-text">19、sleep() 、join（）、yield（）有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20、wait-notify-和suspend-resume-之间的区别"><span class="toc-text">20、wait(),notify()和suspend(),resume()之间的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21、为什么wait-方法和notify-notifyAll-方法要在同步块中被调用"><span class="toc-text">21、为什么wait()方法和notify()/notifyAll()方法要在同步块中被调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22、wait-方法和notify-notifyAll-方法在放弃对象监视器时有什么区别"><span class="toc-text">22、wait()方法和notify()/notifyAll()方法在放弃对象监视器时有什么区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23、Runnable和Callable的区别"><span class="toc-text">23、Runnable和Callable的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24、Thread类的sleep-方法和对象的wait-方法都可以让线程暂停执行，它们有什么区别？"><span class="toc-text">24、Thread类的sleep()方法和对象的wait()方法都可以让线程暂停执行，它们有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25、线程的sleep-方法和yield-方法有什么区别？"><span class="toc-text">25、线程的sleep()方法和yield()方法有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26、为什么wait-nofity和nofityAll这些方法不放在Thread类当中"><span class="toc-text">26、为什么wait,nofity和nofityAll这些方法不放在Thread类当中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27、怎么唤醒一个阻塞的线程"><span class="toc-text">27、怎么唤醒一个阻塞的线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28、什么是多线程的上下文切换"><span class="toc-text">28、什么是多线程的上下文切换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29、FutureTask是什么"><span class="toc-text">29、FutureTask是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30、一个线程如果出现了运行时异常怎么办？"><span class="toc-text">30、一个线程如果出现了运行时异常怎么办？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#31、Java当中有哪几种锁"><span class="toc-text">31、Java当中有哪几种锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32、如何在两个线程间共享数据"><span class="toc-text">32、如何在两个线程间共享数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33、如何正确的使用wait-使用if还是while？"><span class="toc-text">33、如何正确的使用wait()?使用if还是while？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34、什么是线程局部变量ThreadLocal"><span class="toc-text">34、什么是线程局部变量ThreadLocal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#35、ThreadLoal的作用是什么？"><span class="toc-text">35、ThreadLoal的作用是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#36、ThreadLocal-原理分析"><span class="toc-text">36、ThreadLocal 原理分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#37、如果你提交任务时，线程池队列已满，这时会发生什么"><span class="toc-text">37、如果你提交任务时，线程池队列已满，这时会发生什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#38、为什么要使用线程池"><span class="toc-text">38、为什么要使用线程池</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#39、java中用到的线程调度算法是什么"><span class="toc-text">39、java中用到的线程调度算法是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#40、Thread-sleep-0-的作用是什么"><span class="toc-text">40、Thread.sleep(0)的作用是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#41、什么是CAS"><span class="toc-text">41、什么是CAS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#42、什么是乐观锁和悲观锁"><span class="toc-text">42、什么是乐观锁和悲观锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#43、ConcurrentHashMap的并发度是什么？"><span class="toc-text">43、ConcurrentHashMap的并发度是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#44、ConcurrentHashMap的工作原理"><span class="toc-text">44、ConcurrentHashMap的工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#45、CyclicBarrier和CountDownLatch区别"><span class="toc-text">45、CyclicBarrier和CountDownLatch区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#46、java中的-操作符线程安全么？"><span class="toc-text">46、java中的++操作符线程安全么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#47、有三个线程T1，T2，T3，怎么确保它们按顺序执行？"><span class="toc-text">47、有三个线程T1，T2，T3，怎么确保它们按顺序执行？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#48、如何在Java中创建Immutable对象？"><span class="toc-text">48、如何在Java中创建Immutable对象？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#49、你有哪些多线程开发良好的实践？"><span class="toc-text">49、你有哪些多线程开发良好的实践？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#50、可以创建Volatile数组吗？"><span class="toc-text">50、可以创建Volatile数组吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#51、Volatile关键字的作用"><span class="toc-text">51、Volatile关键字的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#52、volatile能使得一个非原子操作变成原子操作吗？"><span class="toc-text">52、volatile能使得一个非原子操作变成原子操作吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#53、volatile类型变量提供什么保证？"><span class="toc-text">53、volatile类型变量提供什么保证？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#54、Java-中，编写多线程程序的时候你会遵循哪些最佳实践？"><span class="toc-text">54、Java 中，编写多线程程序的时候你会遵循哪些最佳实践？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#55、说出至少-5-点在-Java-中使用线程的最佳实践。"><span class="toc-text">55、说出至少 5 点在 Java 中使用线程的最佳实践。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#56、Java中如何获取到线程dump文件"><span class="toc-text">56、Java中如何获取到线程dump文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#57、高并发、任务执行时间短的业务怎样使用线程池？并发不高、任务执行时间长的业务怎样使用线程池？并发高、业务执行时间长的业务怎样使用线程池？"><span class="toc-text">57、高并发、任务执行时间短的业务怎样使用线程池？并发不高、任务执行时间长的业务怎样使用线程池？并发高、业务执行时间长的业务怎样使用线程池？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#58、作业-进程-调度算法"><span class="toc-text">58、作业(进程)调度算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#59、讲讲线程池的实现原理"><span class="toc-text">59、讲讲线程池的实现原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#60、创建一个线程池"><span class="toc-text">60、创建一个线程池</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#61、处理流程"><span class="toc-text">61、处理流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#62、合理配置线程池"><span class="toc-text">62、合理配置线程池</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#63、synchronize-实现原理"><span class="toc-text">63、synchronize 实现原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#64、轻量锁"><span class="toc-text">64、轻量锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#65、解锁"><span class="toc-text">65、解锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#66、偏向锁"><span class="toc-text">66、偏向锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#67、释放锁"><span class="toc-text">67、释放锁</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、什么是进程，什么是线程，为什么需要多线程编程？ </p>
+<p>进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动，是操作系统进行资源分配和调度的一个独立单位；</p>
+<p>线程是进程的一个实体，是CPU调度和分派的基本单位，是比进程更小的能独立运行的基本单位。线程的划分尺度小于进程，这使得多线程程序的并发性高；进程在执行时通常拥有独立的内存单元，而线程之间可以共享内存。</p>
+<p>使用多线程的编程通常能够带来更好的性能和用户体验，但是多线程的程序对于其他程序是不友好的，因为它可能占用了更多的CPU资源。当然，也不是线程越多，程序的性能就越好，因为线程之间的调度和切换也会浪费CPU时间。时下很时髦的Node.js就采用了单线程异步I/O的工作模式。</p>
+<h2 id="2、什么是线程安全"><a href="#2、什么是线程安全" class="headerlink" title="2、什么是线程安全"></a>2、什么是线程安全</h2><p>如果你的代码在多线程下执行和在单线程下执行永远都能获得一样的结果，那么你的代码就是线程安全的。</p>
+<p>这个问题有值得一提的地方，就是线程安全也是有几个级别的：</p>
+<ul>
+<li>不可变。像String、Integer、Long这些，都是final类型的类，任何一个线程都改变不了它们的值，要改变除非新创建一个，因此这些不可变对象不需要任何同步手段就可以直接在多线程环境下使用</li>
+<li>绝对线程安全。不管运行时环境如何，调用者都不需要额外的同步措施。要做到这一点通常需要付出许多额外的代价，Java中标注自己是线程安全的类，实际上绝大多数都不是线程安全的，不过绝对线程安全的类，Java中也有，比方说CopyOnWriteArrayList、CopyOnWriteArraySet</li>
+<li>相对线程安全。相对线程安全也就是我们通常意义上所说的线程安全，像Vector这种，add、remove方法都是原子操作，不会被打断，但也仅限于此，如果有个线程在遍历某个Vector、有个线程同时在add这个Vector，99%的情况下都会出现ConcurrentModificationException，也就是fail-fast机制。</li>
+<li>线程非安全。这个就没什么好说的了，ArrayList、LinkedList、HashMap等都是线程非安全的类</li>
+</ul>
+<h2 id="3、编写多线程程序有几种实现方式？"><a href="#3、编写多线程程序有几种实现方式？" class="headerlink" title="3、编写多线程程序有几种实现方式？"></a>3、编写多线程程序有几种实现方式？</h2><p>Java 5以前实现多线程有两种实现方法：一种是继承Thread类；另一种是实现Runnable接口。两种方式都要通过重写run()方法来定义线程的行为，推荐使用后者，因为Java中的继承是单继承，一个类有一个父类，如果继承了Thread类就无法再继承其他类了，显然使用Runnable接口更为灵活。</p>
+<p>Java 5以后创建线程还有第三种方式：实现Callable接口，该接口中的call方法可以在线程执行结束时产生一个返回值。</p>
+<h2 id="4、synchronized关键字的用法？"><a href="#4、synchronized关键字的用法？" class="headerlink" title="4、synchronized关键字的用法？"></a>4、synchronized关键字的用法？</h2><p>synchronized关键字可以将对象或者方法标记为同步，以实现对对象和方法的互斥访问，可以用synchronized(对象) { … }定义同步代码块，或者在声明方法时将synchronized作为方法的修饰符。</p>
+<h2 id="5、简述synchronized-和java-util-concurrent-locks-Lock的异同？"><a href="#5、简述synchronized-和java-util-concurrent-locks-Lock的异同？" class="headerlink" title="5、简述synchronized 和java.util.concurrent.locks.Lock的异同？"></a>5、简述synchronized 和java.util.concurrent.locks.Lock的异同？</h2><p>Lock是Java 5以后引入的新的API，和关键字synchronized相比主要相同点：Lock 能完成synchronized所实现的所有功能；主要不同点：Lock有比synchronized更精确的线程语义和更好的性能，而且不强制性的要求一定要获得锁。synchronized会自动释放锁，而Lock一定要求程序员手工释放，并且最好在finally 块中释放（这是释放外部资源的最好的地方）。</p>
+<h2 id="6、当一个线程进入一个对象的synchronized方法A之后，其它线程是否可进入此对象的synchronized方法B？"><a href="#6、当一个线程进入一个对象的synchronized方法A之后，其它线程是否可进入此对象的synchronized方法B？" class="headerlink" title="6、当一个线程进入一个对象的synchronized方法A之后，其它线程是否可进入此对象的synchronized方法B？"></a>6、当一个线程进入一个对象的synchronized方法A之后，其它线程是否可进入此对象的synchronized方法B？</h2><p>不能。其它线程只能访问该对象的非同步方法，同步方法则不能进入。因为非静态方法上的synchronized修饰符要求执行方法时要获得对象的锁，如果已经进入A方法说明对象锁已经被取走，那么试图进入B方法的线程就只能在等锁池（注意不是等待池哦）中等待对象的锁。</p>
+<h2 id="7、synchronized和ReentrantLock的区别"><a href="#7、synchronized和ReentrantLock的区别" class="headerlink" title="7、synchronized和ReentrantLock的区别"></a>7、synchronized和ReentrantLock的区别</h2><p>synchronized是和if、else、for、while一样的关键字，ReentrantLock是类，这是二者的本质区别。既然ReentrantLock是类，那么它就提供了比synchronized更多更灵活的特性，可以被继承、可以有方法、可以有各种各样的类变量，ReentrantLock比synchronized的扩展性体现在几点上：</p>
+<ol>
+<li>ReentrantLock可以对获取锁的等待时间进行设置，这样就避免了死锁</li>
+<li>ReentrantLock可以获取各种锁的信息</li>
+<li>ReentrantLock可以灵活地实现多路通知</li>
+</ol>
+<p>另外，二者的锁机制其实也是不一样的:ReentrantLock底层调用的是Unsafe的park方法加锁，synchronized操作的应该是对象头中mark word.</p>
+<h2 id="8、举例说明同步和异步。"><a href="#8、举例说明同步和异步。" class="headerlink" title="8、举例说明同步和异步。"></a>8、举例说明同步和异步。</h2><p>如果系统中存在临界资源（资源数量少于竞争资源的线程数量的资源），例如正在写的数据以后可能被另一个线程读到，或者正在读的数据可能已经被另一个线程写过了，那么这些数据就必须进行同步存取（数据库操作中的排他锁就是最好的例子）。当应用程序在对象上调用了一个需要花费很长时间来执行的方法，并且不希望让程序等待方法的返回时，就应该使用异步编程，在很多情况下采用异步途径往往更有效率。事实上，所谓的同步就是指阻塞式操作，而异步就是非阻塞式操作。</p>
+<h2 id="9、启动一个线程是调用run-还是start-方法？"><a href="#9、启动一个线程是调用run-还是start-方法？" class="headerlink" title="9、启动一个线程是调用run()还是start()方法？"></a>9、启动一个线程是调用run()还是start()方法？</h2><p>启动一个线程是调用start()方法，使线程所代表的虚拟处理机处于可运行状态，这意味着它可以由JVM 调度并执行，这并不意味着线程就会立即运行。run()方法是线程启动后要进行回调（callback）的方法。</p>
+<h2 id="10、为什么需要run-和start-方法，我们可以只用run-方法来完成任务吗？"><a href="#10、为什么需要run-和start-方法，我们可以只用run-方法来完成任务吗？" class="headerlink" title="10、为什么需要run()和start()方法，我们可以只用run()方法来完成任务吗？"></a>10、为什么需要run()和start()方法，我们可以只用run()方法来完成任务吗？</h2><p>我们需要run()&amp;start()这两个方法是因为JVM创建一个单独的线程不同于普通方法的调用，所以这项工作由线程的start方法来完成，start由本地方法实现，需要显示地被调用，使用这俩个方法的另外一个好处是任何一个对象都可以作为线程运行，只要实现了Runnable接口，这就避免因继承了Thread类而造成的Java的多继承问题。</p>
+<h2 id="11、什么是线程池（thread-pool）？"><a href="#11、什么是线程池（thread-pool）？" class="headerlink" title="11、什么是线程池（thread pool）？"></a>11、什么是线程池（thread pool）？</h2><p>在面向对象编程中，创建和销毁对象是很费时间的，因为创建一个对象要获取内存资源或者其它更多资源。</p>
+<p>在Java中更是如此，虚拟机将试图跟踪每一个对象，以便能够在对象销毁后进行垃圾回收。所以提高服务程序效率的一个手段就是尽可能减少创建和销毁对象的次数，特别是一些很耗资源的对象创建和销毁，这就是“池化资源”技术产生的原因。线程池顾名思义就是事先创建若干个可执行的线程放入一个池（容器）中，需要的时候从池中获取线程不用自行创建，使用完毕不需要销毁线程而是放回池中，从而减少创建和销毁线程对象的开销。</p>
+<p>Java 5+中的Executor接口定义一个执行线程的工具。它的子类型即线程池接口是ExecutorService。要配置一个线程池是比较复杂的，尤其是对于线程池的原理不是很清楚的情况下，因此在工具类Executors面提供了一些静态工厂方法，生成一些常用的线程池，如下所示：</p>
+<ul>
+<li>newSingleThreadExecutor：创建一个单线程的线程池。这个线程池只有一个线程在工作，也就是相当于单线程串行执行所有任务。如果这个唯一的线程因为异常结束，那么会有一个新的线程来替代它。此线程池保证所有任务的执行顺序按照任务的提交顺序执行。</li>
+<li>newFixedThreadPool：创建固定大小的线程池。每次提交一个任务就创建一个线程，直到线程达到线程池的最大大小。线程池的大小一旦达到最大值就会保持不变，如果某个线程因为执行异常而结束，那么线程池会补充一个新线程。</li>
+<li>newCachedThreadPool：创建一个可缓存的线程池。如果线程池的大小超过了处理任务所需要的线程，那么就会回收部分空闲（60秒不执行任务）的线程，当任务数增加时，此线程池又可以智能的添加新线程来处理任务。此线程池不会对线程池大小做限制，线程池大小完全依赖于操作系统（或者说JVM）能够创建的最大线程大小。</li>
+<li>newScheduledThreadPool：创建一个大小无限的线程池。此线程池支持定时以及周期性执行任务的需求。</li>
+<li>newSingleThreadExecutor：创建一个单线程的线程池。此线程池支持定时以及周期性执行任务的需求。</li>
+</ul>
+<h2 id="12、线程的基本状态以及状态之间的关系？"><a href="#12、线程的基本状态以及状态之间的关系？" class="headerlink" title="12、线程的基本状态以及状态之间的关系？"></a>12、线程的基本状态以及状态之间的关系？</h2><p><img src="https://ask.qcloudimg.com/http-save/yehe-5473698/afmi1374jm.jpeg?imageView2/2/w/1620" alt="img"></p>
+<p>其中Running表示运行状态；Runnable表示就绪状态（万事俱备，只欠CPU）；Blocked表示阻塞状态；阻塞状态又有多种情况，可能是因为调用wait()方法进入等待池，也可能是执行同步方法或同步代码块进入等锁池，或者是调用了sleep()方法或join()方法等待休眠或其他线程结束，或是因为发生了I/O中断。</p>
+<h2 id="13、Java中如何实现序列化，有什么意义？"><a href="#13、Java中如何实现序列化，有什么意义？" class="headerlink" title="13、Java中如何实现序列化，有什么意义？"></a>13、Java中如何实现序列化，有什么意义？</h2><p>序列化就是一种用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化。可以对流化后的对象进行读写操作，也可将流化后的对象传输于网络之间。序列化是为了解决对象流读写操作时可能引发的问题（如果不进行序列化可能会存在数据乱序的问题）。</p>
+<p>要实现序列化，需要让一个类实现Serializable接口，该接口是一个标识性接口，标注该类对象是可被序列化的，然后使用一个输出流来构造一个对象输出流并通过writeObject(Object)方法就可以将实现对象写出（即保存其状态）；如果需要反序列化则可以用一个输入流建立对象输入流，然后通过readObject方法从流中读取对象。序列化除了能够实现对象的持久化之外，还能够用于对象的深度克隆。</p>
+<h2 id="14、产生死锁的条件"><a href="#14、产生死锁的条件" class="headerlink" title="14、产生死锁的条件"></a>14、产生死锁的条件</h2><ol>
+<li>互斥条件：一个资源每次只能被一个进程使用。</li>
+<li>请求与保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放</li>
+<li>不剥夺条件:进程已获得的资源，在末使用完之前，不能强行剥夺。</li>
+<li>循环等待条件:若干进程之间形成一种头尾相接的循环等待资源关系。</li>
+</ol>
+<h2 id="15、什么是线程饿死，什么是活锁？"><a href="#15、什么是线程饿死，什么是活锁？" class="headerlink" title="15、什么是线程饿死，什么是活锁？"></a>15、什么是线程饿死，什么是活锁？</h2><p>线程饿死和活锁虽然不想是死锁一样的常见问题，但是对于并发编程的设计者来说就像一次邂逅一样。</p>
+<p>当所有线程阻塞，或者由于需要的资源无效而不能处理，不存在非阻塞线程使资源可用。JavaAPI中线程活锁可能发生在以下情形：</p>
+<ul>
+<li>当所有线程在程序中执行Object.wait(0)，参数为0的wait方法。程序将发生活锁直到在相应的对象上有线程调用Object.notify()或者Object.notifyAll()。</li>
+<li>当所有线程卡在无限循环中。</li>
+</ul>
+<h2 id="16、什么导致线程阻塞"><a href="#16、什么导致线程阻塞" class="headerlink" title="16、什么导致线程阻塞"></a>16、什么导致线程阻塞</h2><p>阻塞指的是暂停一个线程的执行以等待某个条件发生（如某资源就绪），学过操作系统的同学对它一定已经很熟悉了。Java 提供了大量方法来支持阻塞，下面让我们逐一分析。</p>
+<p>方法说明sleep()sleep() 允许 指定以毫秒为单位的一段时间作为参数，它使得线程在指定的时间内进入阻塞状态，不能得到CPU 时间，指定的时间一过，线程重新进入可执行状态。典型地，sleep() 被用在等待某个资源就绪的情形：测试发现条件不满足后，让线程阻塞一段时间后重新测试，直到条件满足为止suspend() 和 resume()两个方法配套使用，suspend()使得线程进入阻塞状态，并且不会自动恢复，必须其对应的resume() 被调用，才能使得线程重新进入可执行状态。典型地，suspend() 和 resume() 被用在等待另一个线程产生的结果的情形：测试发现结果还没有产生后，让线程阻塞，另一个线程产生了结果后，调用 resume() 使其恢复。yield()yield() 使当前线程放弃当前已经分得的CPU 时间，但不使当前线程阻塞，即线程仍处于可执行状态，随时可能再次分得 CPU 时间。调用 yield() 的效果等价于调度程序认为该线程已执行了足够的时间从而转到另一个线程。wait() 和 notify()两个方法配套使用，wait() 使得线程进入阻塞状态，它有两种形式，一种允许 指定以毫秒为单位的一段时间作为参数，另一种没有参数，前者当对应的 notify() 被调用或者超出指定时间时线程重新进入可执行状态，后者则必须对应的 notify() 被调用.</p>
+<h2 id="17、怎么检测一个线程是否持有对象监视器"><a href="#17、怎么检测一个线程是否持有对象监视器" class="headerlink" title="17、怎么检测一个线程是否持有对象监视器"></a>17、怎么检测一个线程是否持有对象监视器</h2><p>Thread类提供了一个holdsLock(Object obj)方法，当且仅当对象obj的监视器被某条线程持有的时候才会返回true，注意这是一个static方法，这意味着”某条线程”指的是当前线程。</p>
+<h2 id="18、请说出与线程同步以及线程调度相关的方法。"><a href="#18、请说出与线程同步以及线程调度相关的方法。" class="headerlink" title="18、请说出与线程同步以及线程调度相关的方法。"></a>18、请说出与线程同步以及线程调度相关的方法。</h2><ul>
+<li>wait()：使一个线程处于等待（阻塞）状态，并且释放所持有的对象的锁；</li>
+<li>sleep()：使一个正在运行的线程处于睡眠状态，是一个静态方法，调用此方法要处理InterruptedException异常；</li>
+<li>notify()：唤醒一个处于等待状态的线程，当然在调用此方法的时候，并不能确切的唤醒某一个等待状态的线程，而是由JVM确定唤醒哪个线程，而且与优先级无关；</li>
+<li>notityAll()：唤醒所有处于等待状态的线程，该方法并不是将对象的锁给所有线程，而是让它们竞争，只有获得锁的线程才能进入就绪状态；</li>
+</ul>
+<h2 id="19、sleep-、join（）、yield（）有什么区别"><a href="#19、sleep-、join（）、yield（）有什么区别" class="headerlink" title="19、sleep() 、join（）、yield（）有什么区别"></a>19、sleep() 、join（）、yield（）有什么区别</h2><ul>
+<li>sleep()方法给其他线程运行机会时不考虑线程的优先级，因此会给低优先级的线程以运行的机会；yield()方法只会给相同优先级或更高优先级的线程以运行的机会；</li>
+<li>线程执行sleep()方法后转入阻塞（blocked）状态，而执行yield()方法后转入就绪（ready）状态；</li>
+<li>sleep()方法声明抛出InterruptedException，而yield()方法没有声明任何异常；</li>
+<li>sleep()方法比yield()方法（跟操作系统CPU调度相关）具有更好的可移植性。</li>
+</ul>
+<h2 id="20、wait-notify-和suspend-resume-之间的区别"><a href="#20、wait-notify-和suspend-resume-之间的区别" class="headerlink" title="20、wait(),notify()和suspend(),resume()之间的区别"></a>20、wait(),notify()和suspend(),resume()之间的区别</h2><p>初看起来它们与 suspend() 和 resume() 方法对没有什么分别，但是事实上它们是截然不同的。区别的核心在于，前面叙述的所有方法，阻塞时都不会释放占用的锁（如果占用了的话），而这一对方法则相反。上述的核心区别导致了一系列的细节上的区别。</p>
+<p>首先，前面叙述的所有方法都隶属于 Thread 类，但是这一对却直接隶属于 Object 类，也就是说，所有对象都拥有这一对方法。初看起来这十分不可思议，但是实际上却是很自然的，因为这一对方法阻塞时要释放占用的锁，而锁是任何对象都具有的，调用任意对象的 wait() 方法导致线程阻塞，并且该对象上的锁被释放。而调用 任意对象的notify()方法则导致从调用该对象的 wait() 方法而阻塞的线程中随机选择的一个解除阻塞（但要等到获得锁后才真正可执行）。</p>
+<p>其次，前面叙述的所有方法都可在任何位置调用，但是这一对方法却必须在 synchronized 方法或块中调用，理由也很简单，只有在synchronized 方法或块中当前线程才占有锁，才有锁可以释放。同样的道理，调用这一对方法的对象上的锁必须为当前线程所拥有，这样才有锁可以释放。因此，这一对方法调用必须放置在这样的 synchronized 方法或块中，该方法或块的上锁对象就是调用这一对方法的对象。若不满足这一条件，则程序虽然仍能编译，但在运行时会出现IllegalMonitorStateException 异常。</p>
+<p>wait() 和 notify() 方法的上述特性决定了它们经常和synchronized关键字一起使用，将它们和操作系统进程间通信机制作一个比较就会发现它们的相似性：synchronized方法或块提供了类似于操作系统原语的功能，它们的执行不会受到多线程机制的干扰，而这一对方法则相当于 block 和wakeup 原语（这一对方法均声明为 synchronized）。它们的结合使得我们可以实现操作系统上一系列精妙的进程间通信的算法（如信号量算法），并用于解决各种复杂的线程间通信问题。</p>
+<p>关于 wait() 和 notify() 方法最后再说明两点：</p>
+<p>第一：调用 notify() 方法导致解除阻塞的线程是从因调用该对象的 wait() 方法而阻塞的线程中随机选取的，我们无法预料哪一个线程将会被选择，所以编程时要特别小心，避免因这种不确定性而产生问题。</p>
+<p>第二：除了 notify()，还有一个方法 notifyAll() 也可起到类似作用，唯一的区别在于，调用 notifyAll() 方法将把因调用该对象的 wait() 方法而阻塞的所有线程一次性全部解除阻塞。当然，只有获得锁的那一个线程才能进入可执行状态。</p>
+<p>谈到阻塞，就不能不谈一谈死锁，略一分析就能发现，suspend() 方法和不指定超时期限的 wait() 方法的调用都可能产生死锁。遗憾的是，Java 并不在语言级别上支持死锁的避免，我们在编程中必须小心地避免死锁。</p>
+<p>以上我们对 Java 中实现线程阻塞的各种方法作了一番分析，我们重点分析了 wait() 和 notify() 方法，因为它们的功能最强大，使用也最灵活，但是这也导致了它们的效率较低，较容易出错。实际使用中我们应该灵活使用各种方法，以便更好地达到我们的目的。</p>
+<h2 id="21、为什么wait-方法和notify-notifyAll-方法要在同步块中被调用"><a href="#21、为什么wait-方法和notify-notifyAll-方法要在同步块中被调用" class="headerlink" title="21、为什么wait()方法和notify()/notifyAll()方法要在同步块中被调用"></a>21、为什么wait()方法和notify()/notifyAll()方法要在同步块中被调用</h2><p>这是JDK强制的，wait()方法和notify()/notifyAll()方法在调用前都必须先获得对象的锁</p>
+<h2 id="22、wait-方法和notify-notifyAll-方法在放弃对象监视器时有什么区别"><a href="#22、wait-方法和notify-notifyAll-方法在放弃对象监视器时有什么区别" class="headerlink" title="22、wait()方法和notify()/notifyAll()方法在放弃对象监视器时有什么区别"></a>22、wait()方法和notify()/notifyAll()方法在放弃对象监视器时有什么区别</h2><p>wait()方法和notify()/notifyAll()方法在放弃对象监视器的时候的区别在于：wait()方法立即释放对象监视器，notify()/notifyAll()方法则会等待线程剩余代码执行完毕才会放弃对象监视器。</p>
+<h2 id="23、Runnable和Callable的区别"><a href="#23、Runnable和Callable的区别" class="headerlink" title="23、Runnable和Callable的区别"></a>23、Runnable和Callable的区别</h2><p>Runnable接口中的run()方法的返回值是void，它做的事情只是纯粹地去执行run()方法中的代码而已；Callable接口中的call()方法是有返回值的，是一个泛型，和Future、FutureTask配合可以用来获取异步执行的结果。</p>
+<p>这其实是很有用的一个特性，因为多线程相比单线程更难、更复杂的一个重要原因就是因为多线程充满着未知性，某条线程是否执行了？某条线程执行了多久？某条线程执行的时候我们期望的数据是否已经赋值完毕？无法得知，我们能做的只是等待这条多线程的任务执行完毕而已。而Callable+Future/FutureTask却可以方便获取多线程运行的结果，可以在等待时间太长没获取到需要的数据的情况下取消该线程的任务。</p>
+<h2 id="24、Thread类的sleep-方法和对象的wait-方法都可以让线程暂停执行，它们有什么区别？"><a href="#24、Thread类的sleep-方法和对象的wait-方法都可以让线程暂停执行，它们有什么区别？" class="headerlink" title="24、Thread类的sleep()方法和对象的wait()方法都可以让线程暂停执行，它们有什么区别？"></a>24、Thread类的sleep()方法和对象的wait()方法都可以让线程暂停执行，它们有什么区别？</h2><p>sleep()方法（休眠）是线程类（Thread）的静态方法，调用此方法会让当前线程暂停执行指定的时间，将执行机会（CPU）让给其他线程，但是对象的锁依然保持，因此休眠时间结束后会自动恢复。</p>
+<p>wait()是Object类的方法，调用对象的wait()方法导致当前线程放弃对象的锁（线程暂停执行），进入对象的等待池（wait pool），只有调用对象的notify()方法（或notifyAll()方法）时才能唤醒等待池中的线程进入等锁池（lock pool），如果线程重新获得对象的锁就可以进入就绪状态。</p>
+<h2 id="25、线程的sleep-方法和yield-方法有什么区别？"><a href="#25、线程的sleep-方法和yield-方法有什么区别？" class="headerlink" title="25、线程的sleep()方法和yield()方法有什么区别？"></a>25、线程的sleep()方法和yield()方法有什么区别？</h2><ol>
+<li>sleep()方法给其他线程运行机会时不考虑线程的优先级，因此会给低优先级的线程以运行的机会；yield()方法只会给相同优先级或更高优先级的线程以运行的机会；</li>
+<li>线程执行sleep()方法后转入阻塞（blocked）状态，而执行yield()方法后转入就绪（ready）状态；</li>
+<li>sleep()方法声明抛出InterruptedException，而yield()方法没有声明任何异常；</li>
+<li>sleep()方法比yield()方法（跟操作系统CPU调度相关）具有更好的可移植性。</li>
+</ol>
+<h2 id="26、为什么wait-nofity和nofityAll这些方法不放在Thread类当中"><a href="#26、为什么wait-nofity和nofityAll这些方法不放在Thread类当中" class="headerlink" title="26、为什么wait,nofity和nofityAll这些方法不放在Thread类当中"></a>26、为什么wait,nofity和nofityAll这些方法不放在Thread类当中</h2><p>一个很明显的原因是JAVA提供的锁是对象级的而不是线程级的，每个对象都有锁，通过线程获得。如果线程需要等待某些锁那么调用对象中的wait()方法就有意义了。如果wait()方法定义在Thread类中，线程正在等待的是哪个锁就不明显了。简单的说，由于wait，notify和notifyAll都是锁级别的操作，所以把他们定义在Object类中因为锁属于对象。</p>
+<h2 id="27、怎么唤醒一个阻塞的线程"><a href="#27、怎么唤醒一个阻塞的线程" class="headerlink" title="27、怎么唤醒一个阻塞的线程"></a>27、怎么唤醒一个阻塞的线程</h2><p>如果线程是因为调用了wait()、sleep()或者join()方法而导致的阻塞，可以中断线程，并且通过抛出InterruptedException来唤醒它；如果线程遇到了IO阻塞，无能为力，因为IO是操作系统实现的，Java代码并没有办法直接接触到操作系统。</p>
+<h2 id="28、什么是多线程的上下文切换"><a href="#28、什么是多线程的上下文切换" class="headerlink" title="28、什么是多线程的上下文切换"></a>28、什么是多线程的上下文切换</h2><p>多线程的上下文切换是指CPU控制权由一个已经正在运行的线程切换到另外一个就绪并等待获取CPU执行权的线程的过程。</p>
+<h2 id="29、FutureTask是什么"><a href="#29、FutureTask是什么" class="headerlink" title="29、FutureTask是什么"></a>29、FutureTask是什么</h2><p>这个其实前面有提到过，FutureTask表示一个异步运算的任务。FutureTask里面可以传入一个Callable的具体实现类，可以对这个异步运算的任务的结果进行等待获取、判断是否已经完成、取消任务等操作。当然，由于FutureTask也是Runnable接口的实现类，所以FutureTask也可以放入线程池中。</p>
+<h2 id="30、一个线程如果出现了运行时异常怎么办？"><a href="#30、一个线程如果出现了运行时异常怎么办？" class="headerlink" title="30、一个线程如果出现了运行时异常怎么办？"></a>30、一个线程如果出现了运行时异常怎么办？</h2><p>如果这个异常没有被捕获的话，这个线程就停止执行了。另外重要的一点是：如果这个线程持有某个某个对象的监视器，那么这个对象监视器会被立即释放</p>
+<h2 id="31、Java当中有哪几种锁"><a href="#31、Java当中有哪几种锁" class="headerlink" title="31、Java当中有哪几种锁"></a>31、Java当中有哪几种锁</h2><p>自旋锁: 自旋锁在JDK1.6之后就默认开启了。基于之前的观察，共享数据的锁定状态只会持续很短的时间，为了这一小段时间而去挂起和恢复线程有点浪费，所以这里就做了一个处理，让后面请求锁的那个线程在稍等一会，但是不放弃处理器的执行时间，看看持有锁的线程能否快速释放。为了让线程等待，所以需要让线程执行一个忙循环也就是自旋操作。在jdk6之后，引入了自适应的自旋锁，也就是等待的时间不再固定了，而是由上一次在同一个锁上的自旋时间及锁的拥有者状态来决定</p>
+<p>偏向锁: 在JDK1.之后引入的一项锁优化，目的是消除数据在无竞争情况下的同步原语。进一步提升程序的运行性能。偏向锁就是偏心的偏，意思是这个锁会偏向第一个获得他的线程，如果接下来的执行过程中，改锁没有被其他线程获取，则持有偏向锁的线程将永远不需要再进行同步。偏向锁可以提高带有同步但无竞争的程序性能，也就是说他并不一定总是对程序运行有利，如果程序中大多数的锁都是被多个不同的线程访问，那偏向模式就是多余的，在具体问题具体分析的前提下，可以考虑是否使用偏向锁。</p>
+<p>轻量级锁: 为了减少获得锁和释放锁所带来的性能消耗，引入了“偏向锁”和“轻量级锁”，所以在Java SE1.6里锁一共有四种状态，无锁状态，偏向锁状态，轻量级锁状态和重量级锁状态，它会随着竞争情况逐渐升级。锁可以升级但不能降级，意味着偏向锁升级成轻量级锁后不能降级成偏向锁</p>
+<h2 id="32、如何在两个线程间共享数据"><a href="#32、如何在两个线程间共享数据" class="headerlink" title="32、如何在两个线程间共享数据"></a>32、如何在两个线程间共享数据</h2><p>通过在线程之间共享对象就可以了，然后通过wait/notify/notifyAll、await/signal/signalAll进行唤起和等待，比方说阻塞队列BlockingQueue就是为线程之间共享数据而设计的</p>
+<h2 id="33、如何正确的使用wait-使用if还是while？"><a href="#33、如何正确的使用wait-使用if还是while？" class="headerlink" title="33、如何正确的使用wait()?使用if还是while？"></a>33、如何正确的使用wait()?使用if还是while？</h2><p>wait() 方法应该在循环调用，因为当线程获取到 CPU 开始执行的时候，其他条件可能还没有满足，所以在处理前，循环检测条件是否满足会更好。下面是一段标准的使用 wait 和 notify 方法的代码：</p>
+<pre><code class="javascript">synchronized (obj) {
+   while (condition does not hold)
+     obj.wait(); // (Releases lock, and reacquires on wakeup)
+     ... // Perform action appropriate to condition
+}</code></pre>
+<h2 id="34、什么是线程局部变量ThreadLocal"><a href="#34、什么是线程局部变量ThreadLocal" class="headerlink" title="34、什么是线程局部变量ThreadLocal"></a>34、什么是线程局部变量ThreadLocal</h2><p>线程局部变量是局限于线程内部的变量，属于线程自身所有，不在多个线程间共享。Java提供ThreadLocal类来支持线程局部变量，是一种实现线程安全的方式。但是在管理环境下（如 web 服务器）使用线程局部变量的时候要特别小心，在这种情况下，工作线程的生命周期比任何应用变量的生命周期都要长。任何线程局部变量一旦在工作完成后没有释放，Java 应用就存在内存泄露的风险。</p>
+<h2 id="35、ThreadLoal的作用是什么？"><a href="#35、ThreadLoal的作用是什么？" class="headerlink" title="35、ThreadLoal的作用是什么？"></a>35、ThreadLoal的作用是什么？</h2><p>简单说ThreadLocal就是一种以空间换时间的做法在每个Thread里面维护了一个ThreadLocal.ThreadLocalMap把数据进行隔离，数据不共享，自然就没有线程安全方面的问题了.</p>
+<h2 id="36、ThreadLocal-原理分析"><a href="#36、ThreadLocal-原理分析" class="headerlink" title="36、ThreadLocal 原理分析"></a>36、ThreadLocal 原理分析</h2><p>ThreadLocal为解决多线程程序的并发问题提供了一种新的思路。ThreadLocal，顾名思义是线程的一个本地化对象，当工作于多线程中的对象使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程分配一个独立的变量副本，所以每一个线程都可以独立的改变自己的副本，而不影响其他线程所对应的副本。从线程的角度看，这个变量就像是线程的本地变量。</p>
+<p>ThreadLocal类非常简单好用，只有四个方法，能用上的也就是下面三个方法：</p>
+<ul>
+<li>void set(T value)：设置当前线程的线程局部变量的值。</li>
+<li>T get()：获得当前线程所对应的线程局部变量的值。</li>
+<li>void remove()：删除当前线程中线程局部变量的值。</li>
+</ul>
+<p>ThreadLocal是如何做到为每一个线程维护一份独立的变量副本的呢？在ThreadLocal类中有一个Map，键为线程对象，值是其线程对应的变量的副本，自己要模拟实现一个ThreadLocal类其实并不困难，代码如下所示：</p>
+<pre><code class="javascript">import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+public class MyThreadLocal&lt;T&gt; {
+    private Map&lt;Thread, T&gt; map = Collections.synchronizedMap(new HashMap&lt;Thread, T&gt;());
+    public void set(T newValue) {
+        map.put(Thread.currentThread(), newValue);
+    }
+    public T get() {
+        return map.get(Thread.currentThread());
+    }
+    public void remove() {
+        map.remove(Thread.currentThread());
+    }
+}</code></pre>
+<h2 id="37、如果你提交任务时，线程池队列已满，这时会发生什么"><a href="#37、如果你提交任务时，线程池队列已满，这时会发生什么" class="headerlink" title="37、如果你提交任务时，线程池队列已满，这时会发生什么"></a>37、如果你提交任务时，线程池队列已满，这时会发生什么</h2><p>如果你使用的LinkedBlockingQueue，也就是无界队列的话，没关系，继续添加任务到阻塞队列中等待执行，因为LinkedBlockingQueue可以近乎认为是一个无穷大的队列，可以无限存放任务；如果你使用的是有界队列比方说ArrayBlockingQueue的话，任务首先会被添加到ArrayBlockingQueue中，ArrayBlockingQueue满了，则会使用拒绝策略RejectedExecutionHandler处理满了的任务，默认是AbortPolicy。</p>
+<h2 id="38、为什么要使用线程池"><a href="#38、为什么要使用线程池" class="headerlink" title="38、为什么要使用线程池"></a>38、为什么要使用线程池</h2><p>避免频繁地创建和销毁线程，达到线程对象的重用。另外，使用线程池还可以根据项目灵活地控制并发的数目。</p>
+<h2 id="39、java中用到的线程调度算法是什么"><a href="#39、java中用到的线程调度算法是什么" class="headerlink" title="39、java中用到的线程调度算法是什么"></a>39、java中用到的线程调度算法是什么</h2><p>抢占式。一个线程用完CPU之后，操作系统会根据线程优先级、线程饥饿情况等数据算出一个总的优先级并分配下一个时间片给某个线程执行。</p>
+<h2 id="40、Thread-sleep-0-的作用是什么"><a href="#40、Thread-sleep-0-的作用是什么" class="headerlink" title="40、Thread.sleep(0)的作用是什么"></a>40、Thread.sleep(0)的作用是什么</h2><p>由于Java采用抢占式的线程调度算法，因此可能会出现某条线程常常获取到CPU控制权的情况，为了让某些优先级比较低的线程也能获取到CPU控制权，可以使用Thread.sleep(0)手动触发一次操作系统分配时间片的操作，这也是平衡CPU控制权的一种操作。</p>
+<h2 id="41、什么是CAS"><a href="#41、什么是CAS" class="headerlink" title="41、什么是CAS"></a>41、什么是CAS</h2><p>CAS，全称为Compare and Swap，即比较-替换。假设有三个操作数：内存值V、旧的预期值A、要修改的值B，当且仅当预期值A和内存值V相同时，才会将内存值修改为B并返回true，否则什么都不做并返回false。当然CAS一定要volatile变量配合，这样才能保证每次拿到的变量是主内存中最新的那个值，否则旧的预期值A对某条线程来说，永远是一个不会变的值A，只要某次CAS操作失败，永远都不可能成功</p>
+<h2 id="42、什么是乐观锁和悲观锁"><a href="#42、什么是乐观锁和悲观锁" class="headerlink" title="42、什么是乐观锁和悲观锁"></a>42、什么是乐观锁和悲观锁</h2><p>乐观锁：乐观锁认为竞争不总是会发生，因此它不需要持有锁，将比较-替换这两个动作作为一个原子操作尝试去修改内存中的变量，如果失败则表示发生冲突，那么就应该有相应的重试逻辑。</p>
+<p>悲观锁：悲观锁认为竞争总是会发生，因此每次对某资源进行操作时，都会持有一个独占的锁，就像synchronized，不管三七二十一，直接上了锁就操作资源了。</p>
+<h2 id="43、ConcurrentHashMap的并发度是什么？"><a href="#43、ConcurrentHashMap的并发度是什么？" class="headerlink" title="43、ConcurrentHashMap的并发度是什么？"></a>43、ConcurrentHashMap的并发度是什么？</h2><p>ConcurrentHashMap的并发度就是segment的大小，默认为16，这意味着最多同时可以有16条线程操作ConcurrentHashMap，这也是ConcurrentHashMap对Hashtable的最大优势，任何情况下，Hashtable能同时有两条线程获取Hashtable中的数据吗？</p>
+<h2 id="44、ConcurrentHashMap的工作原理"><a href="#44、ConcurrentHashMap的工作原理" class="headerlink" title="44、ConcurrentHashMap的工作原理"></a>44、ConcurrentHashMap的工作原理</h2><p>ConcurrentHashMap在jdk 1.6和jdk 1.8实现原理是不同的.</p>
+<p>jdk 1.6: ConcurrentHashMap是线程安全的，但是与Hashtablea相比，实现线程安全的方式不同。Hashtable是通过对hash表结构进行锁定，是阻塞式的，当一个线程占有这个锁时，其他线程必须阻塞等待其释放锁。ConcurrentHashMap是采用分离锁的方式，它并没有对整个hash表进行锁定，而是局部锁定，也就是说当一个线程占有这个局部锁时，不影响其他线程对hash表其他地方的访问。具体实现:ConcurrentHashMap内部有一个Segment</p>
+<p>jdk 1.8 在jdk 8中，ConcurrentHashMap不再使用Segment分离锁，而是采用一种乐观锁CAS算法来实现同步问题，但其底层还是“数组+链表-&gt;红黑树”的实现。</p>
+<h2 id="45、CyclicBarrier和CountDownLatch区别"><a href="#45、CyclicBarrier和CountDownLatch区别" class="headerlink" title="45、CyclicBarrier和CountDownLatch区别"></a>45、CyclicBarrier和CountDownLatch区别</h2><p>这两个类非常类似，都在java.util.concurrent下，都可以用来表示代码运行到某个点上，二者的区别在于：</p>
+<p>CyclicBarrier的某个线程运行到某个点上之后，该线程即停止运行，直到所有的线程都到达了这个点，所有线程才重新运行；CountDownLatch则不是，某线程运行到某个点上之后，只是给某个数值-1而已，该线程继续运行</p>
+<p>CyclicBarrier只能唤起一个任务，CountDownLatch可以唤起多个任务</p>
+<p>CyclicBarrier可重用，CountDownLatch不可重用，计数值为0该CountDownLatch就不可再用了</p>
+<h2 id="46、java中的-操作符线程安全么？"><a href="#46、java中的-操作符线程安全么？" class="headerlink" title="46、java中的++操作符线程安全么？"></a>46、java中的++操作符线程安全么？</h2><p>不是线程安全的操作。它涉及到多个指令，如读取变量值，增加，然后存储回内存，这个过程可能会出现多个线程交差</p>
+<h2 id="47、有三个线程T1，T2，T3，怎么确保它们按顺序执行？"><a href="#47、有三个线程T1，T2，T3，怎么确保它们按顺序执行？" class="headerlink" title="47、有三个线程T1，T2，T3，怎么确保它们按顺序执行？"></a>47、有三个线程T1，T2，T3，怎么确保它们按顺序执行？</h2><p>在多线程中有多种方法让线程按特定顺序执行，你可以用线程类的join()方法在一个线程中启动另一个线程，另外一个线程完成该线程继续执行。为了确保三个线程的顺序你应该先启动最后一个(T3调用T2，T2调用T1)，这样T1就会先完成而T3最后完成。</p>
+<h2 id="48、如何在Java中创建Immutable对象？"><a href="#48、如何在Java中创建Immutable对象？" class="headerlink" title="48、如何在Java中创建Immutable对象？"></a>48、如何在Java中创建Immutable对象？</h2><p>这个问题看起来和多线程没什么关系， 但不变性有助于简化已经很复杂的并发程序。Immutable对象可以在没有同步的情况下共享，降低了对该对象进行并发访问时的同步化开销。可是Java没有@Immutable这个注解符，要创建不可变类，要实现下面几个步骤：通过构造方法初始化所有成员、对变量不要提供setter方法、将所有的成员声明为私有的，这样就不允许直接访问这些成员、在getter方法中，不要直接返回对象本身，而是克隆对象，并返回对象的拷贝。</p>
+<h2 id="49、你有哪些多线程开发良好的实践？"><a href="#49、你有哪些多线程开发良好的实践？" class="headerlink" title="49、你有哪些多线程开发良好的实践？"></a>49、你有哪些多线程开发良好的实践？</h2><ul>
+<li>给线程命名</li>
+<li>最小化同步范围</li>
+<li>优先使用volatile</li>
+<li>尽可能使用更高层次的并发工具而非wait和notify()来实现线程通信,如BlockingQueue,Semeaphore</li>
+<li>优先使用并发容器而非同步容器.</li>
+<li>考虑使用线程池</li>
+</ul>
+<h2 id="50、可以创建Volatile数组吗？"><a href="#50、可以创建Volatile数组吗？" class="headerlink" title="50、可以创建Volatile数组吗？"></a>50、可以创建Volatile数组吗？</h2><p>Java 中可以创建 volatile类型数组，不过只是一个指向数组的引用，而不是整个数组。如果改变引用指向的数组，将会受到volatile 的保护，但是如果多个线程同时改变数组的元素，volatile标示符就不能起到之前的保护作用了</p>
+<h2 id="51、Volatile关键字的作用"><a href="#51、Volatile关键字的作用" class="headerlink" title="51、Volatile关键字的作用"></a>51、Volatile关键字的作用</h2><p>一个非常重要的问题，是每个学习、应用多线程的Java程序员都必须掌握的。理解volatile关键字的作用的前提是要理解Java内存模型，这里就不讲Java内存模型了，可以参见第31点，volatile关键字的作用主要有两个：</p>
+<ul>
+<li>多线程主要围绕可见性和原子性两个特性而展开，使用volatile关键字修饰的变量，保证了其在多线程之间的可见性，即每次读取到volatile变量，一定是最新的数据</li>
+<li>代码底层执行不像我们看到的高级语言—-Java程序这么简单，它的执行是Java代码–&gt;字节码–&gt;根据字节码执行对应的C/C++代码–&gt;C/C++代码被编译成汇编语言–&gt;和硬件电路交互，现实中，为了获取更好的性能JVM可能会对指令进行重排序，多线程下可能会出现一些意想不到的问题。使用volatile则会对禁止语义重排序，当然这也一定程度上降低了代码执行效率</li>
+</ul>
+<p>从实践角度而言，volatile的一个重要作用就是和CAS结合，保证了原子性，详细的可以参见java.util.concurrent.atomic包下的类，比如AtomicInteger。</p>
+<h2 id="52、volatile能使得一个非原子操作变成原子操作吗？"><a href="#52、volatile能使得一个非原子操作变成原子操作吗？" class="headerlink" title="52、volatile能使得一个非原子操作变成原子操作吗？"></a>52、volatile能使得一个非原子操作变成原子操作吗？</h2><p>一个典型的例子是在类中有一个 long 类型的成员变量。如果你知道该成员变量会被多个线程访问，如计数器、价格等，你最好是将其设置为 volatile。为什么？因为 Java 中读取 long 类型变量不是原子的，需要分成两步，如果一个线程正在修改该 long 变量的值，另一个线程可能只能看到该值的一半（前 32 位）。但是对一个 volatile 型的 long 或 double 变量的读写是原子。</p>
+<p>一种实践是用 volatile 修饰 long 和 double 变量，使其能按原子类型来读写。double 和 long 都是64位宽，因此对这两种类型的读是分为两部分的，第一次读取第一个 32 位，然后再读剩下的 32 位，这个过程不是原子的，但 Java 中 volatile 型的 long 或 double 变量的读写是原子的。volatile 修复符的另一个作用是提供内存屏障（memory barrier），例如在分布式框架中的应用。简单的说，就是当你写一个 volatile 变量之前，Java 内存模型会插入一个写屏障（write barrier），读一个 volatile 变量之前，会插入一个读屏障（read barrier）。意思就是说，在你写一个 volatile 域时，能保证任何线程都能看到你写的值，同时，在写之前，也能保证任何数值的更新对所有线程是可见的，因为内存屏障会将其他所有写的值更新到缓存。</p>
+<h2 id="53、volatile类型变量提供什么保证？"><a href="#53、volatile类型变量提供什么保证？" class="headerlink" title="53、volatile类型变量提供什么保证？"></a>53、volatile类型变量提供什么保证？</h2><p>volatile 主要有两方面的作用:1.避免指令重排2.可见性保证.例如，JVM 或者 JIT为了获得更好的性能会对语句重排序，但是 volatile 类型变量即使在没有同步块的情况下赋值也不会与其他语句重排序。volatile 提供 happens-before 的保证，确保一个线程的修改能对其他线程是可见的。某些情况下，volatile 还能提供原子性，如读 64 位数据类型，像 long 和 double 都不是原子的(低32位和高32位)，但 volatile 类型的 double 和 long 就是原子的.</p>
+<h2 id="54、Java-中，编写多线程程序的时候你会遵循哪些最佳实践？"><a href="#54、Java-中，编写多线程程序的时候你会遵循哪些最佳实践？" class="headerlink" title="54、Java 中，编写多线程程序的时候你会遵循哪些最佳实践？"></a>54、Java 中，编写多线程程序的时候你会遵循哪些最佳实践？</h2><p>这是我在写Java 并发程序的时候遵循的一些最佳实践：</p>
+<ul>
+<li>给线程命名，这样可以帮助调试。</li>
+<li>最小化同步的范围，而不是将整个方法同步，只对关键部分做同步。</li>
+<li>如果可以，更偏向于使用 volatile 而不是 synchronized。</li>
+<li>使用更高层次的并发工具，而不是使用 wait() 和 notify() 来实现线程间通信，如 BlockingQueue，CountDownLatch 及 Semeaphore。</li>
+<li>优先使用并发集合，而不是对集合进行同步。并发集合提供更好的可扩展性。</li>
+</ul>
+<h2 id="55、说出至少-5-点在-Java-中使用线程的最佳实践。"><a href="#55、说出至少-5-点在-Java-中使用线程的最佳实践。" class="headerlink" title="55、说出至少 5 点在 Java 中使用线程的最佳实践。"></a>55、说出至少 5 点在 Java 中使用线程的最佳实践。</h2><p>这个问题与之前的问题类似，你可以使用上面的答案。对线程来说，你应该：</p>
+<ul>
+<li>对线程命名</li>
+<li>将线程和任务分离，使用线程池执行器来执行 Runnable 或 Callable。</li>
+<li>使用线程池</li>
+</ul>
+<h2 id="56、Java中如何获取到线程dump文件"><a href="#56、Java中如何获取到线程dump文件" class="headerlink" title="56、Java中如何获取到线程dump文件"></a>56、Java中如何获取到线程dump文件</h2><p>死循环、死锁、阻塞、页面打开慢等问题，打线程dump是最好的解决问题的途径。所谓线程dump也就是线程堆栈，获取到线程堆栈有两步：</p>
+<ul>
+<li>获取到线程的pid，可以通过使用jps命令，在Linux环境下还可以使用ps -ef | grep java</li>
+<li>打印线程堆栈，可以通过使用jstack pid命令，在Linux环境下还可以使用kill -3 pid</li>
+</ul>
+<p>另外提一点，Thread类提供了一个getStackTrace()方法也可以用于获取线程堆栈。这是一个实例方法，因此此方法是和具体线程实例绑定的，每次获取获取到的是具体某个线程当前运行的堆栈。</p>
+<h2 id="57、高并发、任务执行时间短的业务怎样使用线程池？并发不高、任务执行时间长的业务怎样使用线程池？并发高、业务执行时间长的业务怎样使用线程池？"><a href="#57、高并发、任务执行时间短的业务怎样使用线程池？并发不高、任务执行时间长的业务怎样使用线程池？并发高、业务执行时间长的业务怎样使用线程池？" class="headerlink" title="57、高并发、任务执行时间短的业务怎样使用线程池？并发不高、任务执行时间长的业务怎样使用线程池？并发高、业务执行时间长的业务怎样使用线程池？"></a>57、高并发、任务执行时间短的业务怎样使用线程池？并发不高、任务执行时间长的业务怎样使用线程池？并发高、业务执行时间长的业务怎样使用线程池？</h2><p>这是我在并发编程网上看到的一个问题，把这个问题放在最后一个，希望每个人都能看到并且思考一下，因为这个问题非常好、非常实际、非常专业。关于这个问题，个人看法是：</p>
+<ol>
+<li>高并发、任务执行时间短的业务，线程池线程数可以设置为CPU核数+1，减少线程上下文的切换</li>
+<li>并发不高、任务执行时间长的业务要区分开看： </li>
+</ol>
+<ul>
+<li>假如是业务时间长集中在IO操作上，也就是IO密集型的任务，因为IO操作并不占用CPU，所以不要让所有的CPU闲下来，可以加大线程池中的线程数目，让CPU处理更多的业务</li>
+<li>假如是业务时间长集中在计算操作上，也就是计算密集型任务，这个就没办法了，和（1）一样吧，线程池中的线程数设置得少一些，减少线程上下文的切换</li>
+</ul>
+<ol>
+<li>并发高、业务执行时间长，解决这种类型任务的关键不在于线程池而在于整体架构的设计，看看这些业务里面某些数据是否能做缓存是第一步，增加服务器是第二步，至于线程池的设置，设置参考（2）。</li>
+<li>业务执行时间长的问题，也可能需要分析一下，看看能不能使用中间件对任务进行拆分和解耦。</li>
+</ol>
+<h2 id="58、作业-进程-调度算法"><a href="#58、作业-进程-调度算法" class="headerlink" title="58、作业(进程)调度算法"></a>58、作业(进程)调度算法</h2><ol>
+<li>先来先服务调度算法(FCFS) 每次调度都是从后备作业队列中选择一个或多个最先进入该队列的作业，将它们调入内存，为它们分配资源、创建进程，然后放入就绪队列。</li>
+<li>短作业(进程)优先调度算法(SPF) 短作业优先(SJF)的调度算法是从后备队列中选择一个或若干个估计运行时间最短的作业，将它们调入内存运行。缺点:长作业的运行得不到保证</li>
+<li>优先权调度算法(HPF) 当把该算法用于作业调度时，系统将从后备队列中选择若干个优先权最高的作业装入内存。当用于进程调度时，该算法是把处理机分配给就绪队列中优先权最高的进程，这时，又可进一步把该算法分成如下两种。可以分为: </li>
+</ol>
+<ul>
+<li>非抢占式优先权算法</li>
+<li>抢占式优先权调度算法</li>
+</ul>
+<ol>
+<li>高响应比优先调度算法(HRN) 每次选择高响应比最大的作业执行，响应比=(等待时间+要求服务时间)/要求服务时间。该算法同时考虑了短作业优先和先来先服务。 </li>
+</ol>
+<ul>
+<li>如果作业的等待时间相同，则要求服务的时间愈短，其优先权愈高，因而该算法有利于短作业。</li>
+<li>当要求服务的时间相同时，作业的优先权决定于其等待时间，等待时间愈长，其优先权愈高，因而它实现的是先来先服务。</li>
+<li>对于长作业，作业的优先级可以随等待时间的增加而提高，当其等待时间足够长时，其优先级便可升到很高，从而也可获得处理机。简言之，该算法既照顾了短作业，又考虑了作业到达的先后次序，不会使长作业长期得不到服务。因此，该算法实现了一种较好的折衷。当然，在利用该算法时，每要进行调度之前，都须先做响应比的计算，这会增加系统开销。</li>
+</ul>
+<ol>
+<li>时间片轮转法（RR） 在早期的时间片轮转法中，系统将所有的就绪进程按先来先服务的原则排成一个队列，每次调度时，把CPU分配给队首进程，并令其执行一个时间片。时间片的大小从几ms到几百ms。当执行的时间片用完时，由一个计时器发出时钟中断请求，调度程序便据此信号来停止该进程的执行，并将它送往就绪队列的末尾；然后，再把处理机分配给就绪队列中新的队首进程，同时也让它执行一个时间片。这样就可以保证就绪队列中的所有进程在一给定的时间内均能获得一时间片的处理机执行时间。换言之，系统能在给定的时间内响应所有用户的请求。</li>
+<li>多级反馈队列调度算法 它是目前被公认的一种较好的进程调度算法。 </li>
+</ol>
+<ul>
+<li>应设置多个就绪队列，并为各个队列赋予不同的优先级。第一个队列的优先级最高，第二个队列次之，其余各队列的优先权逐个降低。该算法赋予各个队列中进程执行时间片的大小也各不相同，在优先权愈高的队列中，为每个进程所规定的执行时间片就愈小。例如，第二个队列的时间片要比第一个队列的时间片长一倍，……，第i+1个队列的时间片要比第i个队列的时间片长一倍。</li>
+<li>当一个新进程进入内存后，首先将它放入第一队列的末尾，按FCFS原则排队等待调度。当轮到该进程执行时，如它能在该时间片内完成，便可准备撤离系统；如果它在一个时间片结束时尚未完成，调度程序便将该进程转入第二队列的末尾，再同样地按FCFS原则等待调度执行；如果它在第二队列中运行一个时间片后仍未完成，再依次将它放入第三队列，……，如此下去，当一个长作业(进程)从第一队列依次降到第n队列后，在第n 队列便采取按时间片轮转的方式运行。</li>
+<li>仅当第一队列空闲时，调度程序才调度第二队列中的进程运行；仅当第1～(i-1)队列均空时，才会调度第i队列中的进程运行。如果处理机正在第i队列中为某进程服务时，又有新进程进入优先权较高的队列(第1～(i-1)中的任何一个队列)，则此时新进程将抢占正在运行进程的处理机，即由调度程序把正在运行的进程放回到第i队列的末尾，把处理机分配给新到的高优先权进程。</li>
+</ul>
+<h2 id="59、讲讲线程池的实现原理"><a href="#59、讲讲线程池的实现原理" class="headerlink" title="59、讲讲线程池的实现原理"></a>59、讲讲线程池的实现原理</h2><p>首先要明确为什么要使用线程池，使用线程池会带来什么好处？</p>
+<ul>
+<li>线程是稀缺资源，不能频繁的创建。</li>
+<li>应当将其放入一个池子中，可以给其他任务进行复用。</li>
+<li>解耦作用，线程的创建于执行完全分开，方便维护。</li>
+</ul>
+<h3 id="60、创建一个线程池"><a href="#60、创建一个线程池" class="headerlink" title="60、创建一个线程池"></a>60、创建一个线程池</h3><p>以一个使用较多的</p>
+<pre><code class="javascript">ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue&lt;Runnable&gt; workQueue, RejectedExecutionHandler handler);</code></pre>
+<p>为例：</p>
+<ul>
+<li>其中的 corePoolSize 为线程池的基本大小。</li>
+<li>maximumPoolSize 为线程池最大线程大小。</li>
+<li>keepAliveTime 和 unit 则是线程空闲后的存活时间。</li>
+<li>workQueue 用于存放任务的阻塞队列。</li>
+<li>handler 当队列和最大线程池都满了之后的饱和策略。</li>
+</ul>
+<h3 id="61、处理流程"><a href="#61、处理流程" class="headerlink" title="61、处理流程"></a>61、处理流程</h3><p>当提交一个任务到线程池时它的执行流程是怎样的呢？</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-5473698/olds0dii5s.jpeg?imageView2/2/w/1620" alt="img"></p>
+<p>首先第一步会判断核心线程数有没有达到上限，如果没有则创建线程(会获取全局锁)，满了则会将任务丢进阻塞队列。</p>
+<p>如果队列也满了则需要判断最大线程数是否达到上限，如果没有则创建线程(获取全局锁)，如果最大线程数也满了则会根据饱和策略处理。</p>
+<p>常用的饱和策略有:</p>
+<ul>
+<li>直接丢弃任务。</li>
+<li>调用者线程处理。</li>
+<li>丢弃队列中的最近任务，执行当前任务。</li>
+</ul>
+<p>所以当线程池完成预热之后都是将任务放入队列，接着由工作线程一个个从队列里取出执行。</p>
+<h3 id="62、合理配置线程池"><a href="#62、合理配置线程池" class="headerlink" title="62、合理配置线程池"></a>62、合理配置线程池</h3><p>线程池并不是配置越大越好，而是要根据任务的熟悉来进行划分：如果是 CPU 密集型任务应当分配较少的线程，比如 CPU 个数相当的大小。</p>
+<p>如果是 IO 密集型任务，由于线程并不是一直在运行，所以可以尽可能的多配置线程，比如 CPU 个数 * 2 。</p>
+<p>当是一个混合型任务，可以将其拆分为 CPU 密集型任务以及 IO 密集型任务，这样来分别配置。</p>
+<h2 id="63、synchronize-实现原理"><a href="#63、synchronize-实现原理" class="headerlink" title="63、synchronize 实现原理"></a>63、synchronize 实现原理</h2><p>众所周知 Synchronize 关键字是解决并发问题常用解决方案，有以下三种使用方式:</p>
+<ul>
+<li>同步普通方法，锁的是当前对象。</li>
+<li>同步静态方法，锁的是当前 Class 对象。</li>
+<li>同步块，锁的是 {} 中的对象。</li>
+</ul>
+<p>实现原理：JVM 是通过进入、退出对象监视器( Monitor )来实现对方法、同步块的同步的。</p>
+<p>具体实现是在编译之后在同步方法调用前加入一个 monitor.enter 指令，在退出方法和异常处插入 monitor.exit 的指令。</p>
+<p>其本质就是对一个对象监视器( Monitor )进行获取，而这个获取过程具有排他性从而达到了同一时刻只能一个线程访问的目的。</p>
+<p>而对于没有获取到锁的线程将会阻塞到方法入口处，直到获取锁的线程 monitor.exit 之后才能尝试继续获取锁。</p>
+<p>流程图如下:</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-5473698/2et7klu95e.jpeg?imageView2/2/w/1620" alt="img"></p>
+<p>synchronize 很多都称之为重量锁，JDK1.6 中对 synchronize 进行了各种优化，为了能减少获取和释放锁带来的消耗引入了偏向锁和轻量锁。</p>
+<h3 id="64、轻量锁"><a href="#64、轻量锁" class="headerlink" title="64、轻量锁"></a>64、轻量锁</h3><p>当代码进入同步块时，如果同步对象为无锁状态时，当前线程会在栈帧中创建一个锁记录(Lock Record)区域，同时将锁对象的对象头中 Mark Word 拷贝到锁记录中，再尝试使用 CAS 将 Mark Word 更新为指向锁记录的指针。</p>
+<p>如果更新成功，当前线程就获得了锁。</p>
+<p>如果更新失败 JVM 会先检查锁对象的 Mark Word 是否指向当前线程的锁记录。</p>
+<p>如果是则说明当前线程拥有锁对象的锁，可以直接进入同步块。</p>
+<p>不是则说明有其他线程抢占了锁，如果存在多个线程同时竞争一把锁，轻量锁就会膨胀为重量锁。</p>
+<h3 id="65、解锁"><a href="#65、解锁" class="headerlink" title="65、解锁"></a>65、解锁</h3><p>轻量锁的解锁过程也是利用 CAS 来实现的，会尝试锁记录替换回锁对象的 Mark Word 。如果替换成功则说明整个同步操作完成，失败则说明有其他线程尝试获取锁，这时就会唤醒被挂起的线程(此时已经膨胀为重量锁)</p>
+<p>轻量锁能提升性能的原因是：</p>
+<p>认为大多数锁在整个同步周期都不存在竞争，所以使用 CAS 比使用互斥开销更少。但如果锁竞争激烈，轻量锁就不但有互斥的开销，还有 CAS 的开销，甚至比重量锁更慢。</p>
+<h3 id="66、偏向锁"><a href="#66、偏向锁" class="headerlink" title="66、偏向锁"></a>66、偏向锁</h3><p>为了进一步的降低获取锁的代价，JDK1.6 之后还引入了偏向锁。</p>
+<p>偏向锁的特征是:锁不存在多线程竞争，并且应由一个线程多次获得锁。</p>
+<p>当线程访问同步块时，会使用 CAS 将线程 ID 更新到锁对象的 Mark Word 中，如果更新成功则获得偏向锁，并且之后每次进入这个对象锁相关的同步块时都不需要再次获取锁了。</p>
+<h3 id="67、释放锁"><a href="#67、释放锁" class="headerlink" title="67、释放锁"></a>67、释放锁</h3><p>当有另外一个线程获取这个锁时，持有偏向锁的线程就会释放锁，释放时会等待全局安全点(这一时刻没有字节码运行)，接着会暂停拥有偏向锁的线程，根据锁对象目前是否被锁来判定将对象头中的 Mark Word 设置为无锁或者是轻量锁状态。</p>
+<p>偏向锁可以提高带有同步却没有竞争的程序性能，但如果程序中大多数锁都存在竞争时，那偏向锁就起不到太大作用。可以使用 -XX:-userBiasedLocking=false 来关闭偏向锁，并默认进入轻量锁。</p>
+<p>转载：原文发布于微信公众号 - Java程序猿部落（ydsy-love）</p>
+<p>原文发表时间：2019-08-21</p>
+<p>本文参与<a href="https://cloud.tencent.com/developer/support-plan" target="_blank" rel="noopener">腾讯云自媒体分享计划</a>，欢迎正在阅读的你也加入，一起分享。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以加QQ（2602138376） </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>最全面的多线程面试题，你能回答几个？</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">13.9k</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Zevs">Zevs</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-09-03, 14:59:31</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-04, 18:08:36</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/03/最全面的多线程面试题，你能回答几个？/" title="最全面的多线程面试题，你能回答几个？">http://zhsh666.xyz/2019/09/03/最全面的多线程面试题，你能回答几个？/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="/js/gitment.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'http://zhsh666.xyz/2019/09/03/最全面的多线程面试题，你能回答几个？/', // 可选。默认为 location.href
+        owner: 'Zevs6',
+        repo: 'Zevs6.github.io',
+        oauth: {
+            client_id: '18b468126f8247522ee7',
+            client_secret: '5690a9fd74b6c10ae45cf9b9bd33ea34a1f166cf',
+        },
+    })
+    gitment.render('comments')
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p id="sitetime"></p>
+<p class="footer-entry">©2019 ®Zevs<span> | ✿网站字词总数：<code class="site_word_count"></code>字</span></p>
+
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2019,08,13,00,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML="网站已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+	siteTime();
+</script>
+
+<p>√本站访问人数：<code class="site_uv"></code>人次 | ◎本站总访问量：<code class="site_pv"></code>次</p>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9143eb90f928be2d7df47517e5f3de98";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#hexo','#3-hexo','#CSS3','#小程序','#css','#Flex','#Apache','#Tomcat','#服务器','#HBuilder','#HTML','#JavaScript','#HTML5','#idea','#IDEA','#Java','#jsp','#js','#JDBC','#MySQL','#Github','#node.js','#Node.js','#PHP','#PanDownload','#Python','#java','#SpringBoot','#Vue','#框架','#wordpress','#WampServer','#WordPress','#自定义','#nodejs','#GitHub','#gitbash','#部署','#final','#常量','#数据库','#飘落特效','#jquery','#mysql','#Markdown','#Typora','#npm','#jsDeliver','#cnd','#1+x','#代码','#安卓','#博客','#纪念','#reading','#数据结构','#Chrome','#Cookie','#Session','#codding','#剪辑','#缘起','#虚拟机','#模拟器','#Wordpress','#智慧树','#图床','#码云','#网站收录','#CSS','#轮播图','#鼠标点击','#点击特效','#jsDelivr','#PicGo','#前端','#Hexo','#Swing','#南京三日游','#主题','#Lsky Pro','#宝塔','#Android','#Vue.js','#Spring Boot','#网页设计','#http','#https','#多线程','#HTMK','#JS',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://cdn.jsdelivr.net/gh/Zevs6/blogimg/img/5459e6ed98435.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+<div class="mobile-menus-out" >
+
+</div>
+<div class="mobile-menus">
+    
+    
+    <a class="dynamic-menu site_url"   href="/photo">相册</a>
+    
+    
+    <a class="dynamic-menu " target="_blank"  href="https://pic.iqy.ink/">图床</a>
+    
+    
+    <a class="dynamic-menu " target="_self"   href="https://z.zhsh666.xyz/">主题切换</a>
+    
+</div>
+
+
+
+<!--给WordPress网站添加鼠标点击爆炸五颜六色特效-->
+    <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+<script type="text/javascript" src="http://a-oss.zmki.cn/20190502/baozatexiao.js"></script>
+<!-- 飘落特效
+<script src="https://cdn.bootcss.com/jquery/1.2.4/jquery.min.js"></script> 
+<script src="https://cdn.mom1.cn/1/su.js"></script> 
+<script type="text/javascript">jQuery(document).ready(function($){ $('body').wpSuperSnow({ flakes: ['https://cdn.mom1.cn/1/007.png','https://cdn.mom1.cn/1//006.png','https://cdn.mom1.cn/1//004.png','https://cdn.mom1.cn/1/002.png','https://cdn.mom1.cn/1/001.png','https://cdn.mom1.cn/1/003.png','https://cdn.mom1.cn/1/002.png','https://cdn.mom1.cn/1/001.png'], totalFlakes: '290', zIndex: '999999', maxSize: '30', maxDuration: '20', useFlakeTrans: false }); });</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-7988318233886821",
+          enable_page_level_ads: true
+     });
+</script>
+<!--自动推送工具代码-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</html>

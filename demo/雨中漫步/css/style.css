@@ -1,0 +1,900 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: arial, tahoma, 'Microsoft Yahei', sans-serif;
+    background-color: #ffffff;
+    background-color: #eeeeee;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='589' height='490.8' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.04'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+a {
+    padding-bottom: 3px;
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #027bfd;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    text-align: center;
+    list-style-type:none;
+}
+
+.header {
+    background: #92e9f0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+    background-image: url(../images/bg.jpg) !important;
+}
+
+.top-bar {
+    width: 960px;
+    margin: auto;
+    height: 130px;
+}
+
+.avatar {
+    position: relative;
+    float: left;
+    border-radius: 100%;
+    padding: 3px;
+    display: block;
+    background: -webkit-linear-gradient(bottom left, rgb(186, 168, 255), rgb(133, 243, 255));
+    background: -o-linear-gradient(bottom left, rgb(186, 168, 255), rgb(133, 243, 255));
+    background: linear-gradient(to top right, rgb(186, 168, 255), rgb(133, 243, 255));
+    margin-top: 33px;
+    margin-right: 10px;
+}
+
+.avatar::after {
+    content: "";
+    position: absolute;
+    background: url(../images/v.png) no-repeat;
+    background-size: 20px;
+    width: 22px;
+    height: 22px;
+    right: 0;
+    bottom: 0;
+}
+
+.top-logo {
+    width: 350px;
+    padding-top: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgb(119, 107, 154);
+}
+
+.top-logo h1 {
+    font-size: 24px;
+    color: #FFF;
+}
+
+.top-logo p {
+    margin-top: -10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nav-bar {
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+    height: 44px;
+    box-shadow: 0 0 10px #7d7d7d;
+}
+
+.nav-bar:hover {
+    overflow: visible;
+}
+
+.nav-bg {
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    background: #333;
+    z-index: 9999;
+}
+
+.nav-top {
+    height: 44px;
+    width: 960px;
+    margin: auto;
+}
+
+.nav-content {
+    position: absolute;
+}
+
+.nav-content-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 960px;
+    background: #333;
+    border-radius: 0 0 10px 10px;
+}
+
+.nav-content-box>li {
+    float: left;
+    line-height: 44px;
+}
+
+.nav-content-box>li:hover {
+    background: #000;
+}
+
+.nav-content-box>li>span>a {
+    display: block;
+    width: 100%;
+    margin: 0;
+    height: 41px;
+    line-height: 41px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFF;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+.nav-content-box>li:hover>span>a {
+    background: #027bfd;
+    transform: scale(1.1);
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    border-radius: 5px;
+}
+
+ul>li.home,
+ul>li.lanmu1,
+ul>li.lanmu2,
+ul>li.lanmu3,
+ul>li.lanmu4,
+ul>li.lanmu5,
+ul>li.lanmu6,
+ul>li.lanmu7 {
+    width: 120px;
+}
+
+ul>li.home {
+    height: 44px;
+    background: #027bfd;
+}
+
+ul.nav-content-box>li>ul {
+    background: #333;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+ul.nav-content-box>li>ul:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+
+.nav-content-box>li:hover>ul {
+    border-right: none;
+    background: #027bfd;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+ul.nav-content-box>li>ul>li {
+    float: left;
+    width: 100%;
+    line-height: 2;
+    text-align: center;
+}
+
+ul.nav-content-box>li.lanmu1>ul>li {
+    width: 49%;
+}
+
+ul.nav-content-box>li>ul>li>a {
+    display: block;
+    width: 100%;
+    color: #b6d9ff;
+}
+
+ul.nav-content-box>li>ul>li>a:hover {
+    color: #FFF;
+}
+
+
+.peKenBurns {
+    width: 920px;
+    height: 400px;
+}
+
+.container_12,
+.container_16 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    margin-top: 20px;
+}
+
+.banner {
+    position: relative;
+    box-shadow: 0 10px 10px #9a9a9a;
+}
+
+.banner_inner {
+    position: relative;
+    height: 425px;
+    width: 990px;
+    margin: 0 auto
+}
+
+.banner_img {
+    width: 20000px
+}
+
+.banner_img li {
+    float: left;
+    width: 1903px;
+    position: relative
+}
+
+.banner_img li.bgli01 {
+    background: #2a95bb url(../images/1-0.png) center no-repeat;
+}
+
+.banner_img li.bgli02 {
+    background: #E8E8E8 url(../images/2-0.png) center no-repeat;
+}
+
+.banner_img li.bgli03 {
+    background: #d63356 url(../images/3-0.png) center no-repeat;
+}
+
+.banner_img li.bgli04 {
+    background: #0a7ba4 url(../images/4-0.png) center no-repeat;
+}
+
+.banner .child1 {
+    position: absolute;
+    width: 588px;
+    height: 425px;
+    left: 66px;
+    top: 0
+}
+
+.banner .child2 {
+    position: absolute;
+    width: 654px;
+    height: 425px;
+    left: 343px;
+    top: 0
+}
+
+.banner_common {
+    position: relative;
+    width: 990px;
+    margin: 0 auto
+}
+
+.banner_pre {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: 180px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: url(../images/banner_btn_l_24.png) no-repeat;
+    opacity: .5;
+    filter: alpha(opacity=50)
+}
+
+.banner_next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: 180px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: url(../images/banner_btn_r_24.png) no-repeat;
+    opacity: .5;
+    filter: alpha(opacity=50)
+}
+
+.banner_pre:hover,
+.banner_next:hover {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.banner .control {
+    width: 130px;
+    position: absolute;
+    top: 393px;
+    left: 50%;
+    margin-left: -40px
+}
+
+.banner .control li {
+    float: left;
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #fff
+}
+
+.banner .control li a {
+    display: none
+}
+
+.banner .control li.current {
+    background: #ff7f02
+}
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.wrapper {
+    padding: 40px 0;
+}
+
+.tw {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .2s ease-in-out;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+.tw:hover {
+    transform: scale(1.02);
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0);
+    -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0);
+    -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0);
+}
+
+.tw__picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.tw-infos {
+    padding: 10px;
+    background: #fff;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.tw__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    color: #555;
+}
+
+.tw__text {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    color: #86888A;
+    padding: 10px 0;
+    border-bottom: 1px solid #EEE;
+    border-top: 1px solid #EEE;
+}
+
+.tw__text--high {
+    font-weight: 600;
+}
+
+.Graphic__nav {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0 0 40px 0;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.12);
+    border-left: 5px solid #027bfd;
+    border-right: 5px solid #027bfd;
+}
+
+.search {
+    width: 100%;
+    height: 50px;
+    padding: 20px 0 42px 0;
+    background: #FFF;
+    margin: auto;
+    box-shadow: 0 0 10px #7d7d7d;
+}
+
+.parent {
+    width: 940px;
+    top: 4px;
+    position: relative;
+    margin: auto;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.parent p {
+    float: right;
+    margin-top: -9px;
+    font-weight: bold;
+    color: #555;
+    font-size: 17px;
+    border-left: 1px solid #EEE;
+    padding: 19px 10px;
+}
+
+.parent>input:first-of-type {
+    width: 440px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    font-size: 18px;
+    outline: none;
+    padding-left: 10px;
+    color: #999;
+}
+
+
+.parent>input:last-of-type {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    background: #027bfd;
+    border: 1px solid #027bfd;
+    color: #fff;
+    font-size: 17px;
+    outline: none;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.parent>input:last-of-type:hover {
+    background: #55a7ff;
+    border: 1px solid #55a7ff;
+}
+
+.nav__link {
+    padding: 5px 10px;
+    color: #333;
+    font-size: 22px;
+    display: block;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.nav__link.is-active {
+    color: #027bfd;
+}
+
+
+
+.footer__list.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list__item.item {
+    display: flex;
+}
+
+.item__link.link {
+    margin: 0;
+}
+
+.item__link.link:not(:first-child) {
+    margin-left: 20px;
+}
+
+.link__icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+.ssm-default {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: height .2s ease-out, opacity .2s ease-out .2s
+}
+
+[data-sjsel] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: -webkit-transform .2s ease-out;
+    transition: transform .2s ease-out;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out
+}
+
+.listtag {
+    padding-left: 18px;
+    background: url(../images/taglist.gif) 0 5px no-repeat;
+    width: 300px;
+    color: #999;
+    margin: 10px 0 0 0;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.listtag a {
+    margin: 0 8px 0 0;
+    margin: 2px 8px -2px 0\9;
+    _margin: 0 8px 0 0;
+    color: #999;
+}
+
+.listtag a:hover {
+    color: #2ad2bb;
+}
+
+.listdate {
+    margin-right: 13px;
+    padding-left: 18px;
+    background: url(../images/time.gif) 0 5px no-repeat;
+    color: #999;
+    float: left;
+    line-height: 24px;
+}
+
+.listview {
+    float: left;
+    margin-right: 13px;
+    padding-left: 24px;
+    background: url(../images/view.gif) 0 5px no-repeat;
+    color: #999;
+    line-height: 24px;
+}
+
+.listcomment {
+    float: left;
+    margin-right: 13px;
+    padding-left: 20px;
+    background: url(../images/comment.gif) 0 5px no-repeat;
+    color: #999;
+    line-height: 24px;
+}
+
+.more {
+    float: right;
+    border-radius: 100%;
+    padding: 3px;
+    display: block;
+    margin-top: -17px;
+    margin-right: 10px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+.more:hover {
+    transform: scale(1.5);
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all
+}
+
+.lanmu-top {
+    width: 100%;
+    padding: 20px 0 30px 0;
+    margin: auto;
+    background-color: #1586ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+    color: #FFF;
+    z-index: -1;
+    box-shadow: 0 5px 10px #8e8e8e;
+}
+
+.lanmu-title{
+    width: 980px;
+    margin: auto;
+    text-shadow: 2px 2px 2px rgb(0, 66, 138);
+}
+
+.lanmu-title h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.lanmu-title p { 
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.content-top {
+    width: 100%;
+    padding: 20px 0 160px 0;
+    margin: auto;
+    background-color: #1586ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+    color: #FFF;
+    z-index: -1;
+    box-shadow: 0 5px 10px #8e8e8e;
+}
+
+.content-title{
+    width: 980px;
+    margin: auto;
+    text-shadow: 2px 2px 2px rgb(0, 66, 138);
+}
+
+.content-title h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.content-title p { 
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.content{
+    width: 100%;
+}
+
+.Include{
+    margin: auto;
+    width: 980px;
+    background: #FFF;
+    margin-top: -140px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #7d7d7d;
+}
+
+.wz-top{
+    padding: 20px 0 40px 20px;
+    color: #555;
+    border-bottom: 1px solid #EEE;
+}
+
+.wztag {
+    padding-left: 18px;
+    background: url(../images/taglist.gif) 0 5px no-repeat;
+    width: 400px;
+    color: #999;
+    font-size: 13px;
+    line-height: 24px;
+    float: right;
+}
+
+.wztag a {
+    margin: 0 8px 0 0;
+    margin: 2px 8px -2px 0\9;
+    _margin: 0 8px 0 0;
+    color: #999;
+}
+
+.wztag a:hover {
+    color: #2ad2bb;
+}
+
+.wzdata {
+    margin-right: 13px;
+    padding-left: 18px;
+    background: url(../images/time.gif) 0 5px no-repeat;
+    color: #999;
+    float: left;
+    line-height: 24px;
+}
+
+.wzview {
+    float: left;
+    margin-right: 13px;
+    padding-left: 24px;
+    background: url(../images/view.gif) 0 5px no-repeat;
+    color: #999;
+    line-height: 24px;
+}
+
+.wzcomment {
+    float: left;
+    margin-right: 13px;
+    padding-left: 20px;
+    background: url(../images/comment.gif) 0 5px no-repeat;
+    color: #999;
+    line-height: 24px;
+}
+
+.wzcomment a {
+    color: #555
+}
+
+.wzcomment a:hover {
+    color: #027bfd
+}
+
+.contents {
+    color: #555;
+    font-size: 15px;
+    padding: 20px;
+    line-height: 25px;
+}
+
+.contents h2 {
+    font-size: 20px;
+    border-left: 5px solid #027bfd;
+    margin-left: -20px;
+    padding: 5px 15px;
+}
+.contents img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #d4d4d4;
+}
+
+.label {
+    background: #ffffff;
+    border-top: 1px solid #e2e2e2;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+    background-image: url(../images/bsbg.png) !important;
+}
+
+.label li{
+    text-align: left;
+    color: #555;
+    line-height: 30px;
+}
+
+.pinglun {
+    background: #ffffff;
+    padding: 20px;
+    border-top: 1px solid #e2e2e2;
+    border-radius: 0 0 8px 8px;
+}
+
+.prevnext {
+    position: relative;
+    padding: 20px;
+    background: #F9f9f9;
+    border-top: 1px solid #e2e2e2;
+}
+
+.prevnext .r {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding-right: 20px;
+}
+
+.footer {
+    background: #FFF;
+    width: 100%;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+    bottom:0px;
+    text-align: center;
+    border-top: 5px solid #027bfd;
+}
+
+.footer-left {
+    font-size: 17px;
+    font-weight: bold;
+    color: #555;
+    padding: 20px 0 0 0;
+}
+
+.footer-right {
+    font-size: 17px;
+    color: #555;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 0 0 20px 0;
+}
+
+
+.aboutqq {
+    margin-right: 13px;
+    padding-left: 30px;
+    background: url(../images/qq.png) 0 -2px no-repeat;
+    color: #555;
+    float: left;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.aboutweixin {
+    margin-right: 13px;
+    padding-left: 36px;
+    background: url(../images/weixin.png) 0 0px no-repeat;
+    color: #555;
+    float: left;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.aboutweibo {
+    margin-right: 13px;
+    padding-left: 36px;
+    background: url(../images/weibo.png) 0 -5px no-repeat;
+    color: #555;
+    float: left;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.aboutbilibili {
+    margin-right: 13px;
+    padding-left: 36px;
+    background: url(../images/bilibili.png) 0 -5px no-repeat;
+    color: #555;
+    float: left;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.aboutyouxiang {
+    margin-right: 13px;
+    padding-left: 38px;
+    background: url(../images/youxiang.png) 0 -5px no-repeat;
+    color: #555;
+    float: left;
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+}

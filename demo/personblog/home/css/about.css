@@ -1,0 +1,384 @@
+﻿@charset "gb2312";
+
+body {
+	font-size: 12px;
+	/*修改习题大小*/
+	background-color: #53A8BC;
+	/*设置背景颜色*/
+	background-image: url(../img/bg.jpg);
+	/*设置背景图片*/
+	background-position: 50% top;
+	/*设置背景图像的起始位置*/
+	background-attachment: scroll;
+	/*设置背景图像是否固定或者随着页面的其余部分滚动*/
+	/*scroll：默认值。背景图像会随着页面其余部分的滚动而移动。*/
+	background-repeat: no-repeat;
+	/*设置背景图片不平铺*/
+	color: #5d5d5d;
+	/*设置前景色颜色*/
+	margin: 0;
+	/*清除外边距v*/
+}
+
+a:link,a:visited {
+	/*link选择未被访问的链接，visited选择已访问的链接，并设置其样式*/
+	text-decoration: none;
+	/*设置文本无下划线*/
+	color: #000000;
+}
+
+header {
+	padding: 40px 0;
+	/*设置内边距   上    右    下   左 */
+	width: 1000px;
+	/*设置高度为1000像素*/
+	margin: auto;
+	/*设置外边距为自动*/
+}
+
+header h1 {
+	font-size: 36px;
+	/*设置字体大小*/
+	text-shadow: 1px 1px 1px #fff;
+	/*设置文本阴影效果    */
+	/*水平阴影位置    垂直阴影位置  模糊的距离    阴影的颜色*/
+	font-family: 'Arizonia', cursive;
+	/*设置字体  /* google 在线字体 Arizonia */
+}
+
+header h1 a {
+	color: #000;
+	/*设置超链接的字体颜色*/
+}
+
+header h1 a:hover {
+	/*鼠标悬停效果*/
+	padding-left: 20px;
+	/*设置左内边距*/
+}
+
+header p {
+	margin: 17px 0 0 0;
+	/*设置上  右  下  左   外边距 */
+	text-shadow: 1px 1px 1px #000;
+	/*设置文本阴影效果    */
+	color: #fff;
+	/*设置字体颜色*/
+}
+
+.navswf {
+	position: relative;
+	/*相对定位的元素，相对于其正常位置进行定位   */
+	width: 1000px;
+	margin: auto;
+}
+
+#nav {
+	line-height: 40px;
+	/*设置行间的距离（行高）*/
+	width: 1000px;
+	height: 40px;
+	position: absolute;
+	/*生成绝对定位的元素*/
+	left: 0px;
+	/*元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。*/
+	top: 15px;
+}
+
+#nav ul {
+	list-style: none;
+	/*设置列表项无标记*/
+	text-align: left;
+	/*设置文本对齐方式*/
+}
+
+#nav ul li {
+	display: inline;
+	/*此元素会被显示为内联元素，元素前后不会换行显示*/
+}
+
+#nav ul li a {
+	color: #FFF;
+	padding: 15px 30px;
+	transition: all 0.5s;  
+	/*设置hover鼠标悬停的过渡时间*/
+}
+
+
+/* ---------------背景颜色过渡效果 */
+/*鼠标悬停时效果*/
+#nav ul li a:hover {
+	background: #E5B91C;
+	color: #FFF;
+	border-radius: 50px 0;
+}
+
+#nav ul li a#nav_current {
+	background: #9ACC99;
+	border-radius: 0 50px;
+}
+
+#main {
+	width: 600px;
+	height: 400px;
+	margin: 100px 0 0 76px;
+	position: relative;
+	border: 6px double #417DB7;
+}
+
+#main .scolling {
+	width: 600px;
+	height: 400px;
+	position: relative;
+}
+
+#main .scolling img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+#main .item {
+	position: absolute;
+	bottom: 22px;
+	left: 230px;
+	width: 200px;
+	height: 16px;
+}
+
+#main .item span {
+	width: 16px;
+	height: 16px;
+	background: #ccc;
+	display: inline-block;
+}
+
+#main .item span:hover {
+	cursor: pointer;
+}
+.pic{
+	opacity: 0;
+}
+#main:hover .pic {
+	opacity: 1;
+}
+
+#left .pic_left{
+	background: url(../img/left.png);
+	position: absolute;
+	width:60px;
+	height:100px;
+	bottom: 166px;
+	left: 0px;
+	cursor: pointer;
+}
+#right .pic_right{
+	background: url(../img/right.png);
+	position: absolute;
+	width:60px;
+	height:100px;
+	bottom: 166px;
+	left: 540px;
+	cursor: pointer;
+}
+
+.translucent {
+	background-color: rgba(255,255,255,0.3);
+    border: 1px solid #eee;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    transition: all 1s;
+    position: relative;
+    bottom: 410px;
+    left: 750px;
+    width: 370px;
+    height: 340px;
+}
+.btn{
+	margin: auto;
+	background: url(../img/2018817125347.jpg);
+	background-size: 100% 100%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.btn:hover{
+	 box-shadow: 5px 5px 5px; 
+}
+
+.author-name .t-blue{
+	color: #F8490B;
+	font-size: 16px;
+    margin: 10px 0;
+}
+.author-name span{
+	font-size: 14px;
+}
+
+.sidebar_author_btn {
+    margin-top: 32px;
+    text-align: center;
+    
+}
+
+.sidebar_author_btn .sab_btn {
+    background: orange;
+    margin-right: 15px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+}
+.sab_btn:hover{
+	border: 1px solid orange;
+	background: white;
+	
+}
+.tm:hover .qrcode {
+	display: block;
+}
+.qrcode {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 250px;
+    left: 165px;
+    display: none;
+}
+
+.data-info ul li{
+	margin-top: 23px;
+	list-style: none;
+	width: 100px;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+
+.t-black{
+	font-size: 25px;
+	color: #000000;
+}
+
+.data-info ul li span {
+    display: block;
+    font-size: 16px;
+    color: #888;
+}
+
+.widget{
+	width: 310px;
+	height: 320px;
+    position: relative;
+    background-color: rgba(255,255,255,0.3);
+    padding: 35px 30px;
+    bottom: 380px;
+	left: 750px;
+}
+.widget h3{
+	font-size: 21px;
+	margin: 0;
+	color: #000000;
+	line-height: 30px;
+}
+.widget h3 span{
+	padding-bottom: 10px;
+	border-bottom: 3px solid black;
+}
+.attentionus{
+	margin-top: 36px;
+	overflow: hidden;
+}
+.attentionus .social{
+	display: block;
+	width: 300px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+
+.social-widget-link-count{
+	padding-left: 10px;
+	cursor: pointer;
+}
+.social-widget-link-count:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+
+.social-link-weibo{
+	border: 1px solid #EC3D51;
+}
+.social-link-kuaishou {
+	border: 1px solid #68A6D6;
+}
+.social-link-email {
+	border: 1px solid #12AAE8;
+}
+.social-link-qq {
+	border: 1px solid #2AB39A;
+}
+.social-link-wechat {
+	border: 1px solid #199872;
+}
+
+.link-title{
+	width: 110px;
+	height: 100%;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	float: right;
+	cursor: pointer;
+	transition: width 0.6s; 
+}
+.link-title:hover{
+	width: 130px;
+}
+
+.social-link-weibo .link-title{
+	background:#EC3D51;
+}
+.social-link-kuaishou .link-title {
+	background: #68A6D6;
+}
+.social-link-email .link-title{
+	background: #12AAE8;
+}
+.social-link-qq .link-title{
+	background:#2AB39A;
+}
+.social-link-wechat .link-title{
+	background: #199872;
+}
+
+
+video{
+	position: relative;
+	bottom: 782px;
+	left:72px;
+	width: 620px;
+	height: 455px;
+}
+
+.footer-bottom {
+	background: rgba(0, 0, 0, 0.6);
+	overflow: hidden;
+	
+}
+
+.footer-bottom p {
+	font-size: 14px;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
+}

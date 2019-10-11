@@ -1,0 +1,138 @@
+﻿
+body {
+	background: #53A8BC url(../img/bg.jpg) 50% top scroll no-repeat;
+	margin:0;
+}
+
+#top {
+	width: 100%;    /*宽度跟随浏览器100%*/
+	height: 90px;   /*高度90像素*/
+}
+
+#menu {
+	width: 1000px;       /*宽度：1000像素*/
+	overflow: hidden;    /*超出部分隐藏*/
+	margin: 0 auto;     /*上下外边距为0   左右自动 */
+}
+
+#menu img {
+	height: 90px;   /*设置图片高度为90像素*/
+}
+
+#menu ul {
+	list-style-type: none;   /*清楚列表项前面小黑点*/
+}
+
+#menu ul li {
+	float: left;    /*设置li 左浮动*/
+	height: 90px;    /*高度为90px*/
+	line-height: 90px;  /*设置行高为90px   此时文字会垂直居中*/
+	margin-right: 50px;  /*设置右边距为50像素*/
+}
+
+#menu ul li a {
+	color: black;   /*设置超链接文字颜色为黑色*/
+	text-decoration: none;  /*清楚默认下划线*/
+	display: inline-block;  /*旁边的内联对象会被呈递在同一行内*/
+}
+
+#menu ul li a:hover {
+	color: deepskyblue;  
+	font-size: 16px;
+}
+
+
+#login {
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#login p {
+	text-align: center;
+}
+
+.t1 {
+	font-size: 28px;
+	font-family: "微软雅黑";
+	color: #000000;
+}
+
+.t2 {
+	font-size: 15px;
+	font-family: "微软雅黑";
+	color: #000000;
+}
+
+.main{
+	margin: auto;
+	padding: 10px;
+	width: 900px;
+	height: 460px;
+	background-color:rgba(0,0,0,0.4);
+	/*background: url(http://img.php.cn/upload/course/000/000/004/58144f924a5da186.gif);*/
+}
+
+.textbox {
+	width: 350px;
+	height: 40px;
+	border-radius: 3px;
+	border: 1px solid #e2b709;
+	padding-left: 10px;
+}
+
+.submit {
+	width: 365px;
+	height: 40px;
+	background-color: #F0184d;
+	color: white;
+	border: 1px solid #666666;
+}
+
+.button {
+	width: 365px;
+	height: 40px;
+	padding-left: 10px;
+	background-color: white;
+	border: 1px solid #666666;
+}
+
+.text {
+	width: 360px;
+	margin: 0 auto;
+	font-size: 15px;
+	color: #111111;
+}
+
+#bottom {
+	width: 100%;
+	background-color: #323333;
+	height: 230px;
+	margin-top: 140px;
+}
+
+#bottom-content {
+	width: 1000px;
+	overflow: hidden;
+	margin: 0 auto;
+	color: white;
+	height: 230px;
+}
+
+#content-left {
+	width: 460px;
+	float: left;
+	height: 280px;
+}
+
+#bottom-content p {
+	margin-top: 10px;
+}
+
+#content-right {
+	width: 460px;
+	float: right;
+	height: 280px;
+	text-align: center;
+	margin-top: 40px;
+}
